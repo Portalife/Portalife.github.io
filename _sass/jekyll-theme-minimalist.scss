@@ -76,7 +76,7 @@ ul.link:last-child {
 }
 
 .wrapper {
-  width:860px;
+  width:1010px;
   margin: 0 auto;
 }
 
@@ -139,7 +139,7 @@ kbd {
 }
 
 .sidebar {
-  width:185px;
+  width:195px;
   float:right;
   position:relative;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -174,9 +174,10 @@ strong {
 }
 
 section {
-  width: 640px;
+  width: 800px;
   float:left;
   padding-bottom:30px;
+  padding-bottom:100px;
 }
 
 small {
