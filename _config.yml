@@ -28,3 +28,5 @@ sidebar:
 # adding this avoids it
 github: [metadata]
 remote_theme : BDHU/minimalist
+url: "https://Portalife.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
+baseurl: "/Portalife
