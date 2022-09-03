@@ -140,8 +140,8 @@ kbd {
 
 .sidebar {
   width:185px;
-  float:left;
-  position:fixed;
+  float:right;
+  position:relative;
   -webkit-font-smoothing:subpixel-antialiased;
   top: 0;
   padding: 58px 0 50px 0;
@@ -174,8 +174,8 @@ strong {
 }
 
 section {
-  width: 610px;
-  float:right;
+  width: 650x;
+  float:left;
   padding-bottom:30px;
 }
 
