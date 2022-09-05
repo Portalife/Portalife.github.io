@@ -11,7 +11,7 @@
 * [**미분**](https://portalife.github.io/categories/미시경제/미분)  
 * **평균**  
 * **한계**  
-* **탄력성**  
+* [**탄력성**](https://portalife.github.io/categories/미시경제/탄력성)  
 
 ### **소비자이론**
 
