@@ -293,7 +293,7 @@ footer {
 
 @media print, screen and (min-width: 961px) {
   .link-wrapper-mobile {
-  width: 300px;}
+  display: none !important;}
 }
 
 @media print, screen and (max-width: 480px) {
