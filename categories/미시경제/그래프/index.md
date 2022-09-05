@@ -1,4 +1,4 @@
-<a href="https://portalife.github.io/categories/미시경제/" style="color: #289ED9; padding: 5px;"><b>←미시경제<b/></a>
+<a href="https://portalife.github.io/categories/미시경제/" style="color: #FFFFFF; background-color: #289ED9; padding: 5px;"><b>미시경제<b/></a>
 
 # 함수의 그래프
 
