@@ -1,8 +1,10 @@
 # 미시경제학
 
+---
+
 ### 도입
 
-* 함수  
+* [함수](https://portalife.github.io/categories/미시경제/함수)
 * 그래프  
 * 미분  
 * 평균  
