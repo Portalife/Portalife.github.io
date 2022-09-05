@@ -1,5 +1,7 @@
 # 미시경제학
 
+---
+
 ### 도입
 
 * [함수](https://portalife.github.io/categories/미시경제/함수)
