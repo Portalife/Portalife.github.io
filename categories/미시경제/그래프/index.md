@@ -24,9 +24,9 @@ Graph of a Function
 
 이러한 그래프의 효율적인 분석을 위해, 레벨 집합을 정의하고자 한다.
 
-#레벨 집합
+# 레벨 집합
 
-#####Level Set
+##### Level Set
 
 ### 정의
 
