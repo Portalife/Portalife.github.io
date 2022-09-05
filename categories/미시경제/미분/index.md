@@ -9,7 +9,7 @@
 ##### Definiton
 
 함수 \\(f:\mathbb{R}\to\mathbb{R}\\)와 \\(x\in\mathbb{R}\\)에 대하여, \\(f\\)의 **도함수**\\(^{\mathbf{derivative}}\\)는 다음과 같이 정의된다.
-\\[{df \over dx} ={f(x+h)-f(x) \over x}\\]
+\\[{df \over dx} =\lim_{h\to 0}{f(x+h)-f(x) \over h}\\]
 그리고, 이러한 도함수를 구하는 과정을 **미분**\\(^{\mathbf{differentiation}}\\)이라고 한다.
 
 ### 해설
@@ -35,8 +35,6 @@
 ### 상수함수의 미분
 
 ##### Constant term rule
-
-#####
 
 \\(c'=0,\ (c\in\mathbb{R})\\)
 
