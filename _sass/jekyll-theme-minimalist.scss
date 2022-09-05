@@ -5,7 +5,7 @@
 body {
   background-color: var(--clr-bg);
   padding:50px;
-  font: 15px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 15px/1.5 "Nanum Gothic", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: var(--clr-text);
   font-weight:400;
 }
@@ -41,6 +41,7 @@ h3, h4, h5, h6 {
 
 p {
   color:#444;
+  font:"Nanum Gothic",
 }
 
 a {
