@@ -1,5 +1,8 @@
 <a href="https://portalife.github.io/categories/미시경제/" style="color: #FFFFFF; background-color: #289ED9; padding: 5px;"><b>미시경제<b/></a>
-
+<a href="https://freshrimpsushi.github.io/categories/%EB%B3%B4%EC%A1%B0%EC%A0%95%EB%A6%AC/" style="background-color: rgba(0, 0, 0, 0.8); color: orange;
+            border-radius:10px; padding: 5px;">
+            📂보조정리</a>
+  
 # 함수의 그래프
 
 ##### Graph of a Function
