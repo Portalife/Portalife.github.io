@@ -8,7 +8,7 @@
 
 ##### Definiton
 
-함수 \\(f:\mathbb{R}^n\to \mathbb{R}\\)에 대하여 \\(f\\)의 그래프는, 집합 \\(G=\\{(\mathbf{x} ,f(\mathbf{x}))\\ |\\ \mathbf{x}\in X\\} \\)이다.
+함수 \\(f:\mathbb{R}^n\to \mathbb{R}\\)에 대하여 \\(f\\)의 그래프는, 집합 \\(G=\\{(\mathbf{x} ,f(\mathbf{x}))\mid\mathbf{x}\in X\\} \\)이다.
 
 ### 해설
 
