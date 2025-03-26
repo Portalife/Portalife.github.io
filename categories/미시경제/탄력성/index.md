@@ -47,3 +47,5 @@ background-color: #289ED9; padding: 5px; border-radius: 10px">
 반면, 점탄력성은 탄력성을 한 점에서 미분으로서 정의한 것이다. 즉, 증가율을 계산할 때 필요한 증가분을 미분의 아주 작은 변화량으로 대체한 것이다. 즉, 아주 작은 \\(x\\)변화율에 대한 아주 작은 \\(y\\)의 변화율이다. 하지만 앞서 말했듯이 경제학에서는 한계 개념을 독립변수가 1만큼 변화하는 것으로 표현하는 방식이 흔하므로, 점탄력성을 \\(x\\)의 1%증가에 대한 \\(y\\)의 변화율의 비율이라고 표현해도 무방하다.
 
 미시경제학은 미분을 정말 사랑하므로, 이하 나오는 탄력성 관련 개념은 모두 **점탄력성**이라고 생각해도 전혀 무리가 없다.
+
+<blockquote class="twitter-tweet" data-media-max-width="560"><p lang="ja" dir="ltr">安心の歌を作った。 <a href="https://t.co/aVpBIoBHZ9">pic.twitter.com/aVpBIoBHZ9</a></p>&mdash; でんきくじら (@ELwhale35) <a href="https://twitter.com/ELwhale35/status/1811749758052286823?ref_src=twsrc%5Etfw">July 12, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
