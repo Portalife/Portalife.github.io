@@ -11,11 +11,14 @@ plugins:
 
 # You can find fonts from https://iconify.design or https://fontawesome.com. Below is just an example illustrating how to use custom icons
 sidebar:
-  - name: GitHub
-    icon: <i class="fa-brands fa-github"></i>
-    link: https://github.com/Portalife
+  - name: Youtube
+    icon: <i class="fa-brands fa-youtube"></i>
+    link: https://www.youtube.com/@portalife_0
+  - name: X(Twitter)
+    icon: <i class="fa-brands fa-x-twitter"></i>
+    link: https://x.com/portalife12
   - name: School
-    icon: <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" style="vertical-align:-0.125em;" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5L12 0l12 9.5l-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14a7 7 0 0 0 0-14z" fill="currentColor"/></svg>
+    icon: <i class="fa-solid fa-graduation-cap"></i>
     link: https://www.skku.edu/skku/index.do
 
 # https://github.com/github/pages-gem/issues/399#issuecomment-301827749
