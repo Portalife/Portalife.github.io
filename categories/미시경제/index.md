@@ -1,3 +1,6 @@
+---
+layout: post
+---
 # 미시경제학
 
 ### Microeconomics

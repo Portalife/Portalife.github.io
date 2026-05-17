@@ -29,3 +29,5 @@ github: [metadata]
 
 imagemagick:
   enabled: true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+
+favicon: true
