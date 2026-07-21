@@ -8,6 +8,8 @@ color-scheme: auto
 languages: ["ko", "ja"]
 default_lang: "ko"
 permalink: /categories/:categories/:title/
+url: "https://Portalife.github.io"
+baseurl: ""
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
