@@ -1,0 +1,11 @@
+<!-- _includes/youtube.html -->
+<div class="youtube-container{% if include.shorts %} youtube-shorts{% endif %}">
+  <iframe class="youtube-embed" 
+          src="https://www.youtube.com/embed/{{ include.id }}{% if include.start %}?start={{ include.start }}{% endif %}" 
+          frameborder="0" 
+          scrolling="no" 
+          allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>
+</div>

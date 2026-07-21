@@ -1,0 +1,12 @@
+{%- assign target_title = include.t -%}{%- assign display_text = include.text | default: target_title -%}{%- assign found_doc = site.posts | where: "title", target_title | first -%}{%- if found_doc == nil -%}{%- assign found_doc = site.pages | where: "title", target_title | first -%}{%- endif -%}{%- assign current_category = page.categories | first | default: nil -%}{%- assign current_url = page.url -%}
+{%- if found_doc -%}
+{%- assign doc_url = found_doc.url -%}<a href="{{ doc_url | prepend: site.baseurl }}" class="wiki-link">{{ display_text }}</a>
+{%- elsif current_category -%}
+{%- assign parts = current_url | split: '/' -%}
+{%- assign last_segment = parts | last -%}
+{%- assign mock_url = current_url | replace: last_segment, target_title -%}
+<a href="{{ mock_url | prepend: site.baseurl }}" class="wiki-link-broken" title="{% t layout.nullpost %} ({{ target_title }})">{{ display_text }}</a>
+{%- else -%}
+{%- assign mock_url = current_url | append: target_title -%}
+<a href="{{ mock_url | prepend: site.baseurl }}" class="wiki-link-broken" title="{% t layout.nullpost %} ({{ target_title }})">{{ display_text }}</a>
+{%- endif -%}

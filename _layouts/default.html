@@ -6,15 +6,24 @@
 {% endcase %}
 
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ page.lang | default: site.lang | default: "ko" }}">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Portalife">
+    <meta name="description" content="{% t meta.description %}">
+    <meta property="og:description" content="{% t sidebar.description %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css">
-
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
+    {% seo %}
+    <link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+      onerror="this.onerror=null;this.href='https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css';">
+    <link rel="stylesheet" as="style" crossorigin 
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-jp-dynamic-subset.min.css"
+      onerror="this.onerror=null;this.href='https://cdnjs.cloudflare.com/ajax/libs/pretendard-jp/1.3.9/variable/pretendardvariable-jp-dynamic-subset.min.css';">
+    <link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/npm/@fontsource-variable/noto-sans-sc@5.2.10/index.min.css">
+      <link rel="stylesheet" href="{{ "/assets/css/colors-ColorScheme.css?v=" | replace: "ColorScheme", ColorScheme | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
 
     <link rel="preload" href="{{site.logo | relative_url}}" as="image">
@@ -24,12 +33,71 @@
     <![endif]-->
     {% include head-custom.html %}
   </head>
-  <body>
-      <a href="{{ '/' | relative_url }}" rel="home">
-        <p style="text-align: center;">
-           <img class="fit-picture" src="/assets/img/portalifeipa_logo3.png" alt="Thumbnail" style="height: 150px; width: auto;">
-        </p>
-      </a>
+  <body class="lang-{{ site.lang }}">    
+    <div class="header-container">
+
+      <div class="header-side-left"></div>
+      
+      <div class="header-logo-area">
+        <a href="{{ site.baseurl }}/" rel="home">
+          {% assign url = page.url | downcase %}
+          {% assign parts = url | split: '/' %}
+
+          {% assign logo_key = nil %}
+          {% for p in parts %}
+            {% if p == "categories" %}
+              {% assign idx = forloop.index %}
+              {% assign logo_key = parts[idx] %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if logo_key %}
+            <img class="header-logo" src="/assets/img/{{ logo_key }}.png" alt="Logo">
+          {% else %}
+            <img class="header-logo" src="/assets/img/default.png" alt="Logo">
+          {% endif %}
+        </a>
+      </div>
+      
+      <div class="header-side-right">
+        {% if site.lang == "ko" %}
+          {% capture link1 %}{{ site.baseurl_root }}/ja{{ page.url }}{% endcapture %}
+          <a href="{{ link1 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ko">{% t global.japanese %}</a>
+        {% elsif site.lang == "ja" %}
+          {% capture link2 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+          <a href="{{ link2 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ja">{% t global.korean %}</a>
+        {% endif %}
+          <div class="lang-setting-wrapper" style="position: relative; display: inline-block;">
+
+            <button id="redirect-setting-btn" style="background:none; border:none; cursor:pointer; font-size:14px; color:gray;" title="리다이렉트 설정">︙</button>
+
+            <div id="redirect-popup" class="setting-popup">
+              <div class="popup-header">
+                  <span class="popup-title">
+                    {% t sidebar.change %}
+                    
+                    <div class="info-wrapper">
+                      <span class="info-icon">i</span>
+                      <span class="info-tooltip" style="display:inline-block; width: {% t sidebar.change_wid %};">
+                        {% t sidebar.change_desc %}
+                      </span>
+                    </div>
+                    
+                  </span>
+                  <span class="close-popup" id="close-popup">&times;</span>
+                </div>
+              <div class="toggle-container">
+                <label class="switch">
+                  <input type="checkbox" id="redirect-toggle">
+                  <span class="slider round"></span>
+                </label>
+                <span id="toggle-status">ON</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
     <div class="wrapper">
       <div class="sidebar">
         <header>
@@ -37,32 +105,38 @@
             <img class="img-circle" src="{{site.logo | relative_url}}" alt="Logo">
           {% endif %}
 
-          {% if site.blank_title %}
-            <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          {% else %}
-            <h1 style="color:#7ED8E9;">{{ site.title | default: site.github.repository_name }}</h1>
-          {% endif %}
+          <h1 class="h1-ipa" aria-label="portalife" style="color:#7ED8E9;">
+            {% if site.logo_text %}
+              {{ site.logo_text }}
+            {% else %}
+              {{ site.title }}
+            {% endif %}
+          </h1>          
 
           {% if site.email %}
             <p class="addr"><i class="fa-regular fa-envelope"></i>&nbsp;{{ site.email }}</p>
           {% endif %}
 
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <p>{% t sidebar.description %}</p>
 
           {% include sidebar.html %}
           <div class="category" style="padding:0px 0px 10px 0px">
-            <div id="cate0-1" class="cate"><span style="cursor:pointer; color: green">|</span><a href="{{ '/categories/미시경제/' | relative_url }}" style="color: black"> 미시경제 (4)</a><br></div>
-            <div id="cate0-2" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/거시경제/' | relative_url }}" style="color: black"> 거시경제 (0)</a><br></div>
-            <div id="cate0-3" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/동태경제/' | relative_url }}" style="color: black"> 동태경제 (0)</a><br></div>
-            <div id="cate0-4" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/계량경제/' | relative_url }}" style="color: black"> 계량경제 (0)</a><br></div>
-            <hr>
-            <div id="cate0-5" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/화폐금융론/' | relative_url }}" style="color: black"> 화폐금융론 (0)</a><br></div>
-            <div id="cate0-6" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/국제무역론/' | relative_url }}" style="color: black"> 국제무역론 (0)</a><br></div>
-            <hr>
-            <div id="cate0-7" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/선형대수/' | relative_url }}" style="color: black"> 선형대수 (0)</a><br></div>
-            <div id="cate0-8" class="cate"><span style="cursor:pointer; color: red">|</span><a href="{{ '/categories/경제수학/' | relative_url }}" style="color: black"> 경제수학 (0)</a><br></div>
+            <div id="cate1-0" class="cate"><span style="cursor:pointer; color: rgb(255, 166, 0)">■</span><a href="{{ '/categories/phonology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonology %}<sup>&thinsp;Ph</sup> ({{ site.categories["phonology"] | size }})</a><br></div>
+            <div id="cate2-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/phonetics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonetics %}<sup>&thinsp;Pt</sup> ({{ site.categories["phonetics"] | size }})</a><br></div>
+            <div id="cate3-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/morphology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.morphology %}<sup>&thinsp;Mp</sup> ({{ site.categories["morphology"] | size }})</a><br></div>
+            <div id="cate4-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/semantics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.semantics %}<sup>&thinsp;Sm</sup> ({{ site.categories["semantics"] | size }})</a><br></div>
+            
+            <div id="cate5-0" class="cate"><a href="{{ '/categories/explanation/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.explanation %}<sup>&thinsp;Ex</sup> ({{ site.categories["explanation"] | size }})</a><br></div>
+            <div id="cate5-0" class="cate"><a href="{{ '/categories/portalife_lab/' | prepend: site.baseurl }}" style="color: black"> Portalife Lab<sup>&thinsp;Pl</sup> ({{ site.categories["portalife_lab"] | size }})</a><br></div>
+            <div id="cate6-0" class="cate"><a href="{{ '/categories/translate/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.translate %}<sup>&thinsp;Tr</sup> ({{ site.categories["translate"] | size }})</a><br></div>
+            <div id="cate7-0" class="cate"><a href="{{ '/categories/etc/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.etc %}<sup>&thinsp;etc</sup> ({{ site.categories["etc"] | size }})</a><br></div>
+            <div class="cate-child-group">
+              <div id="cate7-1" class="cate child"><a href="{{ '/categories/etc/original/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.original %}<sup>&thinsp;Original</sup> ({{ site.categories["original"] | size }})</a><br></div>
+              <div id="cate7-2" class="cate child"><a href="{{ '/categories/etc/derivatives/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.derivatives %}<sup>&thinsp;Dw</sup> ({{ site.categories["derivatives"] | size }})</a><br></div>
+              <div id="cate7-3" class="cate child"><a href="{{ '/categories/etc/misc/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.misc %}<sup>&thinsp;Misc</sup> ({{ site.categories["misc"] | size }})</a><br></div>
+            </div>
+            <div id="cate8-0" class="cate" style="margin-top: 0.5rem"><a href="{{ '/categories/tags/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.tags %}<sup>&thinsp;Tags</sup></a><br></div>
           </div>
-         {% include links-mobile.html %}
         
         <div class="sidebar-footer">
           {%- include footer.html -%}
@@ -70,15 +144,19 @@
         </header>
  
       </div>
-      <section>
+      <section class="layout-{{ page.layout }}">
 
       {{ content }}
 
       </section>
       <footer>
         {%- include footer.html -%}
+        {% include links-mobile.html %}
       </footer>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  <script>
+    renderMathInElement(document.body);
+  </script>
   </body>
 </html>

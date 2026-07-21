@@ -1,0 +1,117 @@
+{% comment %}
+to use:
+{% include postlist.html %}
+or
+{% include postlist.html category="tech" limit=6 %}
+
+우선순위
+1 include로 넘긴 category
+2 page.categories의 첫 번째
+3 URL에서 /categories/다음 세그먼트
+{% endcomment %}
+
+{% assign limit = include.limit | default: 20 %}
+
+{% assign cat = include.category %}
+{% if cat == nil %}
+  {% if page.categories and page.categories.size > 0 %}
+    {% assign cat = page.categories[0] %}
+  {% endif %}
+{% endif %}
+
+{% if cat == nil %}
+  {% assign parts = page.url | split: '/' %}
+  {% for p in parts %}
+    {% if p == "categories" %}
+      {% assign idx = forloop.index %}
+      {% assign cat = parts[idx] %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if cat %}
+{% assign raw_posts = site.categories[cat] %}
+{% if raw_posts and raw_posts.size > 0 %}
+
+{% assign posts = raw_posts | sort: "order" | reverse | sort: "date" | reverse %}
+<div class="postlist">
+  <div class="postlist-title">
+    {% t sidebar.{{ cat }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
+  </div><br>
+  <div class="postlist-table">
+    {% for post in posts %}
+
+    <div class="postlist-row" {% if forloop.index > limit %}style="display: none;"{% endif %}>
+      <div class="postlist-title-cell">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}{% if post.author %} - {{ post.author }}{% endif %}</a>
+      </div>
+      <div class="postlist-date-cell">
+        {{ post.date | date: "%Y.%m.%d" }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+  {% if posts.size > limit %}
+  <br>
+  <div class="postlist-more-btn-wrapper">
+
+    <button class="postlist-more-btn-minimal" onclick="showMorePosts(this)">
+      {% t layout.more %}
+    </button>
+  </div>
+  {% endif %}
+</div>
+{% else %}
+<div class="postlist">
+  <div class="postlist-empty">{% t layout.empty %}</div>
+</div>
+{% endif %}
+{% else %}
+{%- comment -%}카테고리 변수 자체가 없을 때{%- endcomment -%}
+{% endif %}
+
+<script>
+if (typeof showMorePosts !== 'function') {
+  function showMorePosts(button) {
+    const postlist = button.closest('.postlist');
+    const postlistTable = postlist.querySelector('.postlist-table');
+    const rows = postlistTable.querySelectorAll('.postlist-row');
+    const limit = {{ limit }};
+    
+    let shownCount = 0;
+    let newlyShownRows = [];
+    
+    for (let row of rows) {
+      if (row.style.display === 'none') {
+        row.style.display = '';
+        
+        row.style.pointerEvents = 'none'; 
+        newlyShownRows.push(row);
+        
+        shownCount++;
+        if (shownCount >= limit) break;
+      }
+    }
+    
+    setTimeout(() => {
+      for (let row of newlyShownRows) {
+        row.style.pointerEvents = '';
+      }
+    }, 850);
+    
+    let remainingHidden = 0;
+    for (let row of rows) {
+      if (row.style.display === 'none') {
+        remainingHidden++;
+      }
+    }
+    
+    if (remainingHidden === 0) {
+      button.closest('.postlist-more-btn-wrapper').style.display = 'none';
+    }
+  }
+}
+</script>

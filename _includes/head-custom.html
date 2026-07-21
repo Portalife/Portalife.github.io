@@ -1,3 +1,27 @@
+<script>
+  (function() {
+    // 수동으로 끄면 현재 페이지 유지
+    if (localStorage.getItem('lang_selected') === 'true') return;
+
+    // 브라우저 언어 확인
+    var userLang = navigator.language || navigator.userLanguage;
+    var isJaBrowser = userLang.toLowerCase().indexOf('ja') !== -1;
+    var isJaPage = window.location.pathname.startsWith('/ja/');
+
+    // 리다이렉트 처리
+    if (isJaBrowser && !isJaPage) {
+      // 내 언어가 일본어인데 한국어 페이지에 있다면 -> 일본어로 보냄
+      window.location.href = '/ja' + window.location.pathname;
+    } 
+    else if (!isJaBrowser && isJaPage) {
+      // 내 언어가 한국어인데 일본어 페이지에 있다면 -> 한국어로 보냄
+      var newPath = window.location.pathname.replace(/^\/ja/, '');
+      if (newPath === '') newPath = '/'; // 주소가 완전히 비어버리면 메인으로
+      window.location.href = newPath;
+    }
+  })();
+</script>
+
 <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 
@@ -13,7 +37,29 @@
   <meta name="theme-color" content="#ffffff">
 {% endif %}
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.css" integrity="sha384-xo3oXcu2FwjgZEcZnpFAF2BUCgyAPNcn8CwwPnaN0ajcbe0WxSoeKnFeeAfQnIZD" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.js" integrity="sha384-ZQXoYllNtmeIZKmaU4jDNeTAe8gbbfWsxATRIwJ6zFmlwUpNHuZn8Hsqf8QCa647" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" integrity="sha384-vlBdW0r3AcZO/HboRPznQNowvexd3fY8qHOWkBi5q7KGgqJ+F48+DceybYmrVbmB" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.js" integrity="sha384-AtrdNsnxl/75rvBneBVH7DtOvCxSVahR2zWqle1coBKd8DEmLoviqNeJSx64gNAs" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
 
 <!-- end custom head snippets -->

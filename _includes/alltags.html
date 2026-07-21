@@ -1,0 +1,84 @@
+{% comment %}
+to use:
+{% include alltags.html %}
+{% endcomment %}
+
+<style type="text/css">
+.tag-archive-container {
+  --theme-main: #aad0ff;  
+  --theme-light: #004e75;  
+  --theme-dark: #fff;  
+  --theme-title: #1e293b;
+  margin: 2rem 0 0 0;
+}
+
+.tag-cloud a {
+  padding: 5px 12px;
+  background-color: var(--theme-light);
+  border-radius: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--theme-dark);
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  margin: 0 0 0.3rem 0;
+}
+.tag-cloud a:hover {
+  opacity: 0.82;
+}
+
+.postlist-title {
+  border-bottom: 1px solid var(--theme-main); 
+  padding-bottom: 8px;
+  color: var(--theme-title); 
+}
+</style>
+
+{% assign sorted_tags = site.tags | sort %}
+
+<div class="tag-archive-container">
+
+  <div class="tag-cloud" style="line-height: 2.0; margin-bottom: 2rem;">
+    {% for tag_item in sorted_tags %}
+      {% assign tag_name = tag_item[0] %}
+      {% assign posts = tag_item[1] %}
+      <a href="#{{ tag_name | slugify }}">
+        #{% t tags.{{ tag_name }} %} ({{ posts.size }})
+      </a>
+    {% endfor %}
+  </div>
+
+  <hr class="tag-archive-hr">
+
+  <div class="tag-sections">
+    {% for tag_item in sorted_tags %}
+      {% assign tag_name = tag_item[0] %}
+      {% assign posts = tag_item[1] | sort: "order" | reverse | sort: "date" | reverse %}
+      
+      <div class="postlist" id="{{ tag_name | slugify }}" style="margin-bottom: 3rem; scroll-margin-top: 2rem;">
+        <div class="postlist-title">
+          {% capture tag_url %}/tags/{{ tag_name }}/{% endcapture %}
+          <h3 style="margin: 0 0 0.5rem 0">
+            <a href="{{ tag_url | prepend: site.baseurl }}">
+              {% t tags.{{ tag_name }} %} ({{ posts.size }})
+            </a>
+          </h3>
+        </div><br>
+        <div class="postlist-table">
+          {% for post in posts %}
+          <div class="postlist-row">
+            <div class="postlist-title-cell">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </div>
+            <div class="postlist-date-cell">
+              {{ post.date | date: "%Y.%m.%d" }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>

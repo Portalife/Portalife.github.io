@@ -20,3 +20,5 @@ gem "jemoji"
 gem "kramdown-parser-gfm"
 
 gem 'wdm', '>= 0.1.0', :platforms => [:windows]
+
+gem 'jekyll-multiple-languages-plugin'

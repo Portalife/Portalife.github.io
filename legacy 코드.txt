@@ -1,0 +1,155 @@
+default 로고 구역  
+      <a href="{{ site.baseurl }}/" rel="home">
+          {% assign url = page.url | downcase %}
+          {% assign parts = url | split: '/' %}
+
+          {% assign logo_key = nil %}
+          {% for p in parts %}
+            {% if p == "categories" %}
+              {% assign idx = forloop.index %}
+              {% assign logo_key = parts[idx] %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if logo_key %}
+            <img src="/assets/img/{{ logo_key }}.png" alt="Logo" style="max-height: 150px; max-width: 100%; height: auto; width: auto; display: inline-block;">
+          {% else %}
+            <img src="/assets/img/default.png" alt="Logo" style="max-height: 150px; max-width: 100%; height: auto; width: auto; display: inline-block;">
+          {% endif %}
+        </a>
+
+
+
+
+
+default 상단 구역
+
+
+
+    <div style="max-width: 1100px; margin: 0 auto; display: flex; align-items: center; padding: 20px 0;">
+      <div style="width: 195px;"></div>
+      <div style="flex: 1; text-align: center;">
+        <a href="{{ site.baseurl }}/" rel="home">
+          {% assign url = page.url | downcase %}
+          {% assign parts = url | split: '/' %}
+
+          {% assign logo_key = nil %}
+          {% for p in parts %}
+            {% if p == "categories" %}
+              {% assign idx = forloop.index %}
+              {% assign logo_key = parts[idx] %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if logo_key %}
+            <img class="header-logo" src="/assets/img/{{ logo_key }}.png" alt="Logo">
+          {% else %}
+            <img class="header-logo" src="/assets/img/default.png" alt="Logo">
+          {% endif %}
+        </a>
+      </div>
+      <div style="width: 195px; text-align: center;">
+        {% if site.lang == "ko" %}
+          {% capture link1 %}{{ site.baseurl_root }}/ja{{ page.url }}{% endcapture %}
+          <a href="{{ link1 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ko">{% t global.japanese %}</a>
+        {% elsif site.lang == "ja" %}
+          {% capture link2 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+          <a href="{{ link2 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ja">{% t global.korean %}</a>
+        {% endif %}
+          <div class="lang-setting-wrapper" style="position: relative; display: inline-block;">
+
+            <button id="redirect-setting-btn" style="background:none; border:none; cursor:pointer; font-size:14px; color:gray;" title="리다이렉트 설정">︙</button>
+
+            <div id="redirect-popup" class="setting-popup">
+              <div class="popup-header">
+                  <span class="popup-title">
+                    {% t sidebar.change %}
+                    
+                    <!-- i 아이콘과 툴팁(말풍선) 영역 -->
+                    <div class="info-wrapper">
+                      <span class="info-icon">i</span>
+                      <span class="info-tooltip" style="display:inline-block; width: {% t sidebar.change_wid %};">
+                        {% t sidebar.change_desc %}
+                      </span>
+                    </div>
+                    
+                  </span>
+                  <span class="close-popup" id="close-popup">&times;</span>
+                </div>
+              <div class="toggle-container">
+                <label class="switch">
+                  <input type="checkbox" id="redirect-toggle">
+                  <span class="slider round"></span>
+                </label>
+                <span id="toggle-status">ON</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+postlist.html 기존 코드
+
+{% comment %}
+to use:
+{% include postlist.html %}
+or
+{% include postlist.html category="tech" limit=6 %}
+
+우선순위
+1 include로 넘긴 category
+2 page.categories의 첫 번째
+3 URL에서 /categories/다음 세그먼트
+{% endcomment %}
+
+{% assign limit = include.limit | default: 20 %}
+
+{% assign cat = include.category %}
+{% if cat == nil %}
+  {% if page.categories and page.categories.size > 0 %}
+    {% assign cat = page.categories[0] %}
+  {% endif %}
+{% endif %}
+
+{% if cat == nil %}
+  {% assign parts = page.url | split: '/' %}
+  {% for p in parts %}
+    {% if p == "categories" %}
+      {% assign idx = forloop.index %}
+      {% assign cat = parts[idx] %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if cat %}
+{% assign raw_posts = site.categories[cat] %}
+{% if raw_posts and raw_posts.size > 0 %}
+{% assign posts = raw_posts | sort: "order" | reverse | sort: "date" | reverse | slice: 0, limit %}
+<div class="postlist">
+  <div class="postlist-title">
+    {% t sidebar.{{ cat }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
+  </div><br>
+  <div class="postlist-table">
+    {% for post in posts %}
+    <div class="postlist-row">
+      <div class="postlist-title-cell">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </div>
+      <div class="postlist-date-cell">
+        {{ post.date | date: "%Y.%m.%d" }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% else %}
+<div class="postlist">
+  <div class="postlist-empty">{% t layout.empty %}</div>
+</div>
+{% endif %}
+{% else %}
+{%- comment -%}카테고리 변수 자체가 없을 때{%- endcomment -%}
+{% endif %}

@@ -1,10 +1,79 @@
-<p><small><a href="https://example.com">All posts</a> © 2026 by Portalife is licensed
-        under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img
-            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+<p style="line-height: normal;"><small>© 2026 Portalife.<br>
+        {% t copyrights.allworks %} <a href="{% t copyrights.cclink %}" target="_blank">CC BY-NC-ND 4.0</a><br>{%
+        t copyrights.license %}<br>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+            style="max-width: 1em;max-height:1em;margin-left: .2em;margin-top: .6em;"><img
             src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+            style="max-width: 1em;max-height:1em;margin-left: .2em;margin-top: .6em;"><img
             src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"><img
+            style="max-width: 1em;max-height:1em;margin-left: .2em;margin-top: .6em;"><img
             src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt=""
-            style="max-width: 1em;max-height:1em;margin-left: .2em;"></small></p>
+            style="max-width: 1em;max-height:1em;margin-left: .2em;margin-top: .6em;"></small></p>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const popup = document.getElementById("redirect-popup");
+        const btn = document.getElementById("redirect-setting-btn");
+        const closeBtn = document.getElementById("close-popup");
+        const toggle = document.getElementById("redirect-toggle");
+        const statusText = document.getElementById("toggle-status");
+
+        // 1. 상태 동기화 함수
+        function syncStatus() {
+            const isDisabled = localStorage.getItem('lang_selected') === 'true';
+            if (toggle) toggle.checked = !isDisabled;
+            if (statusText) statusText.innerText = isDisabled ? "OFF" : "ON";
+                            statusText.style.color = isDisabled ? "" : "#32a0b6"; 
+                            statusText.style.fontWeight = isDisabled ? "normal" : "normal";
+        }
+
+        const langLinks = document.querySelectorAll('.lang-change-btn'); 
+        
+        langLinks.forEach(function(link) {
+            link.addEventListener('click', function() { 
+                localStorage.setItem('lang_selected', 'true');
+                console.log("수동 언어 변경 감지: 자동 리다이렉트 종료");
+            });
+        });
+
+        // 3. 토글 직접 조작
+        if (toggle) {
+            toggle.addEventListener('change', function() {
+                if (this.checked) {
+                    localStorage.removeItem('lang_selected');
+                    statusText.innerText = "ON";
+                    statusText.style.color = "#32a0b6"; 
+                    statusText.style.fontWeight = "normal"; 
+                } else {
+                    localStorage.setItem('lang_selected', 'true');
+                    statusText.innerText = "OFF";
+                    statusText.style.color = "";
+                    statusText.style.fontWeight = "normal";
+                }
+            });
+        }
+
+        // 4. 팝업 UI 조작
+        if (btn) {
+            btn.onclick = function(e) {
+                e.stopPropagation();
+                syncStatus();
+                popup.style.display = (popup.style.display === "block") ? "none" : "block";
+            };
+        }
+
+        if (closeBtn) {
+            closeBtn.onclick = function() {
+                popup.style.display = "none";
+            };
+        }
+
+        document.addEventListener('click', function(e) {
+            if (popup && popup.style.display === "block" && !popup.contains(e.target) && e.target !== btn) {
+                popup.style.display = "none";
+            }
+        });
+
+        syncStatus(); // 시작하자마자 상태 확인
+    });
+</script>

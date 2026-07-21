@@ -1,0 +1,76 @@
+global:
+  korean: 한국어
+  japanese: 日本語
+meta:
+  description: 言語学・音韻論・音声学
+sidebar:
+  change: 言語の自動切り替え
+  change_desc: ブラウザの言語がアクセスしたページの言語と異なる場合、常に該当言語のページへ自動的に切り替わります。<br>初期設定はONです。手動で言語を変更した場合、この機能は自動的に無効になります。
+  description: 言語学を扱います。<br>扱わない時もあります。
+  phonology: 音韻論
+  phonetics: 音声学
+  morphology: 形態論
+  semantics: 意味論
+  compare: 比較言語学
+  column: コラム
+  journal: Portalife誌
+  explanation: 解説
+  portalife_lab: Portalife Lab
+  translate: 翻訳
+  etc: その他
+  original: 創作
+  derivatives: 二次創作
+  misc: 雑記
+  change_wid: 285px
+  tags: タグ
+layout:
+  at: に
+  exist: '記事がありますよ！'
+  number: 件の
+  empty: どうやらまだ何にもないみたいです。。。こんなのブログって言えるのかよ
+  more: もっと見る
+  working: 工事中です。
+  nullpost: 存在しないページです。
+  nullpostnotice: 存在しないページです。でも、それだけじゃ寂しいから風景動画でもどうぞ。
+  year: 年
+  month: 月
+  day: 日
+copyrights:
+  allworks: すべての投稿は
+  license: ライセンスの下でご利用いただけます。
+  cclink: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja
+  
+translation:
+  basic: 基本情報
+  vocal: 歌
+  composer: 作曲
+  lyricist: 作詞
+  mixer: ミックス
+  date: 発売日
+  upload: 投稿日
+  album: 収録
+  legend: 凡例
+  original: 原語
+  hangul: 発音（ハングル略式）
+  ipa: 発音（IPA精密）
+  translation: 翻訳
+  lyric: 歌詞
+  illust: イラスト
+  movie: 映像
+tags:
+  column: コラム
+  dameinu: だめいぬ♡いんだ♡だっこ
+  korean: 韓国語
+  linguistics: 言語学
+  literature: 文学
+  math: 数学
+  misc: 雑記
+  momonechinoi: 桃寝ちのい
+  phonology: 音韻論
+  poetry: 詩
+  research: 研究
+  translation: 一般翻訳
+  wotaku: wotaku
+  tragoidia: トラゴイディア
+  denkiqujira: 電ǂ鯨
+  inoutuhasa: いのうつはSA

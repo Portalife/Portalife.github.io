@@ -1,0 +1,104 @@
+---
+layout: post
+title: "존재하지 않는 문서"
+permalink: /404.html
+---
+<style>
+  .lang-setting-wrapper,
+  .lang-change-btn-ko,
+  .lang-change-btn-ja {
+    display: none !important;
+  }
+</style>
+
+<script>
+
+(function() {
+
+    if (window.__404_replaced__) {
+        return;
+    }
+
+
+
+    const veryPath = window.location.pathname.includes('404.html') ? window.location.hash : window.location.pathname;
+    const path = decodeURIComponent(veryPath);
+
+    console.log("현재 감지된 경로:", path);
+
+    const isAsset = /\.(png|jpe?g|gif|css|js|json|svg|ico)$/i.test(path);
+
+    if (!isAsset && path !== '/' && path !== '') {
+        const parts = path.split('/').filter(Boolean);
+        const docSlug = parts[parts.length - 1];
+
+        console.log("추출된 슬러그:", docSlug);
+
+        const h2Title = document.querySelector('h2');
+        if (h2Title) {
+            h2Title.textContent = docSlug;
+        }
+    
+
+
+        if (path.includes('/ja/') && !path.includes('404.html')) {
+            
+
+            window.__404_replaced__ = true;
+
+            const jaIndex = path.indexOf('/ja/');
+            const basePath = path.substring(0, jaIndex);
+            const targetJa404 = basePath + '/ja/404.html';
+
+            console.log("일본어 404 페이지를 가져옵니다:", targetJa404);
+
+            fetch(targetJa404)
+                .then(response => {
+                    if (response.ok) return response.text();
+                    throw new Error('일본어 404 페이지를 불러오지 못했습니다.');
+                })
+                .then(html => {
+                    document.open();
+                    document.write(html);
+                    document.close();
+                    const observer = new MutationObserver((mutations, obs) => {
+                        const newH2Title = document.querySelector('h2');
+
+                        if (newH2Title) {
+                            newH2Title.textContent = docSlug;
+                            obs.disconnect(); 
+                        }
+                    });
+
+                    observer.observe(document, {
+                        childList: true,
+                        subtree: true
+                    });
+                })
+
+                .catch(err => {
+                    console.error("다국어 404 로딩 오류:", err);
+                    window.__404_replaced__ = false;
+                });
+        }
+    }
+    else if (window.location.pathname.includes('/ja/') && window.location.pathname.includes('404.html')) {
+
+        const h2Title = document.querySelector('h2');
+        if (h2Title) {
+            h2Title.textContent = "存在しないページ"; 
+        }
+        document.title = "存在しないページ";
+    }
+})();
+</script>
+
+<hr>
+
+<div>
+    <p class="nullpostnotice">{% t layout.nullpostnotice %}</p>
+</div>
+
+<video autoplay loop muted playsinline style="max-width: 90%; height: auto; border-radius: 15px;">
+    <source src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1784397493/20260626_083731_eo9qzm.mp4" type="video/mp4">
+</video>

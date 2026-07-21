@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<small>{{ page.date | date: "%-d %B %Y" }}</small>
+<h2 style="margin-top: 5px;">{{ page.title }}</h2>
+<hr>
+
+{{content}}
+
+{% if page.tags and page.tags.size > 0 %}
+  <!-- 컨테이너 전체에 post-tags-container 클래스를 부여합니다 -->
+  <small>tags: 
+    {% for tag in page.tags %}
+      {% capture tag_url %}/tags/{{ tag }}/{% endcapture %}
+      <em>
+        <!-- 개별 태그 링크에 post-tag-link 클래스를 부여합니다 -->
+        <a class="post-tag-link" href="{{ tag_url | prepend: site.baseurl }}">
+          {% t tags.{{ tag }} %}
+        </a>
+      </em>{% unless forloop.last %} - {% endunless %}
+    {% endfor %}
+  </small>
+{% endif %}

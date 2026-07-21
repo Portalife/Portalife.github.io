@@ -1,0 +1,75 @@
+global:
+  korean: 한국어
+  japanese: 日本語
+meta:
+  description: 언어학/음운론/음성학
+sidebar:
+  change: 언어자동전환
+  change_desc: 브라우저 언어가 현 페이지의 언어와 다를 경우 <br>항상 해당 언어의 페이지로 이동합니다.<br>디폴트값은 ON입니다. 수동으로 언어를 선택하는 경우 이 기능은 자동으로 해제됩니다.
+  description: 언어학을 다룹니다.<br>안 다룰 때도 있습니다.
+  phonology: 음운론
+  phonetics: 음성학
+  morphology: 형태론
+  semantics: 의미론
+  compare: 비교언어학
+  column: 칼럼
+  journal: Portalife 타임즈
+  explanation: 해설
+  portalife_lab: Portalife Lab
+  translate: 번역
+  etc: 기타
+  original: 창작
+  derivatives: 2차창작
+  misc: 잡글
+  change_wid: 240px
+  tags: 태그
+layout:
+  at: '에 '
+  exist: '글이 있어요!'
+  number: '개의 '
+  empty: 아무래도 아직 아무것도 없는 것 같습니다... 이딴 게 블로그?
+  more: 더 보기
+  working: 공사중입니다.
+  nullpost: 존재하지 않는 페이지입니다.&nbsp;
+  nullpostnotice: 존재하지 않는 페이지입니다. 하지만 아쉬우니까 풍경 영상이라도 드릴게요.
+  year: 년&nbsp;
+  month: 월&nbsp;
+  day: 일&nbsp;
+copyrights:
+  allworks: 모든 포스트는
+  license: 라이선스 하에 이용 가능합니다.
+  cclink: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko
+translation:
+  basic: 기본정보
+  vocal: 노래
+  composer: 작곡
+  lyricist: 작사
+  mixer: 믹싱
+  date: 발매일
+  upload: 투고일
+  album: 수록
+  legend: 일러두기
+  original: 원어
+  hangul: 발음 (한글 약식표기)
+  ipa: 발음 (IPA 정밀전사)
+  translation: 번역
+  lyric: 가사
+  illust: 일러스트
+  movie: 영상
+tags:
+  column: 칼럼
+  dameinu: だめいぬ♡いんだ♡だっこ
+  korean: 한국어
+  linguistics: 언어학
+  literature: 문학
+  math: 수학
+  misc: 잡글
+  momonechinoi: 모모네 치노이
+  phonology: 음운론
+  poetry: 시
+  research: 연구
+  translation: 일반번역
+  wotaku: wotaku
+  tragoidia: トラゴイディア
+  denkiqujira: 전기고래
+  inoutuhasa: 이노우츠하SA
