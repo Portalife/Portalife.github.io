@@ -23,6 +23,7 @@ sidebar:
   misc: 雑記
   change_wid: 285px
   tags: タグ
+  all: このブログ
 layout:
   at: に
   exist: '記事がありますよ！'
@@ -57,6 +58,7 @@ translation:
   lyric: 歌詞
   illust: イラスト
   movie: 映像
+  chorus: コーラス
 tags:
   column: コラム
   dameinu: だめいぬ♡いんだ♡だっこ
@@ -74,3 +76,4 @@ tags:
   tragoidia: トラゴイディア
   denkiqujira: 電ǂ鯨
   inoutuhasa: いのうつはSA
+  yoruriri: よるりり〔深夜盤〕

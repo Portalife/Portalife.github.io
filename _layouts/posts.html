@@ -2,7 +2,14 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
+<small>
+  {% if page.pre %}
+    <a href="{{ '/categories/etc/misc/abouttranslate/' | prepend: site.baseurl }}" style="text-decoration: none;">
+      <span class="preposted" style="cursor:pointer; color: #00a495;">■</span>
+    </a>
+  {% endif %}
+  {{ page.date | date: "%-d %B %Y" }}
+</small>
 <h2 style="margin-top: 5px;">{{ page.title }}</h2>
 <hr>
 

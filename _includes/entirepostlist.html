@@ -1,44 +1,21 @@
 {% comment %}
 to use:
-{% include postlist.html %}
+{% include entirepostlist.html %}
 or
-{% include postlist.html category="tech" limit=6 %}
-
-우선순위
-1 include로 넘긴 category
-2 page.categories의 첫 번째
-3 URL에서 /categories/다음 세그먼트
+{% include enitrepostlist.html limit=6 %}
 {% endcomment %}
 
-{% assign limit = include.limit | default: 20 %}
+{% assign limit = include.limit | default: 10 %}
 
-{% assign cat = include.category %}
-{% if cat == nil %}
-  {% if page.categories and page.categories.size > 0 %}
-    {% assign cat = page.categories[0] %}
-  {% endif %}
-{% endif %}
+{% assign raw_posts = site.posts %}
 
-{% if cat == nil %}
-  {% assign parts = page.url | split: '/' %}
-  {% for p in parts %}
-    {% if p == "categories" %}
-      {% assign idx = forloop.index %}
-      {% assign cat = parts[idx] %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
-
-{% if cat %}
-{% assign raw_posts = site.categories[cat] %}
 {% if raw_posts and raw_posts.size > 0 %}
 
 {% assign posts = raw_posts | sort: "order" | reverse | sort: "date" | reverse %}
 
 <div class="postlist">
   <div class="postlist-title">
-    {% t sidebar.{{ cat }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
+    {% t sidebar.all %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
   </div><br>
   <div class="postlist-table">
     {% for post in posts %}
@@ -69,9 +46,6 @@ or
 <div class="postlist">
   <div class="postlist-empty">{% t layout.empty %}</div>
 </div>
-{% endif %}
-{% else %}
-{%- comment -%}카테고리 변수 자체가 없을 때{%- endcomment -%}
 {% endif %}
 
 <script>

@@ -23,6 +23,7 @@ sidebar:
   misc: 잡글
   change_wid: 240px
   tags: 태그
+  all: 이 블로그
 layout:
   at: '에 '
   exist: '글이 있어요!'
@@ -56,6 +57,7 @@ translation:
   lyric: 가사
   illust: 일러스트
   movie: 영상
+  chorus: 코러스
 tags:
   column: 칼럼
   dameinu: だめいぬ♡いんだ♡だっこ
@@ -73,3 +75,4 @@ tags:
   tragoidia: トラゴイディア
   denkiqujira: 전기고래
   inoutuhasa: 이노우츠하SA
+  yoruriri: 요루리리(심야판)
