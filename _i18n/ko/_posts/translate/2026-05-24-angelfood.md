@@ -479,10 +479,10 @@ tags: [translation, momonechinoi, dameinu]
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
-      <p>노래에서는 億(おく, 억)이라고 부르고 있지만, 공식 가사에는 100,000,000(억)이 아닌 10,000,000(천만)으로 표기되어 있다. 그러나 이것이 의도한 표기인지 단순 오기인지는 밝혀지지 않았다. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>노래에서는 億(おく, 억)이라고 부르고 있지만, 공식 가사에는 100,000,000(억)이 아닌 10,000,000(천만)으로 표기되어 있다. 그러나 이것이 의도한 표기인지 단순 오기인지는 밝혀지지 않았다.&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2">
-      <p>공식 음원에서는 もの라고 부른다. 의미상에 큰 차이는 없다. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>공식 음원에서는 もの라고 부른다. 의미상에 큰 차이는 없다.&nbsp;<a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>

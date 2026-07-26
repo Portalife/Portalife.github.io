@@ -303,7 +303,7 @@ tags: [translation, inoutuhasa]
   <div class="lyric-item"><p class="lyric-orig">赤色の靴を履いてる</p>
       <p class="lyric-hangul">아카이로노 쿠츠오 하이테이루</p>
       <p class="lyric-ipa">äkäiro̞no̞ kɯᵝt͡sɨo̞ häite̞iɾɯᵝ</p>
-      <p class="lyric-trans">빨간색 신발을 신고 있어</p></div>
+      <p class="lyric-trans">빨간색 신발을 신고 있는</p></div>
   <div class="lyric-item"><p class="lyric-orig">君に目を離せないことはそもそも</p>
       <p class="lyric-hangul">키미니 메오 하나세나이 코토와 소모소모</p>
       <p class="lyric-ipa">kʲimʲiɲi me̞o̞ hänäse̞näi ko̞to̞ɰä so̞mo̞so̞mo̞</p>
@@ -327,7 +327,7 @@ tags: [translation, inoutuhasa]
   <div class="lyric-item"><p class="lyric-orig">もうきっと君は見えないよね</p>
       <p class="lyric-hangul">모오 킷토 키미와 미에나이요네</p>
       <p class="lyric-ipa">mo̞ːkʲit̚to̞ kʲimʲiɰä mʲie̞näijo̞ne̞</p>
-      <p class="lyric-trans">이젠 분명 넌 볼 수 없겠지</p></div>
+      <p class="lyric-trans">이제 분명 넌 볼 수 없겠지</p></div>
   <div class="lyric-item"><p class="lyric-orig">間違い　探し　ばかり </p>
       <p class="lyric-hangul">마치가이 사가시 바카리</p>
       <p class="lyric-ipa">mät͡ɕiɡäi säɡäɕi bäkäɾʲi</p>
@@ -475,11 +475,11 @@ tags: [translation, inoutuhasa]
   <div class="lyric-item"><p class="lyric-orig">赤色の靴を履いてた</p>
       <p class="lyric-hangul">아카이로노 쿠츠오 하이테이타</p>
       <p class="lyric-ipa">äkäiro̞no̞ kɯᵝt͡sɨo̞ häite̞itä</p>
-      <p class="lyric-trans">빨간색 신발을 신었었어</p></div>
+      <p class="lyric-trans">빨간색 신발을 신고 있던</p></div>
   <div class="lyric-item"><p class="lyric-orig">君は今何をしてるのかもうわかんない！</p>
       <p class="lyric-hangul">키미와 이마 나니오 시테루노카 모오 와칸나이</p>
       <p class="lyric-ipa">kʲimʲiɰä imä näɲio̞ ɕite̞ɾɯᵝno̞kä mo̞ː ɰäkännäi</p>
-      <p class="lyric-trans">넌 지금 뭘 하고 있는지 이젠 알 수 없어!</p></div>
+      <p class="lyric-trans">너는 지금 뭘 하고 있는지 이젠 알 수 없어!</p></div>
   <div class="lyric-item"><p class="lyric-orig">見えなくなっても</p>
       <p class="lyric-hangul">미에나쿠나앗테모</p>
       <p class="lyric-ipa">mʲie̞näkɯᵝnäːt̚te̞mo̞</p>

@@ -1,0 +1,21 @@
+---
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  {% assign target_post = site.posts | where: "title", page.target | first %}
+  {% if target_post %}
+    {% assign source_title = page.title | url_encode %}
+    {% assign target_url = target_post.url | prepend: site.baseurl | append: "#from=" | append: source_title %}
+    <!-- 메타 태그 즉시 리다이렉트 -->
+    <meta http-equiv="refresh" content="0; url={{ target_url }}">
+    <!-- 히스토리를 덮어씌워 뒤로가기 버그를 막는 replace 사용 -->
+    <script>window.location.replace("{{ target_url }}");</script>
+    <link rel="canonical" href="{{ target_url }}">
+  {% endif %}
+</head>
+<body style="background-color: #ffffff; display: none;">
+  <!-- 디자인 및 레이아웃을 아예 로딩하지 않음 -->
+</body>
+</html>

@@ -10,18 +10,18 @@ layout: default
   {% endif %}
   {{ page.date | date: "%-d %B %Y" }}
 </small>
-<h2 style="margin-top: 5px;">{{ page.title }}</h2>
+<h2 style="margin-top: 5px; margin-right: 7px;">{{ page.title }}</h2>
 <hr>
 
 {{content}}
 
 {% if page.tags and page.tags.size > 0 %}
-  <!-- 컨테이너 전체에 post-tags-container 클래스를 부여합니다 -->
+  <!-- 컨테이너 전체에 post-tags-container 클래스 부여 -->
   <small>tags: 
     {% for tag in page.tags %}
       {% capture tag_url %}/tags/{{ tag }}/{% endcapture %}
       <em>
-        <!-- 개별 태그 링크에 post-tag-link 클래스를 부여합니다 -->
+        <!-- 개별 태그 링크에 post-tag-link 클래스 부여 -->
         <a class="post-tag-link" href="{{ tag_url | prepend: site.baseurl }}">
           {% t tags.{{ tag }} %}
         </a>
@@ -29,3 +29,76 @@ layout: default
     {% endfor %}
   </small>
 {% endif %}
+
+<script>
+(function() {
+  function showRedirectNotice() {
+    try {
+      const rawHash = window.location.hash;
+      if (!rawHash || !rawHash.includes("from=")) return;
+
+      const match = rawHash.match(/#from=(.+)/);
+      if (!match) return;
+
+      const fromTitle = decodeURIComponent(match[1].replace(/\+/g, ' '));
+
+      if (document.querySelector('.redirect-from-notice')) return;
+
+      const notice = document.createElement("div");
+      notice.className = "redirect-from-notice";
+      notice.style.cssText = `
+        padding: 2px 12px;
+        background-color: #f0f6ff;
+        border-radius: 4px;
+        font-size: 0.88rem;
+        color: #1e3a8a;
+        line-height: 1.4;
+        white-space: nowrap;
+      `;
+      notice.innerHTML = `리다이렉트됨: <strong>${fromTitle}</strong>에서 건너왔습니다.`;
+
+      const h2Tag = document.querySelector("h2");
+
+      if (h2Tag && h2Tag.parentNode) {
+        const h2Style = window.getComputedStyle(h2Tag);
+        const marginTop = h2Style.marginTop;
+        const marginBottom = h2Style.marginBottom;
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "redirect-h2-wrapper";
+        wrapper.style.cssText = `
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          flex-wrap: wrap;
+          margin-top: ${marginTop};
+          margin-bottom: ${marginBottom};
+        `;
+
+        h2Tag.style.marginTop = "0";
+        h2Tag.style.marginBottom = "0";
+
+        h2Tag.parentNode.insertBefore(wrapper, h2Tag);
+        wrapper.appendChild(h2Tag);
+        wrapper.appendChild(notice);
+
+      } else {
+        const postContainer = document.querySelector(".post-content") || 
+                              document.querySelector("article") || 
+                              document.body;
+        if (postContainer) {
+          postContainer.insertBefore(notice, postContainer.firstChild);
+        }
+      }
+    } catch (e) {
+      console.error("[Redirect Notice Error]", e);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", showRedirectNotice);
+  } else {
+    showRedirectNotice();
+  }
+})();
+</script>

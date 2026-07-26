@@ -31,7 +31,7 @@ or
 {% endif %}
 
 {% if cat %}
-{% assign raw_posts = site.categories[cat] %}
+{% assign raw_posts = site.categories[cat] | where_exp: "item", "item.re != true" %}
 {% if raw_posts and raw_posts.size > 0 %}
 
 {% assign posts = raw_posts | sort: "order" | reverse | sort: "date" | reverse %}

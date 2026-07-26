@@ -7,7 +7,7 @@ or
 
 {% assign limit = include.limit | default: 10 %}
 
-{% assign raw_posts = site.posts %}
+{% assign raw_posts = site.posts | where_exp: "item", "item.re != true" %}
 
 {% if raw_posts and raw_posts.size > 0 %}
 

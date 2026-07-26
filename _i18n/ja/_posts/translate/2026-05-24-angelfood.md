@@ -479,10 +479,10 @@ tags: [translation, momonechinoi, dameinu]
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
-      <p>歌唱では「億(おく)」と歌われているが、公式の歌詞には100,000,000(億)ではなく10,000,000(千万)と表記されている。しかし、これが意図的な表記なのか、それとも単なる誤記なのかは明らかにされていない。<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>歌唱では「億(おく)」と歌われているが、公式の歌詞には100,000,000(億)ではなく10,000,000(千万)と表記されている。しかし、これが意図的な表記なのか、それとも単なる誤記なのかは明らかにされていない。&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2">
-      <p>公式音源では「もの」と歌っている。<a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>公式音源では「もの」と歌っている。&nbsp;<a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>

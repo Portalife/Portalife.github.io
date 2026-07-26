@@ -8,6 +8,15 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "ko" }}">
   <head>
+    <meta property="og:site_name" content="portalife!" />
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "portalife!",
+      "url" : "https://portalife.github.io/"
+    }
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Portalife">
@@ -35,6 +44,7 @@
     <![endif]-->
     {% include head-custom.html %}
   </head>
+
   <body class="lang-{{ site.lang }}">    
     <div class="header-container">
 
@@ -123,19 +133,19 @@
 
           {% include sidebar.html %}
           <div class="category" style="padding:0px 0px 10px 0px">
-            <div id="cate1-0" class="cate"><span style="cursor:pointer; color: rgb(255, 166, 0)">■</span><a href="{{ '/categories/phonology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonology %}<sup>&thinsp;Ph</sup> ({{ site.categories["phonology"] | size }})</a><br></div>
-            <div id="cate2-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/phonetics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonetics %}<sup>&thinsp;Pt</sup> ({{ site.categories["phonetics"] | size }})</a><br></div>
-            <div id="cate3-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/morphology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.morphology %}<sup>&thinsp;Mp</sup> ({{ site.categories["morphology"] | size }})</a><br></div>
-            <div id="cate4-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/semantics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.semantics %}<sup>&thinsp;Sm</sup> ({{ site.categories["semantics"] | size }})</a><br></div>
+            <div id="cate1-0" class="cate"><span style="cursor:pointer; color: rgb(255, 166, 0)">■</span><a href="{{ '/categories/phonology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonology %}<sup>&thinsp;Ph</sup> ({{ site.categories["phonology"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+            <div id="cate2-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/phonetics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonetics %}<sup>&thinsp;Pt</sup> ({{ site.categories["phonetics"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+            <div id="cate3-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/morphology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.morphology %}<sup>&thinsp;Mp</sup> ({{ site.categories["morphology"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+            <div id="cate4-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/semantics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.semantics %}<sup>&thinsp;Sm</sup> ({{ site.categories["semantics"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
             
             <div id="cate5-0" class="cate"><a href="{{ '/categories/explanation/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.explanation %}<sup>&thinsp;Ex</sup> ({{ site.categories["explanation"] | size }})</a><br></div>
-            <div id="cate5-0" class="cate"><a href="{{ '/categories/portalife_lab/' | prepend: site.baseurl }}" style="color: black"> Portalife Lab<sup>&thinsp;Pl</sup> ({{ site.categories["portalife_lab"] | size }})</a><br></div>
-            <div id="cate6-0" class="cate"><a href="{{ '/categories/translate/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.translate %}<sup>&thinsp;Tr</sup> ({{ site.categories["translate"] | size }})</a><br></div>
-            <div id="cate7-0" class="cate"><a href="{{ '/categories/etc/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.etc %}<sup>&thinsp;etc</sup> ({{ site.categories["etc"] | size }})</a><br></div>
+            <div id="cate5-0" class="cate"><a href="{{ '/categories/portalife_lab/' | prepend: site.baseurl }}" style="color: black"> Portalife Lab<sup>&thinsp;Pl</sup> ({{ site.categories["portalife_lab"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+            <div id="cate6-0" class="cate"><a href="{{ '/categories/translate/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.translate %}<sup>&thinsp;Tr</sup> ({{ site.categories["translate"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+            <div id="cate7-0" class="cate"><a href="{{ '/categories/etc/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.etc %}<sup>&thinsp;etc</sup> ({{ site.categories["etc"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
             <div class="cate-child-group">
-              <div id="cate7-1" class="cate child"><a href="{{ '/categories/etc/original/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.original %}<sup>&thinsp;Original</sup> ({{ site.categories["original"] | size }})</a><br></div>
-              <div id="cate7-2" class="cate child"><a href="{{ '/categories/etc/derivatives/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.derivatives %}<sup>&thinsp;Dw</sup> ({{ site.categories["derivatives"] | size }})</a><br></div>
-              <div id="cate7-3" class="cate child"><a href="{{ '/categories/etc/misc/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.misc %}<sup>&thinsp;Misc</sup> ({{ site.categories["misc"] | size }})</a><br></div>
+              <div id="cate7-1" class="cate child"><a href="{{ '/categories/etc/original/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.original %}<sup>&thinsp;Original</sup> ({{ site.categories["original"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+              <div id="cate7-2" class="cate child"><a href="{{ '/categories/etc/derivatives/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.derivatives %}<sup>&thinsp;Dw</sup> ({{ site.categories["derivatives"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
+              <div id="cate7-3" class="cate child"><a href="{{ '/categories/etc/misc/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.misc %}<sup>&thinsp;Misc</sup> ({{ site.categories["misc"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
             </div>
             <div id="cate8-0" class="cate" style="margin-top: 0.5rem"><a href="{{ '/categories/tags/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.tags %}<sup>&thinsp;Tags</sup></a><br></div>
           </div>

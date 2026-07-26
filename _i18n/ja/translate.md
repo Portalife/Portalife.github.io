@@ -5,4 +5,4 @@
 
 ---
 
-{% include postlist.html category="translate" limit=6 %}
+{% include postlist.html category="translate" limit=20 %}
