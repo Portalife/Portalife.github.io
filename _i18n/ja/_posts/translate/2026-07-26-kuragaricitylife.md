@@ -149,7 +149,7 @@ pre: true
 <h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
 
 <span style="cursor:pointer; color: #39c5bb">■</span>&thinsp;初音ミク&nbsp;
-<span style="display: inline-block; background: linear-gradient(to left, #6BA2F4, #FF829B); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">■</span>&thinsp;琴葉姉妹&nbsp;
+<span style="display: inline-block; background: linear-gradient(to left, #7eb2ff, #ff849c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">■</span>&thinsp;琴葉姉妹&nbsp;
 
 <style type="text/css">
 .lyric-table {
@@ -398,10 +398,10 @@ pre: true
   <tr class="lyric-hangul-row"><td class="lyric-hangul">우와고토 미타이니사</td></tr>
   <tr class="lyric-ipa-row"><td class="lyric-ipa">ɯᵝɰägo̞to̞mʲitäiɲisä</td></tr>
   <tr class="lyric-trans-row"><td class="lyric-trans">헛소리처럼 말이야.</td></tr>
-  <tr class="lyric-orig-row"><td class="lyric-orig" style="background: linear-gradient(to left, #6BA2F4, #FF829B);   border-bottom: none">「よるはきれいだ」</td></tr>
-  <tr class="lyric-hangul-row"><td class="lyric-hangul" style="background: linear-gradient(to left, #D2E1FE, #FFD0DF);   border-bottom: 1px solid #aa8cb248;">요루와 키레이다</td></tr>
-  <tr class="lyric-ipa-row"><td class="lyric-ipa" style="background: linear-gradient(to left, #D2E1FE, #FFD0DF); border-bottom: 1px solid #aa8cb248;">jo̞ɾɯᵝɰä kʲire̞idä</td></tr>
-  <tr class="lyric-trans-row"><td class="lyric-trans" style="background: linear-gradient(to left, #D2E1FE, #FFD0DF); border-bottom: none;">"밤은 아름답다"</td></tr>
+  <tr class="lyric-orig-row"><td class="lyric-orig" style="background: linear-gradient(to left, #7eb2ff, #ff849c);   border-bottom: none">「よるはきれいだ」</td></tr>
+  <tr class="lyric-hangul-row"><td class="lyric-hangul" style="background: linear-gradient(to left, #ddeeff, #fde9ec);   border-bottom: 1px solid #aa8cb248;">요루와 키레이다</td></tr>
+  <tr class="lyric-ipa-row"><td class="lyric-ipa" style="background: linear-gradient(to left, #ddeeff, #fde9ec); border-bottom: 1px solid #aa8cb248;">jo̞ɾɯᵝɰä kʲire̞idä</td></tr>
+  <tr class="lyric-trans-row"><td class="lyric-trans" style="background: linear-gradient(to left, #ddeeff, #fde9ec); border-bottom: none;">"밤은 아름답다"</td></tr>
   <tr class="lyric-orig-row"><td class="lyric-orig">くらがりシティライフ</td></tr>
   <tr class="lyric-hangul-row"><td class="lyric-hangul">쿠라가리 시티 라이후</td></tr>
   <tr class="lyric-ipa-row"><td class="lyric-ipa">kɯᵝɾäɡäɾʲi ɕitʲiɾäiɸɯᵝ</td></tr>
