@@ -10,6 +10,7 @@ default_lang: "ko"
 permalink: /categories/:categories/:title/
 url: "https://Portalife.github.io"
 baseurl: ""
+timezone: Asia/Seoul
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
