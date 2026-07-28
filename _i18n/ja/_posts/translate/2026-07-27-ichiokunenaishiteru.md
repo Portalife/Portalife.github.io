@@ -1,7 +1,7 @@
 ---
 layout: posts
-title: "일억 년 좋아하고 있어"
-author: [이노우츠하SA]
+title: "一億年恋してる"
+author: [いのうつはSA]
 categories: [translate]
 order: 1
 tags: [translation, inoutuhasa]
@@ -93,11 +93,11 @@ pre: true
     </tr>
     <tr>
       <td class="tg-label">{% t translation.vocal %}</td>
-      <td class="tg-value">츠이나쨩</td>
+      <td class="tg-value">ついなちゃん</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.composer %}</td>
-      <td class="tg-value" rowspan="3"><a href="{{ '/tags/inoutuhasa/' | prepend: site.baseurl }}">{% t tags.inoutuhasa %}(いのうつはSA)</a></td>
+      <td class="tg-value" rowspan="3"><a href="{{ '/tags/inoutuhasa/' | prepend: site.baseurl }}">{% t tags.inoutuhasa %}</a></td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.lyricist %}</td>
@@ -112,8 +112,8 @@ pre: true
   </tbody>
 </table>
 
-몇 년이 지나도  
-제시간에 늦지 않으려나
+何年経っても  
+間に合うだろうか
 
 <h3 style="font-weight: 680;">{% t translation.legend %}</h3>
 
@@ -241,7 +241,7 @@ pre: true
     <div class="lyric-item"><p class="lyric-orig">煙を焚いた</p>
         <p class="lyric-hangul">케무리오 타이타</p>
         <p class="lyric-ipa">ke̞mɯᵝɾʲio̞ täitä</p>
-        <p class="lyric-trans">연기를 피웠어&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p></div>
+        <p class="lyric-trans">연기를 피웠어</p></div>
     <div class="lyric-item"><p class="lyric-orig">これで何回目かも</p>
         <p class="lyric-hangul">코레데 나응카이메카모</p>
         <p class="lyric-ipa">ko̞re̞de̞ nä.ɴ̩.käime̞kämo̞</p>
@@ -504,16 +504,13 @@ pre: true
         <p class="lyric-trans">또 와줘!</p></div>
 </div>
 
-<p>문서 작성에 도움을 주신 분: jaejamin님&hairsp;<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>&hairsp;</p>
+<p>作成にご協力いただいた方: jaejamin様&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p>
 
 ---
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
-      <p>향 등을 피우다.(담배를 피우다는 吸う를 사용)&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
-    </li>
-    <li id="fn:2">
-      <p>테마 색 선택&nbsp;<a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>テーマ色の指定&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>
