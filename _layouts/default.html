@@ -130,7 +130,87 @@
           {% endif %}
 
           <p>{% t sidebar.description %}</p>
+          <!--
+          <div class="search-box-container">
 
+            <input type="text" id="search-input" placeholder="포스트 제목 검색..." autocomplete="off">
+            
+
+            <ul id="results-container"></ul>
+          </div>
+
+          <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const searchInput = document.getElementById('search-input');
+            const resultsContainer = document.getElementById('results-container');
+            let searchData = [];
+
+            if (!searchInput || !resultsContainer) return;
+
+            // 1. search.json 로드
+            fetch('{{ "/search.json" | relative_url }}')
+              .then(response => response.json())
+              .then(data => { searchData = data; })
+              .catch(error => console.error(error));
+
+            // 🔍 검색 실행 전용 공통 함수
+            function performSearch() {
+              const rawQuery = searchInput.value.trim();
+              resultsContainer.innerHTML = ''; 
+
+              if (rawQuery.length === 0) return;
+
+              const query = rawQuery.normalize('NFC').toLowerCase();
+
+              const matches = searchData.filter(item => {
+                if (!item.title) return false;
+                return item.title.normalize('NFC').toLowerCase().includes(query);
+              });
+
+              if (matches.length > 0) {
+                matches.slice(0, 7).forEach(item => {
+                  const li = document.createElement('li');
+                  li.style.borderBottom = "1px solid #f1f5f9";
+                  
+                  const dateText = item.date ? `<small style="color:#888; font-size:0.75em;">(${item.date})</small>` : '';
+                  li.innerHTML = `<a href="${item.url}" style="display:block; padding:5px 8px; color:#334155; text-decoration:none; font-size:0.78rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${item.title}</a>`;
+                  
+                  resultsContainer.appendChild(li);
+                });
+              } else {
+                const li = document.createElement('li');
+                li.className = 'no-results';
+                li.style.cssText = "padding:8px; color:#94a3b8; font-size:0.75rem; text-align:center;";
+                li.textContent = '검색 결과가 없습니다.';
+                resultsContainer.appendChild(li);
+              }
+            }
+
+            // 2. 글자 타이핑할 때마다 검색
+            searchInput.addEventListener('input', performSearch);
+
+            // 3. ★ 핵심: 바깥을 누르고 나갔다가, 검색창을 "다시 클릭/포커스"하면 결과창 다시 표출 ★
+            searchInput.addEventListener('focus', performSearch);
+            searchInput.addEventListener('click', performSearch);
+
+            // 4. 엔터(Enter) 키 입력 시 1번 결과로 이동
+            searchInput.addEventListener('keydown', function(e) {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                const firstLink = resultsContainer.querySelector('a');
+                if (firstLink) window.location.href = firstLink.href;
+              }
+            });
+
+            // 5. 바깥 영역 클릭 시 결과창 비워서 숨김
+            document.addEventListener('click', function(e) {
+              if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+                resultsContainer.innerHTML = '';
+              }
+            });
+          });
+          </script>
+          -->
           {% include sidebar.html %}
           <div class="category" style="padding:0px 0px 10px 0px">
             <div id="cate1-0" class="cate"><span style="cursor:pointer; color: rgb(255, 166, 0)">■</span><a href="{{ '/categories/phonology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonology %}<sup>&thinsp;Ph</sup> ({{ site.categories["phonology"] | where_exp: "item", "item.re != true" | size }})</a><br></div>

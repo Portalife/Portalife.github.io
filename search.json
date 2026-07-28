@@ -1,0 +1,30 @@
+---
+layout: null
+---
+[
+  {% assign first = true %}
+  {% for post in site.posts %}
+    {% assign post_lang = post.lang | default: site.lang | default: "ko" %}
+    {% unless first %},{% endunless %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | relative_url | jsonify }},
+      "date": {{ post.date | date: "%Y.%m.%d" | jsonify }},
+      "lang": {{ post_lang | jsonify }}
+    }
+    {% assign first = false %}
+  {% endfor %}
+  {% for page in site.html_pages %}
+    {% if page.title %}
+      {% assign page_lang = page.lang | default: site.lang | default: "ko" %}
+      {% unless first %},{% endunless %}
+      {
+        "title": {{ page.title | jsonify }},
+        "url": {{ page.url | relative_url | jsonify }},
+        "date": "",
+        "lang": {{ page_lang | jsonify }}
+      }
+      {% assign first = false %}
+    {% endif %}
+  {% endfor %}
+]

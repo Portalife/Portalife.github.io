@@ -457,6 +457,88 @@ body.lang-ja .lang-change-btn-ja {
   background-size: 100% 1px;
 }
 
+.search-box-container,
+.search-box-container * {
+  box-sizing: border-box; /* 패딩으로 인해 195px 넘어가는 현상 방지 */
+}
+
+.search-box-container {
+  position: relative;
+  width: 100%;
+  max-width: 195px;
+  margin: 0 auto;
+}
+
+/* 2. 입력창 (세로 높이 및 폰트 축소) */
+#search-input {
+  width: 100%;
+  height: 28px; /* 세로 높이를 28px로 컴팩트하게 축소 */
+  padding: 3px 8px; /* 위아래 여백 최소화 */
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 0.8rem; /* 폰트 크기 슬림화 (~12px) */
+  color: #1e293b;
+  outline: none;
+  background-color: #ffffff;
+}
+
+#search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+/* 3. 검색 결과 드롭다운 (사이드바 요소를 밀어내지 않는 팝업 방식) */
+#results-container {
+  display: none; /* 평소에는 상자 자체가 아예 안 보임 */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  list-style: none;
+  padding: 0;
+  margin: 3px 0 0 0;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* ★ 안쪽에 검색 결과(li)가 하나라도 들어찼을 때만 상자를 표시함 ★ */
+#results-container:not(:empty) {
+  display: block;
+}
+
+/* 4. 결과 리스트 항목 (1줄 말줄임표 처리 ⭐) */
+#results-container li a {
+  display: block;
+  padding: 5px 8px; /* 세로 패딩 최소화 */
+  color: #334155;
+  text-decoration: none;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.78rem; /* 작은 폰트 크기로 한 화면에 많은 글자 표시 */
+  line-height: 1.3;
+
+  /* 195px 폭에서 포스트 제목이 길어도 아래로 안 넘어가고 깔끔하게 ... 처리 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#results-container li a:hover {
+  background-color: #f0f6ff;
+  color: #2563eb;
+}
+
+#results-container li.no-results {
+  padding: 8px;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
 // Disables the scrollbar in Firefox
 // HTML-Proofer fails without "@-moz-document url-prefix()"
 // because scrollbar-width is still experimental in Firefox.
