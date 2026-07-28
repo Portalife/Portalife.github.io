@@ -502,9 +502,10 @@ pre: true
         <p class="lyric-hangul">마타 키테네</p>
         <p class="lyric-ipa">mätä kʲite̞ne̞</p>
         <p class="lyric-trans">또 와줘!</p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: white; color: black"><br>一億年恋してる<br>일억 년 좋아하고 있어<br><br></p></div>
 </div>
 
-<p>作成にご協力いただいた方: jaejamin様&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p>
+<p>記事作成にご協力いただいた方: jaejamin様&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p>
 
 ---
 <div class="footnotes" role="doc-endnotes">

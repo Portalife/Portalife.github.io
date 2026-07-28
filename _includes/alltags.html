@@ -54,7 +54,7 @@ to use:
   <div class="tag-sections">
     {% for tag_item in sorted_tags %}
       {% assign tag_name = tag_item[0] | where_exp: "item", "item.re != true" %}
-      {% assign posts = tag_item[1] | sort: "order" | reverse | sort: "date" | reverse %}
+      {% assign posts = tag_item[1] | sort: "order" | sort: "date" | reverse %}
       
       <div class="postlist" id="{{ tag_name | slugify }}" style="margin-bottom: 3rem; scroll-margin-top: 2rem;">
         <div class="postlist-title">

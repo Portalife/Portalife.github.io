@@ -457,7 +457,7 @@ pre: true
     <div class="lyric-item"><p class="lyric-orig">まあどこか知らない</p>
         <p class="lyric-hangul">마아 도코카 시라나이</p>
         <p class="lyric-ipa">mäː do̞ko̞kä ɕiɾänäi</p>
-        <p class="lyric-trans">뭐 어딘가 알지 못하는</p></div>
+        <p class="lyric-trans">뭐어 어딘가 알지 못하는</p></div>
     <div class="lyric-item"><p class="lyric-orig">ところまで行こうよ</p>
         <p class="lyric-hangul">토코마데 이코오요</p>
         <p class="lyric-ipa">to̞ko̞mäde̞ iko̞ːjo̞</p>
@@ -501,7 +501,8 @@ pre: true
     <div class="lyric-item"><p class="lyric-orig">またきてね！</p>
         <p class="lyric-hangul">마타 키테네</p>
         <p class="lyric-ipa">mätä kʲite̞ne̞</p>
-        <p class="lyric-trans">또 와줘!</p></div>
+        <p class="lyric-trans" style="border-bottom: 1px solid #d1e0df">또 와줘!</p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: white; color: black"><br>一億年恋してる<br>일억 년 사랑하고 있어<br><br></p></div>
 </div>
 
 <p>문서 작성에 도움을 주신 분: jaejamin님&hairsp;<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>&hairsp;</p>
@@ -510,7 +511,7 @@ pre: true
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:1">
-      <p>향 등을 피우다.(담배를 피우다는 吸う를 사용)&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+      <p>향 등을 피우다. (담배를 피우다는 吸う를 사용)&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
     <li id="fn:2">
       <p>테마 색 선택&nbsp;<a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>

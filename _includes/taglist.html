@@ -34,7 +34,7 @@ or
 {% assign raw_posts = site.tags[tag] %}
 {% if raw_posts and raw_posts.size > 0 %}
 
-{% assign posts = raw_posts | sort: "order" | reverse | sort: "date" | reverse %}
+{% assign posts = raw_posts | sort: "order" | sort: "date" | reverse %}
 <div class="postlist">
   <div class="postlist-title">
     {% t tags.{{ tag }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
