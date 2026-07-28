@@ -575,11 +575,11 @@ small {
 }
 
 hr {
-  border:0;
-  background:var(--clr-splitter-blockquote-and-section);
-  height:1px;
-  width:100%;
-  margin:10px 10px 20px 0px
+  border: 0;
+  border-top: 1.5px solid var(--clr-splitter-blockquote-and-section);
+  height: 0;
+  width: 100%;
+  margin: 10px 0 20px 0;
 }
 
 footer, .sidebar-footer {

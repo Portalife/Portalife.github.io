@@ -102,3 +102,58 @@ layout: default
   }
 })();
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const footnotes = document.querySelectorAll('.auto-footnote');
+  if (footnotes.length === 0) return;
+
+  // 1. 포스트 본문 영역 탐색
+  const postContainer = document.querySelector('section.layout-posts') || 
+                        document.querySelector('.layout-posts') || 
+                        document.body;
+
+  const footnotesDiv = document.createElement('div');
+  footnotesDiv.className = 'footnotes';
+  footnotesDiv.setAttribute('role', 'doc-endnotes');
+
+  const ol = document.createElement('ol');
+  footnotesDiv.appendChild(ol);
+
+  // 2. 위에서부터 순서대로 번호 할당하며 내주 및 각주 생성
+  footnotes.forEach((fn, index) => {
+    const num = index + 1;
+    const content = fn.getAttribute('data-content');
+
+    // [내주 생성]
+    const sup = document.createElement('sup');
+    sup.id = `fnref:${num}`;
+    sup.innerHTML = `&hairsp;<a href="#fn:${num}" class="footnote" rel="footnote" role="doc-noteref">${num}</a>&hairsp;`;
+    fn.parentNode.replaceChild(sup, fn);
+
+    // [하단 각주 생성]
+    const li = document.createElement('li');
+    li.id = `fn:${num}`;
+    li.innerHTML = `<p>${content}&nbsp;<a href="#fnref:${num}" class="reversefootnote" role="doc-backlink">↩</a></p>`;
+    ol.appendChild(li);
+  });
+
+  // 3. 기존 본문의 <hr>을 그대로 복제하여 100% 동일한 스타일 적용
+  const existingHr = postContainer.querySelector('hr');
+  const hr = existingHr ? existingHr.cloneNode(true) : document.createElement('hr');
+
+  // 4. 하단 태그 전용 링크(.post-tag-link)가 들어있는 <small> 태그 탐색 ⭐
+  const tagLink = postContainer.querySelector('.post-tag-link');
+  const bottomTagElement = tagLink ? tagLink.closest('small') : null;
+
+  if (bottomTagElement) {
+    // 하단 태그 목록 바로 위에 구분선과 각주 삽입!
+    bottomTagElement.parentNode.insertBefore(hr, bottomTagElement);
+    bottomTagElement.parentNode.insertBefore(footnotesDiv, bottomTagElement);
+  } else {
+    // 태그 목록이 없는 포스트인 경우 section 맨 뒤에 배치
+    postContainer.appendChild(hr);
+    postContainer.appendChild(footnotesDiv);
+  }
+});
+</script>

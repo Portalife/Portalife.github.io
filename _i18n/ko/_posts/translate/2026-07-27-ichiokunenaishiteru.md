@@ -406,10 +406,10 @@ pre: true
         <p class="lyric-hangul">마니아우다로오카</p>
         <p class="lyric-ipa">mäɲi äɯᵝ däro̞ːkä</p>
         <p class="lyric-trans">제시간에 늦지 않으려나</p></div>
-    <div class="lyric-item"><p class="lyric-orig">あ x16</p>
-        <p class="lyric-hangul">아 x16</p>
-        <p class="lyric-ipa">ʔä x16</p>
-        <p class="lyric-trans">아 x16</p></div>
+    <div class="lyric-item"><p class="lyric-orig">あ x26</p>
+        <p class="lyric-hangul">아 x26</p>
+        <p class="lyric-ipa">ʔä x26</p>
+        <p class="lyric-trans">아 x26</p></div>
     <div class="lyric-item"><p class="lyric-orig">ちょっとだけ思い出す</p>
         <p class="lyric-hangul">춋토다케 오모이다스</p>
         <p class="lyric-ipa">t͡ɕo̞t̚to̞däke̞ o̞mo̞idäsɨ</p>
