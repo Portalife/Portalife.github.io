@@ -109,6 +109,10 @@ pre: true
       <td class="tg-label">{% t translation.upload %}</td>
       <td class="tg-value">2026{% t layout.year %}2{% t layout.month %}20{% t layout.day %}</td>
     </tr>
+    <tr>
+      <td class="tg-label">{% t translation.album %}</td>
+      <td class="tg-value">싱글</td>
+    </tr>
   </tbody>
 </table>
 

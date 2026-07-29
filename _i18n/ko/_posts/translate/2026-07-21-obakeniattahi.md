@@ -142,6 +142,10 @@ tags: [translation, inoutuhasa]
       <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
       <td style="font-size: 15px;">이렇게 표시됩니다.</td>
     </tr>
+    <tr>
+      <td class="tg-label">{% t translation.album %}</td>
+      <td class="tg-value">싱글</td>
+    </tr>
   </tbody>
 </table>
 

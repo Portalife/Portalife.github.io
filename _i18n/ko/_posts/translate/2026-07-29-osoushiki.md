@@ -117,7 +117,7 @@ order: 1
     </tr>
     <tr>
       <td class="tg-label">{% t translation.album %}</td>
-      <td class="tg-value"><a href="{{ '/tags/kurashiassort/' | prepend: site.baseurl }}">くらしアソート</a></td>
+      <td class="tg-value">싱글, <a href="{{ '/tags/kurashiassort/' | prepend: site.baseurl }}">くらしアソート</a></td>
     </tr>
   </tbody>
 </table>

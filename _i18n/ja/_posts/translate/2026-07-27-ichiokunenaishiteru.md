@@ -109,6 +109,10 @@ pre: true
       <td class="tg-label">{% t translation.upload %}</td>
       <td class="tg-value">2026{% t layout.year %}2{% t layout.month %}20{% t layout.day %}</td>
     </tr>
+    <tr>
+      <td class="tg-label">{% t translation.album %}</td>
+      <td class="tg-value">シングル</td>
+    </tr>
   </tbody>
 </table>
 
@@ -505,7 +509,7 @@ pre: true
     <div class="lyric-item"><p class="lyric-orig" style="background: white; color: black"><br>一億年恋してる<br>일억 년 좋아하고 있어<br><br></p></div>
 </div>
 
-<p>記事作成にご協力いただいた方: jaejamin様&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p>
+<p>記事作成にご協力いただいた方：jaejamin様&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p>
 
 ---
 <div class="footnotes" role="doc-endnotes">
