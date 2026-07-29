@@ -31,10 +31,20 @@ or
 {% endif %}
 
 {% if tag %}
-{% assign raw_posts = site.tags[tag] %}
+{% assign raw_posts = site.tags[tag] | where_exp: "item", "item.re != true" %}
+
 {% if raw_posts and raw_posts.size > 0 %}
 
-{% assign posts = raw_posts | sort: "order" | sort: "date" | reverse %}
+{% assign posts = "" | split: "" %}
+{% assign sorted_raw_posts = raw_posts | sort: "title" %}
+{% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
+{% for group in grouped_posts %}
+  {% assign sorted_items = group.items | sort: "order" | reverse %}
+  {% for item in sorted_items %}
+    {% assign posts = posts | push: item %}
+  {% endfor %}
+{% endfor %}
+
 <div class="postlist">
   <div class="postlist-title">
     {% t tags.{{ tag }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}

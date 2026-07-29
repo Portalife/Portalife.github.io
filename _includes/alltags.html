@@ -42,10 +42,12 @@ to use:
   <div class="tag-cloud" style="line-height: 2.0; margin-bottom: 2rem;">
     {% for tag_item in sorted_tags %}
       {% assign tag_name = tag_item[0] %}
-      {% assign posts = tag_item[1] %}
-      <a href="#{{ tag_name | slugify }}">
-        #{% t tags.{{ tag_name }} %} ({{ posts.size }})
-      </a>
+      {% assign raw_posts = tag_item[1] | where_exp: "item", "item.re != true" %}
+      {% if raw_posts.size > 0 %}
+        <a href="#{{ tag_name | slugify }}">
+          #{% t tags.{{ tag_name }} %} ({{ raw_posts.size }})
+        </a>
+      {% endif %}
     {% endfor %}
   </div>
 
@@ -53,8 +55,19 @@ to use:
 
   <div class="tag-sections">
     {% for tag_item in sorted_tags %}
-      {% assign tag_name = tag_item[0] | where_exp: "item", "item.re != true" %}
-      {% assign posts = tag_item[1] | sort: "order" | sort: "date" | reverse %}
+      {% assign tag_name = tag_item[0] %}
+      {% assign raw_posts = tag_item[1] | where_exp: "item", "item.re != true" %}
+      
+      {% if raw_posts and raw_posts.size > 0 %}
+        {% assign posts = "" | split: "" %}
+        {% assign sorted_raw_posts = raw_posts | sort: "title" %}
+        {% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
+        {% for group in grouped_posts %}
+          {% assign sorted_items = group.items | sort: "order" | reverse %}
+          {% for item in sorted_items %}
+            {% assign posts = posts | push: item %}
+          {% endfor %}
+        {% endfor %}
       
       <div class="postlist" id="{{ tag_name | slugify }}" style="margin-bottom: 3rem; scroll-margin-top: 2rem;">
         <div class="postlist-title">
@@ -78,6 +91,7 @@ to use:
           {% endfor %}
         </div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
 
