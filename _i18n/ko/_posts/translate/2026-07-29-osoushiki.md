@@ -97,18 +97,19 @@ order: 1
       <td class="tg-value">카후</td>
     </tr>
     <tr>
-      <td class="tg-label">{% t translation.chorus %}</td>
+      <td class="tg-label">{% t translation.voicese %}</td>
       <td class="tg-value">코토노하 자매</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.composer %}</td>
-      <td class="tg-value" rowspan="3"><a href="{{ '/tags/denkiqujira/' | prepend: site.baseurl }}">{% t tags.denkiqujira %}(電ǂ鯨)</a></td>
+      <td class="tg-value" rowspan="2"><a href="{{ '/tags/denkiqujira/' | prepend: site.baseurl }}">{% t tags.denkiqujira %}(電ǂ鯨)</a></td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.lyricist %}</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.movie %}</td>
+      <td class="tg-value">창작집단52Hz(創作集団52Hz)</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.upload %}</td>
