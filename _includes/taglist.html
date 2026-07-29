@@ -33,53 +33,61 @@ or
 {% if tag %}
 {% assign raw_posts = site.tags[tag] | where_exp: "item", "item.re != true" %}
 
-{% if raw_posts and raw_posts.size > 0 %}
+  {% if raw_posts and raw_posts.size > 0 %}
+      {% assign posts = "" | split: "" %}
+          
+      {% comment %} 1. 날짜 내림차순 정렬 {% endcomment %}
+      {% assign sorted_raw_posts = raw_posts | sort: "date" | reverse %}
+          
+      {% comment %} 2. 날짜별 그룹화 {% endcomment %}
+      {% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
+          
+      {% for group in grouped_posts %}
+        {% comment %} 3. 그룹 내 항목들을 제목 오름차순으로 정렬 {% endcomment %}
+        {% assign title_sorted = group.items | sort: "title" %}
+            
+        {% comment %} 4. 그 상태에서 order 내림차순으로 재정렬 {% endcomment %}
+        {% assign sorted_items = title_sorted | sort: "order" | reverse %}
+            
+        {% for item in sorted_items %}
+            {% assign posts = posts | push: item %}
+        {% endfor %}
+      {% endfor %}
 
-{% assign posts = "" | split: "" %}
-{% assign sorted_raw_posts = raw_posts | sort: "title" %}
-{% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
-{% for group in grouped_posts %}
-  {% assign sorted_items = group.items | sort: "order" | reverse %}
-  {% for item in sorted_items %}
-    {% assign posts = posts | push: item %}
-  {% endfor %}
-{% endfor %}
+  <div class="postlist">
+    <div class="postlist-title">
+      {% t tags.{{ tag }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
+    </div><br>
+    <div class="postlist-table">
+      {% for post in posts %}
 
-<div class="postlist">
-  <div class="postlist-title">
-    {% t tags.{{ tag }} %}{% t layout.at %}{{ posts.size }}{% t layout.number %}{% t layout.exist %}
-  </div><br>
-  <div class="postlist-table">
-    {% for post in posts %}
-
-    <div class="postlist-row" {% if forloop.index > limit %}style="display: none;"{% endif %}>
-      <div class="postlist-title-cell">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <div class="postlist-row" {% if forloop.index > limit %}style="display: none;"{% endif %}>
+        <div class="postlist-title-cell">
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+        <div class="postlist-date-cell">
+          {{ post.date | date: "%Y.%m.%d" }}
+        </div>
       </div>
-      <div class="postlist-date-cell">
-        {{ post.date | date: "%Y.%m.%d" }}
-      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+
+    {% if posts.size > limit %}
+    <br>
+    <div class="postlist-more-btn-wrapper">
+
+      <button class="postlist-more-btn-minimal" onclick="showMorePosts(this)">
+        {% t layout.more %}
+      </button>
+    </div>
+    {% endif %}
   </div>
-
-  {% if posts.size > limit %}
-  <br>
-  <div class="postlist-more-btn-wrapper">
-
-    <button class="postlist-more-btn-minimal" onclick="showMorePosts(this)">
-      {% t layout.more %}
-    </button>
+  {% else %}
+  <div class="postlist">
+    <div class="postlist-empty">{% t layout.empty %}</div>
   </div>
   {% endif %}
-</div>
 {% else %}
-<div class="postlist">
-  <div class="postlist-empty">{% t layout.empty %}</div>
-</div>
-{% endif %}
-{% else %}
-{%- comment -%}카테고리 변수 자체가 없을 때{%- endcomment -%}
 {% endif %}
 
 <script>

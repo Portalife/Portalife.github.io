@@ -59,15 +59,25 @@ to use:
       {% assign raw_posts = tag_item[1] | where_exp: "item", "item.re != true" %}
       
       {% if raw_posts and raw_posts.size > 0 %}
-        {% assign posts = "" | split: "" %}
-        {% assign sorted_raw_posts = raw_posts | sort: "title" %}
-        {% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
-        {% for group in grouped_posts %}
-          {% assign sorted_items = group.items | sort: "order" | reverse %}
-          {% for item in sorted_items %}
-            {% assign posts = posts | push: item %}
+          {% assign posts = "" | split: "" %}
+          
+          {% comment %} 1. 날짜 내림차순 정렬 {% endcomment %}
+          {% assign sorted_raw_posts = raw_posts | sort: "date" | reverse %}
+          
+          {% comment %} 2. 날짜별 그룹화 {% endcomment %}
+          {% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
+          
+          {% for group in grouped_posts %}
+            {% comment %} 3. 그룹 내 항목들을 제목 오름차순으로 정렬 {% endcomment %}
+            {% assign title_sorted = group.items | sort: "title" %}
+            
+            {% comment %} 4. 그 상태에서 order 내림차순으로 재정렬 {% endcomment %}
+            {% assign sorted_items = title_sorted | sort: "order" | reverse %}
+            
+            {% for item in sorted_items %}
+              {% assign posts = posts | push: item %}
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
       
       <div class="postlist" id="{{ tag_name | slugify }}" style="margin-bottom: 3rem; scroll-margin-top: 2rem;">
         <div class="postlist-title">
