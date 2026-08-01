@@ -524,8 +524,8 @@ tags: [translation, inoutuhasa]
         <p class="lyric-ipa">säɰäjäkäsɨɡʲiɾɯᵝ käd͡ze̞to̞</p>
         <p class="lyric-trans">너무나도 상쾌한 바람과</p></div>
     <div class="lyric-item"><p class="lyric-orig">涙が混ざって</p>
-        <p class="lyric-hangul">나미다가 마잣테</p>
-        <p class="lyric-ipa">nämʲidäɡä mäd͡zät̚te̞</p>
+        <p class="lyric-hangul">나미다가 마자앗테</p>
+        <p class="lyric-ipa">nämʲidäɡä mäd͡zäːt̚te̞</p>
         <p class="lyric-trans">눈물이 섞여서</p></div>
     <div class="lyric-item"><p class="lyric-orig">終わらせよう</p>
         <p class="lyric-hangul">오와라세요오</p>
