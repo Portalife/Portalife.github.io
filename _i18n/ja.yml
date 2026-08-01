@@ -6,7 +6,7 @@ meta:
 sidebar:
   change: 言語の自動切り替え
   change_desc: ブラウザの言語がアクセスしたページの言語と異なる場合、常に該当言語のページへ自動的に切り替わります。<br>初期設定はONです。手動で言語を変更した場合、この機能は自動的に無効になります。
-  description: 言語学を扱います。<br>扱わない時もあります。
+  description: 言語学を扱います。<br>ボカロが好きです。
   phonology: 音韻論
   phonetics: 音声学
   morphology: 形態論

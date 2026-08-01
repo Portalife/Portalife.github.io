@@ -319,7 +319,7 @@ pre: true
         <p class="lyric-ipa">it͡ɕio̞kɯᵝsäi kɯᵝɾäikämo̞ne̞</p>
         <p class="lyric-trans">1억 살 정도일지도 모르겠네</p></div>
     <div class="lyric-item"><p class="lyric-orig">たまにはゆっくり</p>
-        <p class="lyric-hangul">타마니와 윳쿠리</p>
+        <p class="lyric-hangul">타마니와 육쿠리</p>
         <p class="lyric-ipa">tämäɲiɰä jɯᵝk̚kɯᵝɾʲi</p>
         <p class="lyric-trans">가끔은 느긋하게</p></div>
     <div class="lyric-item"><p class="lyric-orig">お茶でも飲んで</p>

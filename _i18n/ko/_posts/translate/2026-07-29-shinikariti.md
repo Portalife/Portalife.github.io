@@ -440,7 +440,7 @@ order: 2
         <p class="lyric-ipa">näkɯᵝnät̚te̞ɕimäɯᵝno̞ ko̞ɰäide̞ɕo̞ː</p>
         <p class="lyric-trans">없어져 버리는 건 무섭잖아.</p></div>
     <div class="lyric-item"><p class="lyric-orig">秋刀魚は　目玉も　食べられる</p>
-        <p class="lyric-hangul">산마와 메다마모 타베라레루</p>
+        <p class="lyric-hangul">삼마와 메다마모 타베라레루</p>
         <p class="lyric-ipa">sämmäɰä me̞dämämo̞ täbe̞ɾäre̞ɾɯᵝ</p>
         <p class="lyric-trans">꽁치는 눈알도 먹을 수 있어</p></div>
     <div class="lyric-item"><p class="lyric-orig">シニカル　死に軽りティ→濁る</p>
@@ -589,7 +589,7 @@ order: 2
         <p class="lyric-ipa">ɯᵝmäre̞t͡ɕät̚täno̞ɰä ko̞ɰäkät̚täne̞</p>
         <p class="lyric-trans">태어나 버린 것은, 무서웠겠지</p></div>
     <div class="lyric-item"><p class="lyric-orig">もう大丈夫、怯えることないよ、と</p>
-        <p class="lyric-hangul">모오 다이죠오부 오비에루 코토 나이요</p>
+        <p class="lyric-hangul">모오 다이죠오부 오비에루 코토 나이요 토</p>
         <p class="lyric-ipa">mo̞ː däid͡ʑo̞ːbɯᵝ o̞bʲie̞ɾɯᵝ ko̞to̞ näijo̞ to̞</p>
         <p class="lyric-trans">이제 괜찮아, 겁먹을 거 없어, 라며</p></div>
     <div class="lyric-item"><p class="lyric-orig">魚に刃物を突き立てた。</p>
@@ -685,7 +685,7 @@ order: 2
         <p class="lyric-ipa">näkɯᵝnät̚te̞ɕimäɯᵝno̞ ko̞ɰäide̞ɕo̞ː</p>
         <p class="lyric-trans">없어져 버리는 건 무섭잖아.</p></div>
     <div class="lyric-item"><p class="lyric-orig">秋刀魚は　目玉も　食べられる</p>
-        <p class="lyric-hangul">산마와 메다마모 타베라레루</p>
+        <p class="lyric-hangul">삼마와 메다마모 타베라레루</p>
         <p class="lyric-ipa">sämmäɰä me̞dämämo̞ täbe̞ɾäre̞ɾɯᵝ</p>
         <p class="lyric-trans">꽁치는 눈알도 먹을 수 있어</p></div>
     <div class="lyric-item"><p class="lyric-orig">シニカル　死に軽りティ→濁る</p>
