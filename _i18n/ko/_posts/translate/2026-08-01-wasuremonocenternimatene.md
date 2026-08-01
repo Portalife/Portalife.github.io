@@ -329,11 +329,11 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">どこまで続いているの？</p>
         <p class="lyric-hangul">도코마데 츠즈이테이루노</p>
         <p class="lyric-ipa">do̞ko̞mäde̞ t͡sɨd͡zɨᵝite̞iɾɯᵝno̞</p>
-        <p class="lyric-trans">어디까지 계속되는 걸까</p></div>
+        <p class="lyric-trans">어디까지 계속되는 걸까?</p></div>
     <div class="lyric-item"><p class="lyric-orig">学校に見えた</p>
         <p class="lyric-hangul">각코오니 미에타</p>
         <p class="lyric-ipa">ɡäk̚ko̞ːɲi mʲie̞tä</p>
-        <p class="lyric-trans">학교처럼 보인</p></div>
+        <p class="lyric-trans">학교로 보였던</p></div>
     <div class="lyric-item"><p class="lyric-orig">団地を一周して</p>
         <p class="lyric-hangul">단치오 잇슈우시테</p>
         <p class="lyric-ipa">däɲt͡ɕio̞ iɕːɨːɕite̞</p>
