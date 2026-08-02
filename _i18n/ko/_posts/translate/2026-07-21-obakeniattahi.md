@@ -349,7 +349,7 @@ tags: [translation, inoutuhasa]
       <p class="lyric-hangul">난데모 칸데모</p>
       <p class="lyric-ipa">nände̞mo̞ kände̞mo̞</p>
       <p class="lyric-trans">이렇든 저렇든</p></div>
-  <div class="lyric-item"><p class="lyric-orig">損だと思ってた</p>
+  <div class="lyric-item"><p class="lyric-orig">損だと思ってた&hairsp;<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>&hairsp;</p>
       <p class="lyric-hangul">손다토-못테타</p>
       <p class="lyric-ipa">so̞ndäto̞ːmo̞t̚te̞tä</p>
       <p class="lyric-trans">손해라고 생각했던</p></div>
@@ -504,6 +504,9 @@ tags: [translation, inoutuhasa]
   <ol>
     <li id="fn:1">
       <p>間違い探し는 일반적으로 틀린 그림 찾기를 의미하는 단어지만, 이 곡의 맥락을 고려한다면 '실수 찾기'라는 의미, 즉 네 실수(허점)만을 찾아 헤매었지만, 아무 수확도 없었다는 의미와의 중의적 표현을 의도했을 가능성이 높다.&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+    <li id="fn:2">
+      <p>가사에는 思ってた로 적혀있지만, 노래에서는 思ったら로 들린다.&nbsp;<a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
     </li>
   </ol>
 </div>

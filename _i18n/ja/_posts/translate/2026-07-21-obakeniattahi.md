@@ -115,6 +115,10 @@ tags: [translation, inoutuhasa]
         <td class="tg-label">{% t translation.upload %}</td>
         <td class="tg-value">2026{% t layout.year %}4{% t layout.month %}25{% t layout.day %}</td>
       </tr>
+    　<tr>
+      　<td class="tg-label">{% t translation.album %}</td>
+      　<td class="tg-value">シングル</td>
+    　</tr>
     </tbody>
   </table>
 </div>  
@@ -140,10 +144,6 @@ tags: [translation, inoutuhasa]
     <tr>
       <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
       <td style="font-size: 15px;">이렇게 표시됩니다.</td>
-    </tr>
-    <tr>
-      <td class="tg-label">{% t translation.album %}</td>
-      <td class="tg-value">シングル</td>
     </tr>
   </tbody>
 </table>
@@ -348,7 +348,7 @@ tags: [translation, inoutuhasa]
       <p class="lyric-hangul">난데모 칸데모</p>
       <p class="lyric-ipa">nände̞mo̞ kände̞mo̞</p>
       <p class="lyric-trans">이렇든 저렇든</p></div>
-  <div class="lyric-item"><p class="lyric-orig">損だと思ってた</p>
+  <div class="lyric-item"><p class="lyric-orig">損だと思ってた&hairsp;<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>&hairsp;</p>
       <p class="lyric-hangul">손다토-못테타</p>
       <p class="lyric-ipa">so̞ndäto̞ːmo̞t̚te̞tä</p>
       <p class="lyric-trans">손해라고 생각했던</p></div>
@@ -496,4 +496,13 @@ tags: [translation, inoutuhasa]
       <p class="lyric-hangul">타부응 아시타와 이이 히니 나루</p>
       <p class="lyric-ipa">täbɯᵝ.ɴ̩ äɕitäɰä iːçiɲi näɾɯᵝ</p>
       <p class="lyric-trans">아마 내일은 좋은 날이 될 거야</p></div>
+</div>
+
+---
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>歌詞には「思ってた」に書いてあるが、歌では「思ったら」に聞こえる。&nbsp;<a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
 </div>
