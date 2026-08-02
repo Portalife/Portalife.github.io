@@ -537,7 +537,7 @@ tags: [translation, inoutuhasa]
         <p class="lyric-hangul">아스에</p>
         <p class="lyric-ipa">äsɨe̞</p>
         <p class="lyric-trans">내일로</p></div>
-    <div class="lyric-item"><p class="lyric-orig">光をみた進む時間</p>
+    <div class="lyric-item"><p class="lyric-orig">光をみたすすむじかん</p>
         <p class="lyric-hangul">히카리오 미타 스스무 지카응</p>
         <p class="lyric-ipa">çikäɾʲio̞ mʲitä sɨsɨmɯᵝ d͡ʑikä.ɴ̩</p>
         <p class="lyric-trans">빛을 본 나아가는 시간</p></div>
