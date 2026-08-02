@@ -463,7 +463,7 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">薄れてくから</p>
         <p class="lyric-hangul">우스레테쿠카라</p>
         <p class="lyric-ipa">ɯᵝsɨre̞te̞kɯᵝkäɾä</p>
-        <p class="lyric-trans">흐려져가니 기록하자</p></div>
+        <p class="lyric-trans">흐려져가니</p></div>
     <div class="lyric-item"><p class="lyric-orig">記録しよう</p>
         <p class="lyric-hangul">키로쿠시요오</p>
         <p class="lyric-ipa">kʲiro̞kɯᵝɕijo̞ː</p>
