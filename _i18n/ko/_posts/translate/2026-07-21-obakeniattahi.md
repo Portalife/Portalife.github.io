@@ -444,7 +444,7 @@ tags: [translation, inoutuhasa]
   <div class="lyric-item"><p class="lyric-orig">最悪な夢を見ていた</p>
       <p class="lyric-hangul">사이아쿠나 유메오 미테이타</p>
       <p class="lyric-ipa">säiäkɯᵝnä jɯᵝme̞o̞ mʲite̞itä</p>
-      <p class="lyric-trans">최악인 꿈을 꿨었어</p></div>
+      <p class="lyric-trans">최악의 꿈을 꿨었어</p></div>
   <div class="lyric-item"><p class="lyric-orig">世界が私だけ忘れるお呪い</p>
       <p class="lyric-hangul">세카이가 와타시다케 와스레루 오마지나이</p>
       <p class="lyric-ipa">se̞käiɡä ɰätäɕidäke̞ ɰäsɨre̞ɾɯᵝ o̞mäd͡ʑinäi</p>
