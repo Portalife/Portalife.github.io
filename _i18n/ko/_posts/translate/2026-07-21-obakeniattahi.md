@@ -115,6 +115,10 @@ tags: [translation, inoutuhasa]
         <td class="tg-label">{% t translation.upload %}</td>
         <td class="tg-value">2026{% t layout.year %}4{% t layout.month %}25{% t layout.day %}</td>
       </tr>
+      <tr>
+        <td class="tg-label">{% t translation.album %}</td>
+        <td class="tg-value">싱글</td>
+      </tr>
     </tbody>
   </table>
 </div>  
@@ -141,10 +145,6 @@ tags: [translation, inoutuhasa]
     <tr>
       <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
       <td style="font-size: 15px;">이렇게 표시됩니다.</td>
-    </tr>
-    <tr>
-      <td class="tg-label">{% t translation.album %}</td>
-      <td class="tg-value">싱글</td>
     </tr>
   </tbody>
 </table>
