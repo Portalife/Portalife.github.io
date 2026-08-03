@@ -24,6 +24,7 @@ sidebar:
   change_wid: 285px
   tags: タグ
   all: このブログ
+  test: テスト
 layout:
   at: に
   exist: '記事がありますよ！'

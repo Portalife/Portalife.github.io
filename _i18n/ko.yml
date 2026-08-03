@@ -24,6 +24,7 @@ sidebar:
   change_wid: 240px
   tags: 태그
   all: 이 블로그
+  test: 테스트
 layout:
   at: '에 '
   exist: '글이 있어요!'
