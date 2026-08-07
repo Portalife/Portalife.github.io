@@ -280,8 +280,8 @@ tags: [translation, yunomi]
       <p class="lyric-ipa">näɡäi jo̞ɾɯᵝɲi o̞ɕit͡sɨbɯᵝsäre̞so̞ː</p>
       <p class="lyric-trans">기나긴 밤에 짓눌려버릴 것만 같아</p></div>
   <div class="lyric-item"><p class="lyric-orig">君のこと知っていくほど</p>
-      <p class="lyric-hangul">키미노 코토 싯테 유쿠 호도</p>
-      <p class="lyric-ipa">kʲimʲino̞ ko̞to̞ ɕit̚te̞ jɯᵝkɯᵝ ho̞do̞</p>
+      <p class="lyric-hangul">키미노 코토 시잇테 유쿠 호도</p>
+      <p class="lyric-ipa">kʲimʲino̞ ko̞to̞ ɕiːt̚te̞ jɯᵝkɯᵝ ho̞do̞</p>
       <p class="lyric-trans">너에 대해 알아 갈수록</p></div>
   <div class="lyric-item"><p class="lyric-orig">離れていくの</p>
       <p class="lyric-hangul">하나레테 유쿠노</p>
@@ -340,8 +340,8 @@ tags: [translation, yunomi]
       <p class="lyric-ipa">näɡäi jo̞ɾɯᵝɲi o̞ɕit͡sɨbɯᵝsäre̞so̞ː</p>
       <p class="lyric-trans">기나긴 밤에 짓눌려버릴 것만 같아</p></div>
   <div class="lyric-item"><p class="lyric-orig">君のこと知っていくほど</p>
-      <p class="lyric-hangul">키미노 코토 싯테 유쿠 호도</p>
-      <p class="lyric-ipa">kʲimʲino̞ ko̞to̞ ɕit̚te̞ jɯᵝkɯᵝ ho̞do̞</p>
+      <p class="lyric-hangul">키미노 코토 시잇테 유쿠 호도</p>
+      <p class="lyric-ipa">kʲimʲino̞ ko̞to̞ ɕiːt̚te̞ jɯᵝkɯᵝ ho̞do̞</p>
       <p class="lyric-trans">너에 대해 알아 갈수록</p></div>
   <div class="lyric-item"><p class="lyric-orig">わからなくなる</p>
       <p class="lyric-hangul">와카라나쿠 나루</p>
@@ -372,8 +372,8 @@ tags: [translation, yunomi]
       <p class="lyric-ipa">sɨkʲide̞ sɨkʲide̞ o̞ɕit͡sɨbɯᵝsäre̞so̞ː</p>
       <p class="lyric-trans">좋아해서 좋아해서 짓눌려버릴 것만 같아</p></div>
   <div class="lyric-item"><p class="lyric-orig">君のこと知っていくほど</p>
-      <p class="lyric-hangul">키미노 코토 싯테 유쿠 호도</p>
-      <p class="lyric-ipa">kʲimʲino̞ ko̞to̞ ɕit̚te̞ jɯᵝkɯᵝ ho̞do̞</p>
+      <p class="lyric-hangul">키미노 코토 시잇테 유쿠 호도</p>
+      <p class="lyric-ipa">kʲimʲino̞ ko̞to̞ ɕiːt̚te̞ jɯᵝkɯᵝ ho̞do̞</p>
       <p class="lyric-trans">너에 대해 알아 갈수록</p></div>
   <div class="lyric-item"><p class="lyric-orig">大きくなるの</p>
       <p class="lyric-hangul">오오키쿠 나루노</p>
