@@ -87,7 +87,7 @@ tags: [translation, yunomi]
     <tr class="tg-header-row">
       <td colspan="2">
         <span class="tg-title-main">ロボティックガール</span>
-        <span class="tg-title-sub">로보틱 걸</span>
+        <span class="tg-title-sub">Robotic Girl | 로보틱 걸</span>
       </td>
     </tr>
     <tr>
