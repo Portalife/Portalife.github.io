@@ -555,7 +555,7 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">投げ</p>
         <p class="lyric-hangul">나게</p>
         <p class="lyric-ipa">näɡe̞</p>
-        <p class="lyric-trans">내다</p></div>
+        <p class="lyric-trans">내던져</p></div>
     <div class="lyric-item"><p class="lyric-orig">捨て</p>
         <p class="lyric-hangul">스테</p>
         <p class="lyric-ipa">sɨte̞</p>
