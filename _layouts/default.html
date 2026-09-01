@@ -203,13 +203,11 @@
 
             if (!searchInput || !resultsContainer) return;
 
-            // 1. search.json 로드
             fetch('{{ "/search.json" | relative_url }}')
               .then(response => response.json())
               .then(data => { searchData = data; })
               .catch(error => console.error(error));
 
-            // 🔍 검색 실행 전용 공통 함수
             function performSearch() {
               const rawQuery = searchInput.value.trim();
               resultsContainer.innerHTML = ''; 
@@ -242,14 +240,11 @@
               }
             }
 
-            // 2. 글자 타이핑할 때마다 검색
             searchInput.addEventListener('input', performSearch);
 
-            // 3. ★ 핵심: 바깥을 누르고 나갔다가, 검색창을 "다시 클릭/포커스"하면 결과창 다시 표출 ★
             searchInput.addEventListener('focus', performSearch);
             searchInput.addEventListener('click', performSearch);
 
-            // 4. 엔터(Enter) 키 입력 시 1번 결과로 이동
             searchInput.addEventListener('keydown', function(e) {
               if (e.key === 'Enter') {
                 e.preventDefault();
@@ -258,7 +253,6 @@
               }
             });
 
-            // 5. 바깥 영역 클릭 시 결과창 비워서 숨김
             document.addEventListener('click', function(e) {
               if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
                 resultsContainer.innerHTML = '';
