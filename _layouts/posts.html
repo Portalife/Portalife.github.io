@@ -10,7 +10,7 @@ layout: default
   {% endif %}
   {{ page.date | date: "%-d %B %Y" }}
 </small>
-<h2 style="margin-top: 5px; margin-right: 7px;">{{ page.title }}</h2>
+<h1 class="post-title" style="margin-top: 5px; margin-right: 7px;">{{ page.title }}{% if page.author %}<span class="sr-only"> - {{ page.author | join: ', ' }}</span>{% endif %}</h1>
 <hr>
 
 {{content}}

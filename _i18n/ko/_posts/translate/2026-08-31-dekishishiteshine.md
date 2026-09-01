@@ -114,7 +114,7 @@ tags: [translation, inoutuhasa]
     </tr>
   </tbody>
 </table>
-
+{{ page.url | prepend: site.baseurl | prepend: site.url }}
 물에 빠져 죽어버릴 정도로🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️🏊‍♂️  
 목이 졸려 죽을 것처럼😵😵😵😵😵😵😵😵😵😵  
 <br>

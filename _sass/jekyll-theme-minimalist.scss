@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5, h6 {
   margin:0 0 20px;
 }
 
+h1.post-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--clr-h2);
+}
+
 h4 {
   font-size: 17px;
   margin:0 0 12px;
@@ -71,6 +77,18 @@ a {
   text-decoration:none;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .layout-posts .post-tag-link,
 .layout-lab .post-tag-link,
 .layout-textbook .post-tag-link {
@@ -112,10 +130,7 @@ a small {
   display:block;
 }
 
-/* 존재하는 문서 링크 (나무위키 스타일 파란색) */
 
-
-/* 존재하지 않는 문서 링크 (나무위키 스타일 빨간색) */
 .layout-lab a.wiki-link-broken,
 .layout-posts a.wiki-link-broken,
 .layout-textbook a.wiki-link-broken {
@@ -459,7 +474,7 @@ body.lang-ja .lang-change-btn-ja {
 
 .search-box-container,
 .search-box-container * {
-  box-sizing: border-box; /* 패딩으로 인해 195px 넘어가는 현상 방지 */
+  box-sizing: border-box;
 }
 
 .search-box-container {
@@ -469,14 +484,14 @@ body.lang-ja .lang-change-btn-ja {
   margin: 0 auto;
 }
 
-/* 2. 입력창 (세로 높이 및 폰트 축소) */
+
 #search-input {
   width: 100%;
-  height: 28px; /* 세로 높이를 28px로 컴팩트하게 축소 */
-  padding: 3px 8px; /* 위아래 여백 최소화 */
+  height: 28px; 
+  padding: 3px 8px;
   border: 1px solid #cbd5e1;
   border-radius: 4px;
-  font-size: 0.8rem; /* 폰트 크기 슬림화 (~12px) */
+  font-size: 0.8rem; 
   color: #1e293b;
   outline: none;
   background-color: #ffffff;
@@ -487,9 +502,9 @@ body.lang-ja .lang-change-btn-ja {
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
 }
 
-/* 3. 검색 결과 드롭다운 (사이드바 요소를 밀어내지 않는 팝업 방식) */
+
 #results-container {
-  display: none; /* 평소에는 상자 자체가 아예 안 보임 */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -506,22 +521,22 @@ body.lang-ja .lang-change-btn-ja {
   overflow-y: auto;
 }
 
-/* ★ 안쪽에 검색 결과(li)가 하나라도 들어찼을 때만 상자를 표시함 ★ */
+
 #results-container:not(:empty) {
   display: block;
 }
 
-/* 4. 결과 리스트 항목 (1줄 말줄임표 처리 ⭐) */
+
 #results-container li a {
   display: block;
-  padding: 5px 8px; /* 세로 패딩 최소화 */
+  padding: 5px 8px; 
   color: #334155;
   text-decoration: none;
   border-bottom: 1px solid #f1f5f9;
-  font-size: 0.78rem; /* 작은 폰트 크기로 한 화면에 많은 글자 표시 */
+  font-size: 0.78rem; 
   line-height: 1.3;
 
-  /* 195px 폭에서 포스트 제목이 길어도 아래로 안 넘어가고 깔끔하게 ... 처리 */
+
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

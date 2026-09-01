@@ -1,0 +1,58 @@
+    <!--
+    {% assign head_title = page.title %}
+
+    {% if head_title == nil %}
+      {% if page.url contains "/categories/" %}
+        {% assign parts = page.url | split: '/' %}
+        {% for p in parts %}
+          {% if p == "categories" %}
+            {% assign idx = forloop.index %}
+            {% assign cat = parts[idx] %}
+            {% capture head_title %}{% t sidebar.{{ cat }} %}{% endcapture %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+    {% if head_title == nil %}
+      {% if page.url contains "/tags/" %}
+        {% assign parts = page.url | split: '/' %}
+        {% for p in parts %}
+          {% if p == "tags" %}
+            {% assign idx = forloop.index %}
+            {% assign tag = parts[idx] %}
+            {% capture head_title %}#{% t tags.{{ tag }} %}{% endcapture %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endif %}
+
+    {% assign final_seo_title = head_title | default: site.title %}
+    <title>{% if head_title %}{% if page.author %}{{ final_seo_title }} - {{ page.author }}{% else %}{{ final_seo_title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
+    <script>
+    (function() {
+      {% if page.title %}
+        document.title = "{{ page.title | escape }} | {{ site.title | escape }}";
+      {% else %}
+        function setTabTitleFromH1() {
+          const h1Tags = document.querySelectorAll('h1');
+          if (h1Tags.length > 1) {
+            const h1Text = h1Tags[1].textContent.trim();
+            if (h1Text) {
+              document.title = h1Text + " | {{ site.title | escape }}";
+              return;
+            }
+          }
+          document.title = "{{ site.title | escape }}";
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", setTabTitleFromH1);
+        } else {
+          setTabTitleFromH1();
+        }
+      {% endif %}
+    })();
+    </script>
+    -->

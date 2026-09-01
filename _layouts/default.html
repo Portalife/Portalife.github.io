@@ -25,6 +25,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="RCDOr37is_AWM9_2IjNqN9PDPkd3LJG15AIQHlSItQo" />
     <meta name="naver-site-verification" content="5ffd68faac57111855c4875ecd19cbdb741c64e0" />
+    {% assign page_full_url = page.url | prepend: site.baseurl | prepend: site.url %}
+
     {% assign head_title = page.title %}
 
     {% if head_title == nil %}
@@ -55,32 +57,45 @@
       {% endif %}
     {% endif %}
 
-    {% assign final_seo_title = head_title | default: site.title %}
-    <title>{% if head_title %}{% if page.author %}{{ final_seo_title }} - {{ page.author }}{% else %}{{ final_seo_title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
-    {% seo title=false %}
-    <script>
-    (function() {
-      {% if page.title %}
-        document.title = "{{ page.title | escape }} | {{ site.title | escape }}";
+    {% if head_title %}
+      {% if page.author %}
+        {% assign author_text = page.author | join: ', ' %}
+        {% assign clean_title = head_title | append: ' - ' | append: author_text %}
       {% else %}
-        function setTabTitleFromH1() {
-          const h1Tags = document.querySelectorAll('h1');
-          if (h1Tags.length > 1) {
-            const h1Text = h1Tags[1].textContent.trim();
-            if (h1Text) {
-              document.title = h1Text + " | {{ site.title | escape }}";
-              return;
-            }
-          }
-          document.title = "{{ site.title | escape }}";
-        }
-        if (document.readyState === "loading") {
-          document.addEventListener("DOMContentLoaded", setTabTitleFromH1);
-        } else {
-          setTabTitleFromH1();
-        }
+        {% assign clean_title = head_title %}
       {% endif %}
-    })();
+    {% else %}
+      {% assign clean_title = site.title %}
+    {% endif %}
+
+    <title>{% if head_title %}{{ clean_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <meta property="og:title" content="{{ clean_title }}" />
+    <meta name="twitter:title" content="{{ clean_title }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:type" content="{% if page.layout == 'posts' or page.layout == 'post' %}article{% else %}website{% endif %}" />
+    <meta property="og:url" content="{{ page_full_url }}" />
+    <link rel="canonical" href="{{ page_full_url }}" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ clean_title | jsonify }},
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": {{ page_full_url | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://portalife.github.io/assets/img/page3.png"
+        }
+      },
+      "url": {{ page_full_url | jsonify }}
+    }
     </script>
     <link rel="stylesheet" as="style" crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
@@ -172,14 +187,14 @@
           {% if site.logo %}
             <img class="img-circle" src="{{site.logo | relative_url}}" alt="Logo">
           {% endif %}
-
-          <h1 class="h1-ipa" aria-label="portalife" style="color:#7ED8E9;">
+          
+          <div class="h1-ipa" aria-label="portalife" style="color:#7ED8E9; margin:0 0 20px; line-height:1.1;">
             {% if site.logo_text %}
               {{ site.logo_text }}
             {% else %}
               {{ site.title }}
             {% endif %}
-          </h1>          
+          </div>          
 
           {% if site.email %}
             <p class="addr"><i class="fa-regular fa-envelope"></i>&nbsp;{{ site.email }}</p>
