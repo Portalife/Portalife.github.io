@@ -114,7 +114,6 @@ tags: [translation, inoutuhasa]
     </tr>
   </tbody>
 </table>
-{{ page.url | prepend: site.baseurl | prepend: site.url }}
 溺れ死んでしまうほどに🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️️🏊‍♂️🏊‍♂️  
 絞め殺されるみたいに😵😵😵😵😵😵😵😵😵😵  
 <br>
