@@ -601,7 +601,7 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">馬鹿らしくなった</p>
         <p class="lyric-hangul">바카라시쿠 낫타</p>
         <p class="lyric-ipa">bäkäɾäɕikɯᵝ nät̚tä</p>
-        <p class="lyric-trans">바보 같아졌어{% include foot.html content="번역을 보충하자면, 말 그대로 바보가 되었다는 뜻이 아니라 '모든 게 바보 같아졌어, 부질없게 느껴졌어'와 같은 뉘앙스이다." %}</p></div>
+        <p class="lyric-trans">바보 같아졌어{% include foot.html content="번역을 보충하자면, 정말 말 그대로 바보가 되었다는 뜻이 아니라 '모든 게 바보 같아졌어, 부질없게 느껴졌어'와 같은 뉘앙스이다." %}</p></div>
     <div class="lyric-item"><p class="lyric-orig danmaku-trigger" data-danmaku="목이 졸려 죽을 것처럼😵😵😵😵😵😵😵😵😵😵😵😵,목이 졸려 죽을 것처럼🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️">絞め殺されるみたいに</p>
         <p class="lyric-hangul">시메 코로사레루 미타이니</p>
         <p class="lyric-ipa">ɕime̞ ko̞ro̞säre̞ɾɯᵝ mʲitäiɲi</p>

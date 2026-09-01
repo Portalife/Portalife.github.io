@@ -517,7 +517,7 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">海藻が笑っている</p>
         <p class="lyric-hangul">카이소오가 와랏테에루</p>
         <p class="lyric-ipa">käiso̞ːɡä ɰäɾät̚te̞ːɾɯᵝ</p>
-        <p class="lyric-trans">해초{% include foot.html content="사실 '해초'라는 말은 학술적으로 김, 다시마, 미역 등의 해조류를 지칭하는 개념이 아니므로 해조류 또는 해조와 구분해야 하지만, 일상적으로 해초라는 말은 해조류라는 의미로 통용되고 있으므로, 일본에서 해조류를 지칭하는 일상적인 말로 사용되는 海藻(해조)의 번역어로서 해초를 사용하였다." %}가 웃고 있어</p></div>
+        <p class="lyric-trans">해초{% include foot.html content="厳密には、海草という言葉は学術的に海苔・昆布・ワカメなどの海藻類を指す概念ではないため（これは両国共通）、海藻類または海藻とは区別すべきだが、韓国では日常的に「海草（해초）」という言葉自体が海藻類の意味で広く通用しているので、日本で海藻類を指す日常語として使われる「海藻」の訳語として「海草（해초）」を使用した。" %}가 웃고 있어</p></div>
     <div class="lyric-item"><p class="lyric-orig danmaku-trigger" data-danmaku="壊れてくるってしまうほどに🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️,壊れて狂ってしまうほどに🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️">壊れて狂ってしまうほどに</p>
         <p class="lyric-hangul">코와레테 쿠룻테시마우 호도니</p>
         <p class="lyric-ipa">ko̞ɰäre̞te̞ kɯᵝɾɯᵝt̚te̞ɕimäɯᵝ ho̞do̞ɲi</p>
@@ -601,7 +601,7 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">馬鹿らしくなった</p>
         <p class="lyric-hangul">바카라시쿠 낫타</p>
         <p class="lyric-ipa">bäkäɾäɕikɯᵝ nät̚tä</p>
-        <p class="lyric-trans">바보 같아졌어{% include foot.html content="번역을 보충하자면, 말 그대로 바보가 되었다는 뜻이 아니라 '모든 게 바보 같아졌어, 부질없게 느껴졌어'와 같은 뉘앙스이다." %}</p></div>
+        <p class="lyric-trans">바보 같아졌어</p></div>
     <div class="lyric-item"><p class="lyric-orig danmaku-trigger" data-danmaku="絞め殺されるみたいに😵😵😵😵😵😵😵😵😵😵😵😵,絞め殺されるみたいに🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️🏊‍♂️">絞め殺されるみたいに</p>
         <p class="lyric-hangul">시메 코로사레루 미타이니</p>
         <p class="lyric-ipa">ɕime̞ ko̞ro̞säre̞ɾɯᵝ mʲitäiɲi</p>
@@ -629,7 +629,7 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">馬鹿みたいに花火をと</p>
         <p class="lyric-hangul">바카미타이니 하나비오토</p>
         <p class="lyric-ipa">bäkämʲitäiɲi hänäbʲio̞to̞</p>
-        <p class="lyric-trans">바보처럼 불꽃놀이를 이라고{% include foot.html content="애초에 원문이 이렇다. 이노우츠하SA님의 곡에는 갑자기 끊기거나 툭 튀는 부분이 많은데, 그런 방식으로 붕괴되어 가는 세계와 화자의 혼란함을 표현하기 때문이다. 결국 이러한 의도적인 비문 구성 또한 그와 결을 같이 한다고 볼 수 있다." %}</p></div>
+        <p class="lyric-trans">바보처럼 불꽃놀이를 이라고</p></div>
     <div class="lyric-item"><p class="lyric-orig">思い出した</p>
         <p class="lyric-hangul">오모이다시타</p>
         <p class="lyric-ipa">o̞mo̞idäɕi̥tä</p>
