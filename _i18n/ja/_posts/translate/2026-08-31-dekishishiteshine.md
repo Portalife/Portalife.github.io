@@ -756,7 +756,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const repeatCount = Math.floor(Math.random() * 3) + 1;
         item.textContent = Array(repeatCount).fill(randomEmoji).join("　");
 
-        const topPos = Math.random() * 90 + 5;
+        const topPos = Math.random() * 90 + 7;
         item.style.top = topPos + "vh";
 
         const fontSize = 48;
