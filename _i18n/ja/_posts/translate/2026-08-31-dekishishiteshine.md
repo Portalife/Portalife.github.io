@@ -795,7 +795,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, {
-    rootMargin: "-49% 0px -50% 0px",
+    rootMargin: "-45% 0px -50% 0px",
     threshold: 0
   });
 
