@@ -43,7 +43,7 @@ pre: true
 }
 .tg-header-row td {
   padding: 12px 10px;
-  border-bottom: 1px solid #39c5bb ;
+  border-bottom: 1px solid #39c5bb;
 }
 .tg-title-main {
   font-size: 22px;
