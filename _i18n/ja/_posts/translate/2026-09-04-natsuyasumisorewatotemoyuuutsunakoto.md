@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "여름방학. 그것은 정말로 우울한 일"
+title: "夏休み。それはとても憂鬱なこと"
 author: [前頭葉まだ半分]
 categories: [translate]
 order: 1
