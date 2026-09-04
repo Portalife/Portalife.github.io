@@ -308,10 +308,10 @@ tags: [translation, zentouyoumadahanbun]
       <p class="lyric-hangul">무케에카쿠다 무케에카쿠다</p>
       <p class="lyric-ipa">mɯᵝke̞ekäkɯᵝdä mɯᵝke̞ekäkɯᵝdä</p>
       <p class="lyric-trans">무계획이야 무계획이야</p></div>
-  <div class="lyric-item"><p class="lyric-orig">だけどこんな計画（プラン）はある</p>
+  <div class="lyric-item"><p class="lyric-orig">だけどこんな<ruby>計画<rt>プラン</rt></ruby>はある</p>
       <p class="lyric-hangul">다케도 콘나 푸랑와 아루</p>
       <p class="lyric-ipa">däke̞do̞ ko̞nnä pɯᵝɾäɰ̃ɰä äɾɯᵝ</p>
-      <p class="lyric-trans">하지만 이런 계획(플랜)은 있어</p></div>
+      <p class="lyric-trans">하지만 이런 <ruby>계획<rt>플랜</rt></ruby>은 있어</p></div>
   <div class="lyric-item"><p class="lyric-orig">授業中 テロリスト銃を手に教室現れる</p>
       <p class="lyric-hangul">쥬교오츄우 테로리스토 쥬우오 테니 쿄오시츠 아라와레루</p>
       <p class="lyric-ipa">d͡ʑɨɡʲo̞ːt͡ɕɨː te̞ro̞ɾʲisɨto̞ d͡ʑɨːo̞ te̞ɲi kʲo̞ːɕit͡sɨ äɾäɰäre̞ɾɯᵝ</p>
