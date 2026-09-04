@@ -235,7 +235,7 @@ tags: [translation, zentouyoumadahanbun]
   <div class="lyric-item"><p class="lyric-orig">七夕ゼリーを食べながら 給食中 願ったの。</p>
       <p class="lyric-hangul">타나바타 제리-오 타베나가라 큐우쇼쿠츄우 네가앗타노</p>
       <p class="lyric-ipa">tänäbätä d͡ze̞ɾʲiːo̞ täbe̞näɡäɾä kʲɨːɕo̞kɯᵝt͡ɕɨː ne̞ɡäːt̚täno̞</p>
-      <p class="lyric-trans">타나바타 젤리를 먹으며 급식 중에 빌었어.</p></div>
+      <p class="lyric-trans">타나바타 젤리{% include foot.html content="타나바타(七夕)는 일본에서의 칠석 명절을 이르는 말이다. 이 시즌에는 타나바타 젤리(七夕ゼリー)라는 것을 팔거나, 학교에서 급식으로 주기도 하는데, 기본적으로 맛은 라무네와 비슷하다." %}를 먹으며 급식 중에 빌었어.</p></div>
   <div class="lyric-item"><p class="lyric-orig">9月頭にミサイルが</p>
       <p class="lyric-hangul">쿠가츠 아타마니 미사이루가</p>
       <p class="lyric-ipa">kɯᵝɡät͡sɨ ätämäɲi mʲisäiɾɯᵝɡä</p>
@@ -267,7 +267,7 @@ tags: [translation, zentouyoumadahanbun]
   <div class="lyric-item"><p class="lyric-orig">明日██先生が100回しゃっくりをしますように</p>
       <p class="lyric-hangul">아시타 센-세이가 햑카이 샥쿠리오 시마스 요오니</p>
       <p class="lyric-ipa">äɕitä se̞ɰ̃se̞iɡä çäk̚käi ɕäk̚kɯᵝɾʲio̞ ɕimäsɨ jo̞ːɲi</p>
-      <p class="lyric-trans">내일 ██ 선생님이 100번 딸꾹질을 하기를</p></div>
+      <p class="lyric-trans">내일 ██ 선생님이 100번 딸꾹질을 하기를{% include foot.html content="'100번 딸꾹질하면 죽는다.'라는 일본에 널리 퍼져있는 유명한(?) 도시전설 내지 속설. 물론 지금에 와선 진지하게 믿는 사람은 거의 없을 듯 하다. 한국으로 따지면 '선풍기 틀고 자면 죽는다.' 정도가 아닐까 싶다." %}</p></div>
   <div class="lyric-item"><p class="lyric-orig">消えたくてしょうがない病める夏も</p>
       <p class="lyric-hangul">키에타쿠테 쇼오가나이 야메루 나츠모</p>
       <p class="lyric-ipa">kʲie̞täkɯᵝte̞ ɕo̞ːɡänäi jäme̞ɾɯᵝ nät͡sɨmo̞</p>
@@ -387,7 +387,7 @@ tags: [translation, zentouyoumadahanbun]
   <div class="lyric-item"><p class="lyric-orig">9月亡き出すサイレンが</p>
       <p class="lyric-hangul">쿠가츠 나키다스 사이렝-가</p>
       <p class="lyric-ipa">kɯᵝɡät͡sɨ näkʲidäsɨ säire̞ŋɡä</p>
-      <p class="lyric-trans">9월 울기 시작하는 사이렌이</p></div>
+      <p class="lyric-trans">9월 울기 시작하는 사이렌이{% include foot.html content="일본에서 매년 9월 1일은 관동대지진으로 인해 방재의 날로 지정되어, 각지 및 각 기관에서 재난 상황을 대비한 모의 훈련 등이 실시된다." %}</p></div>
   <div class="lyric-item"><p class="lyric-orig">僕の タイムリミット</p>
       <p class="lyric-hangul">보쿠노 타이무 리미잇토</p>
       <p class="lyric-ipa">bo̞kɯᵝno̞ täimɯᵝ ɾʲimʲiːt̚to̞</p>
