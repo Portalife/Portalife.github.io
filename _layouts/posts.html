@@ -16,12 +16,10 @@ layout: default
 {{content}}
 
 {% if page.tags and page.tags.size > 0 %}
-  <!-- 컨테이너 전체에 post-tags-container 클래스 부여 -->
   <small>tags: 
     {% for tag in page.tags %}
       {% capture tag_url %}/tags/{{ tag }}/{% endcapture %}
       <em>
-        <!-- 개별 태그 링크에 post-tag-link 클래스 부여 -->
         <a class="post-tag-link" href="{{ tag_url | prepend: site.baseurl }}">
           {% t tags.{{ tag }} %}
         </a>
@@ -57,15 +55,15 @@ layout: default
       `;
       notice.innerHTML = `리다이렉트됨: <strong>${fromTitle}</strong>에서 건너왔습니다.`;
 
-      const h2Tag = document.querySelector("h2");
+      const h1Tag = document.querySelector("h1");
 
-      if (h2Tag && h2Tag.parentNode) {
-        const h2Style = window.getComputedStyle(h2Tag);
-        const marginTop = h2Style.marginTop;
-        const marginBottom = h2Style.marginBottom;
+      if (h1Tag && h1Tag.parentNode) {
+        const h1Style = window.getComputedStyle(h1Tag);
+        const marginTop = h1Style.marginTop;
+        const marginBottom = h1Style.marginBottom;
 
         const wrapper = document.createElement("div");
-        wrapper.className = "redirect-h2-wrapper";
+        wrapper.className = "redirect-h1-wrapper";
         wrapper.style.cssText = `
           display: flex;
           align-items: center;
@@ -75,11 +73,11 @@ layout: default
           margin-bottom: ${marginBottom};
         `;
 
-        h2Tag.style.marginTop = "0";
-        h2Tag.style.marginBottom = "0";
+        h1Tag.style.marginTop = "0";
+        h1Tag.style.marginBottom = "0";
 
-        h2Tag.parentNode.insertBefore(wrapper, h2Tag);
-        wrapper.appendChild(h2Tag);
+        h1Tag.parentNode.insertBefore(wrapper, h1Tag);
+        wrapper.appendChild(h1Tag);
         wrapper.appendChild(notice);
 
       } else {
