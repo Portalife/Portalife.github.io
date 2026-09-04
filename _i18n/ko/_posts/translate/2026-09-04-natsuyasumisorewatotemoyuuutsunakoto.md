@@ -15,7 +15,7 @@ tags: [translation, zentouyoumadahanbun]
   border-spacing: 0;
   width: fit-content;
   max-width: 400px;
-  border: 1.5px solid #452cd2;
+  border: 1.5px solid #432cd2;
   border-radius: 14px;
   overflow: hidden;
   margin: 0 0 1.5rem 0;
@@ -39,12 +39,12 @@ tags: [translation, zentouyoumadahanbun]
 
 /* 상단 스타일 */
 .tg-header-row {
-  background: #452cd2;
+  background: #432cd2;
   text-align: center;
 }
 .tg-header-row td {
   padding: 17px 14px;
-  border-bottom: soild 1px #452cd2;
+  border-bottom: soild 1px #432cd2;
 }
 .tg-title-main {
   font-size: 22px;
@@ -63,7 +63,7 @@ tags: [translation, zentouyoumadahanbun]
 
 /* 왼쪽 스타일 */
 .tg-label {
-  background-color: #452cd229;
+  background-color: #432cd229;
   font-weight: 400;
   color: #212529;
   text-align: center;
@@ -146,16 +146,16 @@ tags: [translation, zentouyoumadahanbun]
 <style type="text/css">
 .lyric-container {
 
-  --orig-bg: #452cd2;
+  --orig-bg: #432cd2;
   --orig-color: #ffffff;
   
-  --hangul-bg: #452cd229;
+  --hangul-bg: #432cd229;
   --hangul-color: #000000;
   
-  --ipa-bg: #452cd229;
+  --ipa-bg: #432cd229;
   --ipa-color: #000000;
   
-  --trans-bg: #452cd229;
+  --trans-bg: #432cd229;
   --trans-color: #000000; 
 
   --outer-border: #6BA2F4;
@@ -182,7 +182,7 @@ tags: [translation, zentouyoumadahanbun]
   line-height: 2.3;
   padding: 0 15px;
   font-size: 15px;
-  border-bottom: 1px solid #3E3CD7;
+  border-bottom: 1px solid #432cd2;
 }
 
 .lyric-hangul {
@@ -215,7 +215,7 @@ tags: [translation, zentouyoumadahanbun]
   padding: 0 15px;
   font-size: 15px;
   text-align: center;
-  border-bottom: 1px solid #3E3CD7;
+  border-bottom: 1px solid #432cd2;
 }
 
 .lyric-item:last-child .lyric-trans {
