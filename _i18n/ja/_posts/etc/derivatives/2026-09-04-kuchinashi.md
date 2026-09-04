@@ -12,4 +12,4 @@ tags: [derivatives, pianoarrange]
 楽譜は個人利用のみでお願いします。
 
 楽譜  
-<a href="https://res.cloudinary.com/g9fkrbfv/image/upload/v1788520119/kuchinashi_ixn52o.pdf" target="_blank">https://res.cloudinary.com/g9fkrbfv/image/upload/v1788520119/kuchinashi_ixn52o.pdf</a>
+<a href="https://res.cloudinary.com/g9fkrbfv/image/upload/v1788521795/kuchinashi2_oou1sa.pdf" target="_blank">https://res.cloudinary.com/g9fkrbfv/image/upload/v1788521795/kuchinashi2_oou1sa.pdf</a>
