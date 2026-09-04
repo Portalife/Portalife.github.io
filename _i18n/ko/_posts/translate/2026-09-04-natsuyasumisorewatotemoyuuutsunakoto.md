@@ -227,7 +227,7 @@ tags: [translation, zentouyoumadahanbun]
   <div class="lyric-item"><p class="lyric-orig">集団下校 僕は 孤立下校</p>
       <p class="lyric-hangul">슈우당게코오 보쿠와 코리츠게코오</p>
       <p class="lyric-ipa">ɕɨːdäŋɡe̞ko̞ː bo̞kɯᵝɰä ko̞ɾʲit͡sɨɡe̞ko̞ː</p>
-      <p class="lyric-trans">집단하교 나는 독립하교</p></div>
+      <p class="lyric-trans">집단하교 나는 고립하교</p></div>
   <div class="lyric-item"><p class="lyric-orig">持ちきれないほど 重い荷物と</p>
       <p class="lyric-hangul">모치키레나이 호도 오모이 니모츠토</p>
       <p class="lyric-ipa">mo̞t͡ɕikʲire̞näi ho̞do̞ o̞mo̞i ɲimo̞t͡sɨto̞</p>
