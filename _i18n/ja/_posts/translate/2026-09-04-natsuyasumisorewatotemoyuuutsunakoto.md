@@ -327,7 +327,7 @@ tags: [translation, zentouyoumadahanbun]
   <div class="lyric-item"><p class="lyric-orig">君もこんな夏休みも</p>
       <p class="lyric-hangul">키미모 콘나 나츠야스미모</p>
       <p class="lyric-ipa">kʲimʲimo̞ ko̞nnä nät͡sɨjäsɨmʲimo̞</p>
-      <p class="lyric-trans">너도 이런 여름도</p></div>
+      <p class="lyric-trans">너도 이런 여름방학도</p></div>
   <div class="lyric-item"><p class="lyric-orig">旧校舎越しの蝉時雨</p>
       <p class="lyric-hangul">큐우코오샤 고시노 세미시구레</p>
       <p class="lyric-ipa">kʲɨːko̞ːɕä go̞ɕino̞ se̞mʲiɕiɡɯᵝre̞</p>
