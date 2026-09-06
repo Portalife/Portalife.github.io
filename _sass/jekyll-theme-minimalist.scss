@@ -91,14 +91,16 @@ a {
 
 .layout-posts .post-tag-link,
 .layout-lab .post-tag-link,
-.layout-textbook .post-tag-link {
+.layout-textbook .post-tag-link,
+.layout-translate .post-tag-link {
   color: #212529;
   transition: color 0.2s ease; 
 }
 
 .layout-posts .post-tag-link:hover,
 .layout-lab .post-tag-link:hover,
-.layout-textbook .post-tag-link:hover {
+.layout-textbook .post-tag-link:hover,
+.layout-translate .post-tag-link:hover {
   color: var(--clr-a-text-hvr);
 }
 
@@ -108,14 +110,16 @@ a:hover, a:focus {
 
 .layout-lab a,
 .layout-posts a,
-.layout-textbook a {
+.layout-textbook a,
+.layout-translate a {
   color: var(--clr-a-text-hvr);
   text-decoration: none;
 }
 
 .layout-lab a:hover, .layout-lab a:focus,
 .layout-posts a:hover, .layout-posts a:focus,
-.layout-textbook a:hover, .layout-textbook a:focus {
+.layout-textbook a:hover, .layout-textbook a:focus,
+.layout-translate a:hover, .layout-translate a:focus {
   text-decoration: underline;
 }
 
