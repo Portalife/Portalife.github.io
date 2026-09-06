@@ -506,7 +506,7 @@ pre: true
         <p class="lyric-hangul">마타 키테네</p>
         <p class="lyric-ipa">mätä kʲite̞ne̞</p>
         <p class="lyric-trans" style="border-bottom: 1px solid #d1e0df">또 와줘!</p></div>
-    <div class="lyric-item"><p class="lyric-orig" style="background: white; color: black"><br>一億年恋してる<br>일억 년 사랑하고 있어<br><br></p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: white; color: black"><br>一億年恋してる<br>일억 년 좋아하고 있어<br><br></p></div>
 </div>
 
 <p>문서 작성에 도움을 주신 분: jaejamin님&hairsp;<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>&hairsp;</p>
