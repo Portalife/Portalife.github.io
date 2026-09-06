@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "ロボティックガール"
 author: [Yunomi]
 categories: [translate]

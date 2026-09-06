@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "여름방학. 그것은 정말로 우울한 일"
 author: [前頭葉まだ半分]
 categories: [translate]

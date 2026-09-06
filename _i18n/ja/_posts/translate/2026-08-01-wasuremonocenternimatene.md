@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "忘れ物センターにまたね！"
 author: [いのうつはSA]
 categories: [translate]

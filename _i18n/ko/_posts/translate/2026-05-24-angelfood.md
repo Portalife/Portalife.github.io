@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "엔젤푸드"
 author: [모모네 치노이]
 categories: [translate]

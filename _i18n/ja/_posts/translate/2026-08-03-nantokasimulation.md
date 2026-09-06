@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "なんとかシミュレーション"
 author: [いのうつはSA]
 categories: [translate]

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "木になったいもうと"
 author: [電ǂ鯨]
 categories: [translate]

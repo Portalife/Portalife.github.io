@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "유령을 만난 날"
 author: [이노우츠하SA]
 categories: [translate]

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "エンゼルフード"
 author: [桃寝ちのい]
 categories: [translate]

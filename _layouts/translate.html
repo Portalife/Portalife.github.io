@@ -9,7 +9,18 @@ layout: default
       <span class="preposted" style="cursor:pointer; color: #00a495;">■</span>
     </a>
   {% endif %}
-  {{ page.date | date: "%-d %B %Y" }}&emsp;
+  <em style="font-style: normal;">
+  {% if page.tags and page.tags.size > 0 %}
+    {% for tag in page.tags %}
+      {% capture tag_url %}/tags/{{ tag }}/{% endcapture %}
+
+        <a class="post-tag-link" href="{{ tag_url | prepend: site.baseurl }}">
+          {% t tags.{{ tag }} %}
+        </a>
+      {% unless forloop.last %} - {% endunless %}
+    {% endfor %}
+  {% endif %}
+  </em>
 </small>
 <h1 class="post-title" style="margin-top: 5px; margin-right: 7px;">{{ page.title }}{% if page.author %}<span class="sr-only"> - {{ page.author | join: ', ' }}</span>{% endif %}</h1>
 <hr>
@@ -18,7 +29,6 @@ layout: default
 
 <small>
   <em>
-  tags:
   {% if page.tags and page.tags.size > 0 %}
     {% for tag in page.tags %}
       {% capture tag_url %}/tags/{{ tag }}/{% endcapture %}
@@ -110,8 +120,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const footnotes = document.querySelectorAll('.auto-footnote');
   if (footnotes.length === 0) return;
 
-  const postContainer = document.querySelector('section.layout-posts') || 
-                        document.querySelector('.layout-posts') || 
+  // 1. 번역 전용 본문 컨테이너 (<section class="layout-translate">) 탐색 ⭐
+  const postContainer = document.querySelector('section.layout-translate') || 
+                        document.querySelector('.layout-translate') || 
                         document.body;
 
   const footnotesDiv = document.createElement('div');
@@ -121,31 +132,40 @@ document.addEventListener("DOMContentLoaded", function() {
   const ol = document.createElement('ol');
   footnotesDiv.appendChild(ol);
 
+  // 2. 내주 및 각주 생성
   footnotes.forEach((fn, index) => {
     const num = index + 1;
     const content = fn.getAttribute('data-content');
 
+    // [내주 생성]
     const sup = document.createElement('sup');
     sup.id = `fnref:${num}`;
     sup.innerHTML = `&hairsp;<a href="#fn:${num}" class="footnote" rel="footnote" role="doc-noteref">${num}</a>&hairsp;`;
     fn.parentNode.replaceChild(sup, fn);
 
+    // [하단 각주 생성]
     const li = document.createElement('li');
     li.id = `fn:${num}`;
     li.innerHTML = `<p>${content}&nbsp;<a href="#fnref:${num}" class="reversefootnote" role="doc-backlink">↩</a></p>`;
     ol.appendChild(li);
   });
 
+  // 3. 기존 본문 <hr> 복제
   const existingHr = postContainer.querySelector('hr');
   const hr = existingHr ? existingHr.cloneNode(true) : document.createElement('hr');
 
-  const tagLink = postContainer.querySelector('.post-tag-link');
-  const bottomTagElement = tagLink ? tagLink.closest('small') : null;
+  // 4. 태그 링크들 중 '맨 마지막(하단)' 태그 목록만 정확하게 탐색 ⭐⭐⭐
+  const tagLinks = postContainer.querySelectorAll('.post-tag-link');
+  const bottomTagElement = tagLinks.length > 0 
+    ? tagLinks[tagLinks.length - 1].closest('small') 
+    : null;
 
   if (bottomTagElement) {
+    // 맨 아래 태그 목록 바로 "위"에 구분선과 각주 삽입!
     bottomTagElement.parentNode.insertBefore(hr, bottomTagElement);
     bottomTagElement.parentNode.insertBefore(footnotesDiv, bottomTagElement);
   } else {
+    // 혹시 하단 태그가 없는 경우 section 맨 뒤에 삽입
     postContainer.appendChild(hr);
     postContainer.appendChild(footnotesDiv);
   }

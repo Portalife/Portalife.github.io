@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "今日も最悪だったね(^_-)-☆"
 author: [いのうつはSA]
 categories: [translate]

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "おばけに会った日"
 author: [いのうつはSA]
 categories: [translate]

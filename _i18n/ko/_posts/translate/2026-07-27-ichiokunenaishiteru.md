@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "일억 년 좋아하고 있어"
 author: [이노우츠하SA]
 categories: [translate]

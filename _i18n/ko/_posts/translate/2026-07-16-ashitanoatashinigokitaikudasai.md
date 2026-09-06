@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "내일의 저에게 기대해주세요."
 author: [모모네 치노이]
 categories: [translate]

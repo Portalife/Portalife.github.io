@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "一億年恋してる"
 author: [いのうつはSA]
 categories: [translate]

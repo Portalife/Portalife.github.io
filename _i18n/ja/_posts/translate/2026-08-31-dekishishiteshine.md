@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "溺死して死ね"
 author: [いのうつはSA]
 categories: [translate]

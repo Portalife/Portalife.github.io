@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "나무가 된 여동생"
 author: [전기고래]
 categories: [translate]

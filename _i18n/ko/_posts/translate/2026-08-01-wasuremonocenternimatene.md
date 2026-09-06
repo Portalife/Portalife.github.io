@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "유실물 센터에게 또 보자!"
 author: [이노우츠하SA]
 categories: [translate]

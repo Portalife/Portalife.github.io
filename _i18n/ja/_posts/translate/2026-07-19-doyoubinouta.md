@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "土曜日の歌"
 author: [電ǂ鯨]
 categories: [translate]

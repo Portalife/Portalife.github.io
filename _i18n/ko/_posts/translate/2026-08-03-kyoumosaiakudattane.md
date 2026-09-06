@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "오늘도 최악이었네(^_-)-☆"
 author: [이노우츠하SA]
 categories: [translate]

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "토요일의 노래"
 author: [전기고래]
 categories: [translate]

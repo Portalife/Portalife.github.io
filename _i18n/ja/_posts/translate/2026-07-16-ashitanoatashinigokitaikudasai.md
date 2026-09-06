@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "あしたのあたしにご期待ください。"
 author: [桃寝ちのい]
 categories: [translate]

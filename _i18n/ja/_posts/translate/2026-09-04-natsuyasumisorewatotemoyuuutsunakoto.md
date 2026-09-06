@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "夏休み。それはとても憂鬱なこと"
 author: [前頭葉まだ半分]
 categories: [translate]

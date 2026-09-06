@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "시니컬리티"
 author: [전기고래]
 categories: [translate]

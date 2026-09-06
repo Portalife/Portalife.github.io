@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "로보틱 걸"
 author: [Yunomi]
 categories: [translate]

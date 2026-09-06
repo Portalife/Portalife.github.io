@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "장례식"
 author: [전기고래]
 categories: [translate]

@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "くらがりシティライフ"
 author: [電ǂ鯨]
 categories: [translate]

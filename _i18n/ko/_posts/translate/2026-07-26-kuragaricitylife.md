@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "어두컴컴 시티라이프"
 author: [전기고래]
 categories: [translate]

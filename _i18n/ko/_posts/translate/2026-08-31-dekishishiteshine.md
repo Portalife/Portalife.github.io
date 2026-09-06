@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "익사해서 죽어"
 author: [이노우츠하SA]
 categories: [translate]

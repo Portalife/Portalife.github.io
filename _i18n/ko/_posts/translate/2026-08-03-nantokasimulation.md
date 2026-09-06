@@ -1,5 +1,5 @@
 ---
-layout: posts
+layout: translate
 title: "어쩌구 시뮬레이션"
 author: [이노우츠하SA]
 categories: [translate]
