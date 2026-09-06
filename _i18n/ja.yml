@@ -37,11 +37,14 @@ layout:
   year: 年
   month: 月
   day: 日
+  postname: タイトル
+  postdate: 投稿日
+  openlist: 一覧を開く
+  closelist: 一覧を閉じる
 copyrights:
   allworks: すべての投稿は
   license: ライセンスの下でご利用いただけます。
   cclink: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja
-  
 translation:
   basic: 基本情報
   vocal: 歌

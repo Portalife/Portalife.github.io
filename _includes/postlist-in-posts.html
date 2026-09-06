@@ -1,0 +1,349 @@
+{% assign limit = include.limit | default: 5 %}
+
+{% assign cat = include.category %}
+{% assign is_etc = false %}
+
+{% if cat == nil %}
+  {% if page.categories and page.categories.size > 0 %}
+    {% assign cat = page.categories[0] %}
+
+    {% if cat == "etc" and page.categories.size > 1 %}
+      {% assign cat = page.categories[1] %}
+      {% assign is_etc = true %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% if cat == nil or cat == "etc" %}
+  {% assign parts = page.url | split: '/' %}
+  {% for p in parts %}
+    {% if p == "categories" %}
+      {% assign idx = forloop.index %}
+      {% assign cat = parts[idx] %}
+
+      {% if cat == "etc" %}
+        {% assign is_etc = true %}
+        {% assign next_idx = idx | plus: 1 %}
+        {% if parts[next_idx] and parts[next_idx] != "" %}
+          {% assign cat = parts[next_idx] %}
+        {% endif %}
+      {% endif %}
+      
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if cat %}
+{% assign raw_posts = site.categories[cat] | where_exp: "item", "item.re != true" %}
+
+  {% if raw_posts and raw_posts.size > 0 %}
+      {% assign posts = "" | split: "" %}
+        
+      {% comment %} 1. 날짜 내림차순 정렬 {% endcomment %}
+      {% assign sorted_raw_posts = raw_posts | sort: "date" | reverse %}
+        
+      {% comment %} 2. 날짜별 그룹화 {% endcomment %}
+      {% assign grouped_posts = sorted_raw_posts | group_by_exp: "post", "post.date | date: '%Y-%m-%d'" %}
+        
+      {% for group in grouped_posts %}
+        {% comment %} 3. 그룹 내 항목들을 제목 오름차순으로 정렬 {% endcomment %}
+        {% assign title_sorted = group.items | sort: "title" %}
+          
+        {% comment %} 4. 그 상태에서 order 내림차순으로 재정렬 {% endcomment %}
+        {% assign sorted_items = title_sorted | sort: "order" | reverse %}
+          
+        {% for item in sorted_items %}
+          {% assign posts = posts | push: item %}
+        {% endfor %}
+      {% endfor %}
+
+  <div class="category-in-posts-widget" data-limit="{{ limit }}">
+    <!-- 상단 바 -->
+    <div class="category-in-posts-header">
+      <div class="category-in-posts-title">
+        <!-- etc 하위 카테고리일 때와 일반 카테고리일 때 링크 경로 자동 보정 -->
+        {% if is_etc or page.url contains "/categories/etc/" or page.categories contains "etc" %}
+          {% capture cat_url %}/categories/etc/{{ cat }}/{% endcapture %}
+        {% else %}
+          {% capture cat_url %}/categories/{{ cat }}/{% endcapture %}
+        {% endif %}
+
+        <a href="{{ cat_url | prepend: site.baseurl }}" style="text-decoration: none; color: inherit;">
+          <strong>{% t sidebar.{{ cat }} %}</strong>
+        </a>
+        <span class="category-count">{{ posts.size }}{% t layout.number %}{% t layout.exist %}</span>
+      </div>
+      <button type="button" class="category-toggle-btn" onclick="toggleCategoryNav(this)">
+        <span class="toggle-text-close">{% t layout.closelist %}</span>
+        <span class="toggle-text-open" style="display: none;">{% t layout.openlist %}</span>
+      </button>
+    </div>
+
+    <!-- 목록 -->
+    <div class="category-in-posts-body">
+      <div class="category-in-posts-table">
+        <div class="category-in-posts-row category-in-posts-thead">
+          <div class="cell-title">{% t layout.postname %}</div>
+          <div class="cell-date">{% t layout.postdate %}</div>
+        </div>
+        
+        <div class="category-in-posts-tbody">
+          {% for post in posts %}
+          {% assign is_current = false %}
+          {% if current_page_url == nil %}
+            {% assign current_page_url = page.url | prepend: site.baseurl %}
+          {% endif %}
+          {% assign target_post_url = post.url | prepend: site.baseurl %}
+          {% if current_page_url == target_post_url %}
+            {% assign is_current = true %}
+          {% endif %}
+
+          <div class="category-in-posts-row item-row {% if is_current %}current-post{% endif %}" data-url="{{ target_post_url }}">
+            <div class="cell-title">
+              <a href="{{ target_post_url }}">
+                {{ post.title }}{% if post.author %} - {{ post.author }}{% endif %}
+              </a>
+            </div>
+            <div class="cell-date">
+              {{ post.date | date: "%Y. %m. %d." }}
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- 페이지 버튼 -->
+      <div class="category-in-posts-pagination"></div>
+    </div>
+  </div>
+  {% endif %}
+{% endif %}
+
+<style>
+.category-in-posts-widget {
+  width: 100%;
+  margin: 1.5rem 0 2rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+.category-in-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.category-in-posts-title strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+.category-count {
+  font-size: 0.95rem;
+  color: #666;
+  margin-left: 4px;
+}
+.category-toggle-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+.category-toggle-btn:hover {
+  color: #333;
+}
+.category-in-posts-table {
+  width: 100%;
+  border-top: 1px solid #eee;
+}
+.category-in-posts-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.category-in-posts-thead {
+  font-size: 0.85rem;
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding: 8px 4px;
+}
+.cell-title {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 15px;
+}
+.cell-title a {
+  color: #444;
+  text-decoration: none;
+}
+.cell-title a:hover {
+  text-decoration: underline;
+}
+.current-post .cell-title a {
+  font-weight: bold;
+  color: #111;
+}
+.current-bullet {
+  font-size: 0.85rem;
+}
+.cell-date {
+  font-size: 0.85rem;
+  color: #aaa;
+  white-space: nowrap;
+  text-align: right;
+  min-width: 90px;
+}
+.category-in-posts-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 15px 0 10px 0;
+}
+.cat-page-btn {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: #777;
+  padding: 4px 9px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.cat-page-btn:hover {
+  color: #222;
+}
+.cat-page-btn.active {
+  font-weight: bold;
+  color: #111;
+  border: 1px solid #e0e0e0;
+}
+.cat-page-btn.arrow {
+  color: #999;
+  font-size: 0.85rem;
+}
+.category-in-posts-tbody {
+  visibility: hidden;
+}
+.category-in-posts-tbody.is-ready {
+  visibility: visible;
+}
+</style>
+
+<script>
+(function() {
+  function initCatWidget() {
+    const widgets = document.querySelectorAll('.category-in-posts-widget');
+    widgets.forEach(widget => {
+      const limit = parseInt(widget.getAttribute('data-limit')) || 5;
+      const rows = widget.querySelectorAll('.category-in-posts-tbody .item-row');
+      const pagination = widget.querySelector('.category-in-posts-pagination');
+      const totalPosts = rows.length;
+      const totalPages = Math.ceil(totalPosts / limit);
+      
+      if (totalPosts === 0) return;
+
+      let initialPage = 1;
+      rows.forEach((row, idx) => {
+        if (row.classList.contains('current-post')) {
+          initialPage = Math.floor(idx / limit) + 1;
+        }
+      });
+
+      let currentPage = initialPage;
+
+      function renderPage(page) {
+        currentPage = page;
+        const start = (page - 1) * limit;
+        const end = start + limit;
+
+        rows.forEach((row, idx) => {
+          if (idx >= start && idx < end) {
+            row.style.display = 'flex';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+
+        renderPaginationButtons();
+      }
+
+      function renderPaginationButtons() {
+        if (totalPages <= 1) {
+          pagination.innerHTML = '';
+          return;
+        }
+
+        let html = '';
+        const groupSize = 10;
+        const currentGroup = Math.ceil(currentPage / groupSize);
+        const startPage = (currentGroup - 1) * groupSize + 1;
+        const endPage = Math.min(startPage + groupSize - 1, totalPages);
+
+        if (startPage > 1) {
+          html += `<button type="button" class="cat-page-btn arrow prev">&lt; 이전</button>`;
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+          html += `<button type="button" class="cat-page-btn num ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+        }
+
+        if (endPage < totalPages) {
+          html += `<button type="button" class="cat-page-btn arrow next">다음 &gt;</button>`;
+        }
+
+        pagination.innerHTML = html;
+
+        pagination.querySelectorAll('.cat-page-btn.num').forEach(btn => {
+          btn.addEventListener('click', () => {
+            renderPage(parseInt(btn.getAttribute('data-page')));
+          });
+        });
+
+        const prevBtn = pagination.querySelector('.cat-page-btn.arrow.prev');
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => renderPage(startPage - 1));
+        }
+
+        const nextBtn = pagination.querySelector('.cat-page-btn.arrow.next');
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => renderPage(endPage + 1));
+        }
+      }
+
+      renderPage(currentPage);
+      
+      widget.querySelector('.category-in-posts-tbody').classList.add('is-ready');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCatWidget);
+  } else {
+    initCatWidget();
+  }
+})();
+
+function toggleCategoryNav(btn) {
+  const widget = btn.closest('.category-in-posts-widget');
+  const body = widget.querySelector('.category-in-posts-body');
+  const closeText = btn.querySelector('.toggle-text-close');
+  const openText = btn.querySelector('.toggle-text-open');
+
+  if (body.style.display === 'none') {
+    body.style.display = 'block';
+    closeText.style.display = 'inline';
+    openText.style.display = 'none';
+  } else {
+    body.style.display = 'none';
+    closeText.style.display = 'none';
+    openText.style.display = 'inline';
+  }
+}
+</script>

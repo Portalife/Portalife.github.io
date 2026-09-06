@@ -37,6 +37,10 @@ layout:
   year: 년&nbsp;
   month: 월&nbsp;
   day: 일
+  postname: 제목
+  postdate: 작성일
+  openlist: 목록열기
+  closelist: 목록닫기
 copyrights:
   allworks: 모든 포스트는
   license: 라이선스 하에 이용 가능합니다.
