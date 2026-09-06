@@ -247,7 +247,7 @@ tags: [translation, zentouyoumadahanbun]
   <div class="lyric-item"><p class="lyric-orig">31日死に急ぐ僕らの傍</p>
       <p class="lyric-hangul">산쥬우이치니치 시니 이소구 보쿠라노 소바</p>
       <p class="lyric-ipa">säɲd͡ʑɨːit͡ɕiɲit͡ɕi ɕiɲi iso̞ɡɯᵝ bo̞kɯᵝɾäno̞ so̞bä</p>
-      <p class="lyric-trans">31일 죽음을 재촉한 우리들의 곁</p></div>
+      <p class="lyric-trans">31일 죽음을 서두른 우리들의 곁</p></div>
   <div class="lyric-item"><p class="lyric-orig">産まれたがる朝顔が</p>
       <p class="lyric-hangul">우마레타가루 아사가오가</p>
       <p class="lyric-ipa">ɯᵝmäre̞täɡäɾɯᵝ äsäɡäo̞ɡä</p>
