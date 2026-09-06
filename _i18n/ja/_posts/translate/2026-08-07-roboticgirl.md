@@ -217,6 +217,10 @@ tags: [translation, yunomi]
   border-bottom: 1px solid #599BDB;
 }
 
+.lyric-item:last-child .lyric-trans {
+  border-bottom: none;
+}
+
 </style>
 <div class="lyric-container">
   <div class="lyric-item"><p class="lyric-orig">浮気しても内緒ならOK</p>
