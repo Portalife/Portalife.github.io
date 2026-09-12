@@ -649,32 +649,29 @@ tags: [explanation, misc, linguistics]
         <td></td>
     </tr>
     <tr>
-        <td style="text-align: right">両唇音の前</td>
+        <td rowspan="2" style="text-align: right">両唇音の前</td>
         <td>ばびぶべぼ</td>
         <td>b̚</td>
     </tr>
     <tr>
-        <td></td>
         <td>ぱぴぷぺぽ</td>
         <td>p̚</td>
     </tr>
     <tr>
-        <td style="text-align: right">歯茎音の前</td>
+        <td rowspan="2" style="text-align: right">歯茎音の前</td>
         <td>たちつてと</td>
         <td>t̚</td>
     </tr>
     <tr>
-        <td></td>
         <td>だぢづでど</td>
         <td>d̚</td>
     </tr>
     <tr>
-        <td style="text-align: right">軟口蓋音の前</td>
+        <td rowspan="2" style="text-align: right">軟口蓋音の前</td>
         <td>かきくけこ</td>
         <td>k̚</td>
     </tr>
     <tr>
-        <td></td>
         <td>がぎぐげご</td>
         <td>g̚</td>
     </tr>

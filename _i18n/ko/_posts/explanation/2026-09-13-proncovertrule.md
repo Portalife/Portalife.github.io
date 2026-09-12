@@ -649,32 +649,29 @@ tags: [explanation, misc, linguistics]
         <td></td>
     </tr>
     <tr>
-        <td style="text-align: right">양순음 앞</td>
+        <td rowspan="2" style="text-align: right">양순음 앞</td>
         <td>ばびぶべぼ</td>
         <td>b̚</td>
     </tr>
     <tr>
-        <td></td>
         <td>ぱぴぷぺぽ</td>
         <td>p̚</td>
     </tr>
     <tr>
-        <td style="text-align: right">치경음 앞</td>
+        <td rowspan="2" style="text-align: right">치경음 앞</td>
         <td>たちつてと</td>
         <td>t̚</td>
     </tr>
     <tr>
-        <td></td>
         <td>だぢづでど</td>
         <td>d̚</td>
     </tr>
     <tr>
-        <td style="text-align: right">연구개음 앞</td>
+        <td rowspan="2" style="text-align: right">연구개음 앞</td>
         <td>かきくけこ</td>
         <td>k̚</td>
     </tr>
     <tr>
-        <td></td>
         <td>がぎぐげご</td>
         <td>g̚</td>
     </tr>
