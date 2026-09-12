@@ -13,7 +13,7 @@ tags: [explanation, misc, linguistics]
   }
 </style>
 
-### 1. IPA 변환 규칙
+### 1. 스크립트에서의 변환 규칙
 <table>
     <tr>
         <td colspan="4" style="font-weight: bold;">가. 모음</td>
@@ -839,7 +839,7 @@ tags: [explanation, misc, linguistics]
         <td>조건</td>
         <td>대상</td>
         <td>변환</td>
-        <td></td>
+        <td>예시</td>
     </tr>
     <tr>
         <td rowspan="2">각각 독립적인 음절을 구성하는 경우</td>
@@ -850,7 +850,7 @@ tags: [explanation, misc, linguistics]
     <tr>
         <td>/o/+/u/</td>
         <td>o̞ɯᵝ</td>
-        <td></td>
+        <td>일반적인 실현방식은 아님</td>
     </tr>
     <tr>
         <td>e̞의 장음으로 실현되는 경우</td>
@@ -876,7 +876,7 @@ tags: [explanation, misc, linguistics]
         <td>조건</td>
         <td>대상</td>
         <td>변환</td>
-        <td></td>
+        <td>예시</td>
     </tr>
     <tr>
         <td>성문파열음이 실현되는 경우</td>

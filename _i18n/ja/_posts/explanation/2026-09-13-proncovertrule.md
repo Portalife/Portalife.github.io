@@ -13,7 +13,7 @@ tags: [explanation, misc, linguistics]
   }
 </style>
 
-### 1　スクリプトでの変換規則
+### 1　スクリプトにおける変換規則
 <table>
     <tr>
         <td colspan="4" style="font-weight: bold;">ア　母音</td>
@@ -757,7 +757,146 @@ tags: [explanation, misc, linguistics]
     </tr>
 </table>
 
-以下は、スクリプトで一括変換した後、各楽曲ごとに微妙に異なる発音のニュアンスを反映させるため、手作業による二次修正を行う時に適用する追加の規則です。
+以下は、スクリプトで一括変換した後、各楽曲ごとに微妙に異なる発音のニュアンスを反映させるため、手作業による二次の修正を行う時に適用する追加の規則です。
 
 ### 2　追加規則
-
+<table>
+    <tr>
+        <td colspan="2" style="font-weight: bold;">ケ　撥音（ん）の処理</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
+    </tr>
+    <tr>
+        <td rowspan="2">んが先行モーラのcodaである場合</td>
+        <td>〇んが一つの音に割当て</td>
+        <td>修正なし</td>
+        <td>ほとんどの場合</td>
+    </tr>
+    <tr>
+        <td>〇んが二つの音に割当て</td>
+        <td>修正なし</td>
+        <td>{% include w.html t="マーキュリー" text="「マーキュリー」で、安息" %}</td>
+    </tr>
+    <tr>
+        <td>んが単独で成節子音を構成する場合</td>
+        <td>〇んが二つの音に明確に一つずつ割当て</td>
+        <td>.ɴ̩. (場合によって、ɴ̩ の代わりに m̩ n̩ ŋ̍ ɲ̩ も可能) </td>
+        <td>{% include w.html t="木になったいもうと" text="「木になったいもうと」で、千年大樹" %}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="font-weight: bold;">コ　促音の処理</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
+    </tr>
+    <tr>
+        <td rowspan="2">っが先行モーラのcodaである場合</td>
+        <td>〇っが一つの音に割当て</td>
+        <td>修正なし</td>
+        <td>ほとんどの場合</td>
+    </tr>
+    <tr>
+        <td>〇っが二つの音に割当て</td>
+        <td>修正なし</td>
+        <td>{% include w.html t="フォボス" text="「フォボス」で、終わったとして" %}</td>
+    </tr>
+    <tr>
+        <td>っが先行モーラと同じ母音+codaとして実現する場合</td>
+        <td>〇っが二つの音に割当て</td>
+        <td>ː{当該のcoda}</td>
+        <td>{% include w.html t="夏休み。それはとても憂鬱なこと" text="「夏休み。それはとても憂鬱なこと」で、願ったの" %}</td>
+    </tr>
+    <tr>
+        <td>語頭の場合(ただし、後続モーラ有り)</td>
+        <td>っ〇</td>
+        <td>◌͈(低いVOT)</td>
+        <td>{% include w.html t="おそうしき" text="「おそうしき」で、って" %}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="font-weight: bold;">サ　長音の処理</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
+    </tr>
+    <tr>
+        <td rowspan="2">それぞれ独立した音節を構成する場合</td>
+        <td>/e/+/i/</td>
+        <td>e̞i</td>
+        <td>{% include w.html t="とるりり" text="「とるりり」で、座っている" %}</td>
+    </tr>
+    <tr>
+        <td>/o/+/u/</td>
+        <td>o̞ɯᵝ</td>
+        <td>一般的な実現の方式ではない</td>
+    </tr>
+    <tr>
+        <td>e̞の長音として実現する場合</td>
+        <td>/e/+/i/</td>
+        <td>e̞ː</td>
+        <td>{% include w.html t="エラトマ" text="「エラトマ」で、煮えたぎっている" %}</td>
+    </tr>
+    <tr>
+        <td>iがe̞に同化する場合</td>
+        <td>/e/+/i/</td>
+        <td>e̞e</td>
+        <td>{% include w.html t="溺死して死ね" text="「溺死して死ね」で、～ていたんだ" %}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="font-weight: bold;">シ　特殊規則</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
+    </tr>
+    <tr>
+        <td>声門破裂音が実現される場合</td>
+        <td>母音の前・後の空間</td>
+        <td>ʔ</td>
+        <td>{% include w.html t="一億年恋してる" text="「一億年恋してる」で、あ x26" %}</td>
+    </tr>
+    <tr>
+        <td rowspan="3">表記されたモーラと実現されるモーラが異なる場合</td>
+        <td>は（助詞）</td>
+        <td>ɰä</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>へ（助詞）</td>
+        <td>e̞</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>行く</td>
+        <td>ikɯᵝ/jɯᵝkɯᵝ</td>
+        <td></td>
+    </tr>
+</table>
