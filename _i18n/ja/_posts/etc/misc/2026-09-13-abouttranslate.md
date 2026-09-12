@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "翻訳カテゴリーに関する諸事項"
+title: "翻訳カテゴリーについて"
 categories: [etc, misc]
 tags: [misc]
 order: 2

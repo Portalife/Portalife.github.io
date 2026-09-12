@@ -756,3 +756,148 @@ tags: [explanation, misc, linguistics]
         <td>çː</td>
     </tr>
 </table>
+
+이하는 스크립트로 일괄 변환을 한번 거친 후, 각 곡마다 미묘하게 다른 발음을 반영하기 위해 수작업으로 이차적인 수정을 진행할 때 적용하는 추가적인 규칙입니다.
+
+### 2. 추가규칙
+<table>
+    <tr>
+        <td style="font-weight: bold;">자. 발음(ん)의 처리</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>조건</td>
+        <td>대상(기준)</td>
+        <td>변환</td>
+        <td>예시</td>
+    </tr>
+    <tr>
+        <td rowspan="2">ん가 선행 모라의 coda인 경우</td>
+        <td>〇ん가 한 음에 할당됨</td>
+        <td>수정 없음</td>
+        <td>대부분의 경우</td>
+    </tr>
+    <tr>
+        <td>〇ん가 두 음에 할당됨</td>
+        <td>수정 없음</td>
+        <td>{% include w.html t="머큐리" text="머큐리에서 안식(安息)" %}</td>
+    </tr>
+    <tr>
+        <td>ん가 단독으로 성절 자음을 구성하는 경우</td>
+        <td>〇ん가 두 음에 각각 하나씩 명확히 할당됨</td>
+        <td>.ɴ̩. (경우에 따라 ɴ̩ 대신 m̩, n̩, ŋ̍, ɲ̩도 가능) </td>
+        <td>{% include w.html t="나무가 된 여동생" text="나무가 된 여동생에서 천년고목(千年大樹)" %}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="font-weight: bold;">차. 촉음(っ)의 처리</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>조건</td>
+        <td>대상(기준)</td>
+        <td>변환</td>
+        <td>예시</td>
+    </tr>
+    <tr>
+        <td rowspan="2">っ가 선행 모라의 coda인 경우</td>
+        <td>〇っ가 한 음에 할당됨</td>
+        <td>수정 없음</td>
+        <td>대부분의 경우</td>
+    </tr>
+    <tr>
+        <td>〇っ가 두 음에 할당됨</td>
+        <td>수정 없음</td>
+        <td>{% include w.html t="포보스" text="포보스에서 끝났다 해도(終わったとして)" %}</td>
+    </tr>
+    <tr>
+        <td>っ가 선행 모라와 같은 모음+coda로 실현되는 경우</td>
+        <td>〇っ가 두 음에 할당됨</td>
+        <td>ː{해당 coda}</td>
+        <td>{% include w.html t="여름방학. 그것은 정말로 우울한 일" text="여름방학. 그것은 정말로 우울한 일에서 빌었어(願ったの)" %}</td>
+    </tr>
+    <tr>
+        <td>어두인 경우(단, 후속 모라가 있음)</td>
+        <td>っ〇</td>
+        <td>◌͈(낮은 VOT)</td>
+        <td>{% include w.html t="장례식" text="장례식에서 라며(って)" %}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="font-weight: bold;">카. 장음의 처리</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>조건</td>
+        <td>대상</td>
+        <td>변환</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2">각각 독립적인 음절을 구성하는 경우</td>
+        <td>/e/+/i/</td>
+        <td>e̞i</td>
+        <td>{% include w.html t="토루리리" text="토루리리에서 앉아 있어(座っている)" %}</td>
+    </tr>
+    <tr>
+        <td>/o/+/u/</td>
+        <td>o̞ɯᵝ</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>e̞의 장음으로 실현되는 경우</td>
+        <td>/e/+/i/</td>
+        <td>e̞ː</td>
+        <td>{% include w.html t="에라토마" text="에라토마에서 끓어넘쳐(煮えたぎっている)" %}</td>
+    </tr>
+    <tr>
+        <td>i가 e̞에 동화되는 경우</td>
+        <td>/e/+/i/</td>
+        <td>e̞e</td>
+        <td>{% include w.html t="익사해서 죽어" text="익사해서 죽어에서 -였던 거야(ていたんだ)" %}</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td style="font-weight: bold;">타. 특수규칙</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>조건</td>
+        <td>대상</td>
+        <td>변환</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>성문파열음이 실현되는 경우</td>
+        <td>모음의 앞 또는 뒤의 공간</td>
+        <td>ʔ</td>
+        <td>{% include w.html t="일억 년 좋아하고 있어" text="일억 년 좋아하고 있어에서 아 x26" %}</td>
+    </tr>
+    <tr>
+        <td rowspan="3">표기된 모라와 실현되는 모라가 다른 경우</td>
+        <td>は(조사)</td>
+        <td>ɰä</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>へ(조사)</td>
+        <td>e̞</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>行く</td>
+        <td>ikɯᵝ/jɯᵝkɯᵝ</td>
+        <td></td>
+    </tr>
+</table>

@@ -13,7 +13,7 @@ tags: [explanation, misc, linguistics]
   }
 </style>
 
-### 1　IPA変換規則
+### 1　スクリプトでの変換規則
 <table>
     <tr>
         <td colspan="4" style="font-weight: bold;">ア　母音</td>
@@ -756,3 +756,8 @@ tags: [explanation, misc, linguistics]
         <td>çː</td>
     </tr>
 </table>
+
+以下は、スクリプトで一括変換した後、各楽曲ごとに微妙に異なる発音のニュアンスを反映させるため、手作業による二次修正を行う時に適用する追加の規則です。
+
+### 2　追加規則
+
