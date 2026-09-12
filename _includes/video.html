@@ -1,0 +1,12 @@
+<!-- _includes/video.html -->
+<div class="video-container" style="position: relative; width: 100%; max-width: 800px; margin: 2rem auto; border-radius: 10px; overflow: hidden; background-color: #000;">
+  <video 
+    controls 
+    preload="metadata" 
+    playsinline 
+    {% if include.poster %}poster="{{ include.poster }}"{% endif %}
+    style="display: block; width: 100%; height: auto; outline: none;">
+    <source src="{{ include.src }}" type="video/mp4">
+    브라우저가 비디오 재생을 지원하지 않습니다.
+  </video>
+</div>
