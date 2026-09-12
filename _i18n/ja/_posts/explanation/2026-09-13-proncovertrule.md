@@ -786,7 +786,7 @@ tags: [explanation, misc, linguistics]
     <tr>
         <td>んが単独で成節子音を構成する場合</td>
         <td>〇んが二つの音に明確に一つずつ割当て</td>
-        <td>.ɴ̩. (場合によって、ɴ̩ の代わりに m̩ n̩ ŋ̍ ɲ̩ も可能) </td>
+        <td>.ɴ̩.（場合によって、ɴ̩ の代わりに m̩ n̩ ŋ̍ ɲ̩ も可能）</td>
         <td>{% include w.html t="木になったいもうと" text="「木になったいもうと」で、千年大樹" %}</td>
     </tr>
 </table>
@@ -821,9 +821,9 @@ tags: [explanation, misc, linguistics]
         <td>{% include w.html t="夏休み。それはとても憂鬱なこと" text="「夏休み。それはとても憂鬱なこと」で、願ったの" %}</td>
     </tr>
     <tr>
-        <td>語頭の場合(ただし、後続モーラ有り)</td>
+        <td>語頭の場合（後続モーラ有り）</td>
         <td>っ〇</td>
-        <td>◌͈(低いVOT)</td>
+        <td>◌͈（低いVOT）</td>
         <td>{% include w.html t="おそうしき" text="「おそうしき」で、って" %}</td>
     </tr>
 </table>
