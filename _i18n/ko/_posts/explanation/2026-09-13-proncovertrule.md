@@ -565,29 +565,28 @@ tags: [explanation, misc, linguistics]
         <td style="font-weight: bold;">바. 발음(撥音, ん)의 처리</td>
         <td></td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>조건</td>
+        <td></td>
         <td>대상</td>
         <td>변환</td>
     </tr>
     <tr>
         <td>마찰음 및 모음/반모음 앞인 경우</td>
+        <td></td>
         <td>さしすせそはひふへほあいうえおやゆよわを</td>
         <td>ɰ̃</td>
     </tr>
     <tr>
-        <td>마찰음 및 모음/반모음 앞이 아닌 경우</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
+        <td rowspan="4">마찰음 및 모음/반모음 앞이 아닌 경우</td>
         <td style="text-align: right">양순음 앞</td>
         <td>ばびぶべぼぱぴぷぺぽまみむめも</td>
         <td>m</td>
     </tr>
     <tr>
-        <td style="text-align: right">(치)경구개음 앞(구개음화된 음 포함)</td>
+        <td style="text-align: right">(치)경구개음 앞<br>(구개음화된 음 포함)</td>
         <td>にちじぢり</td>
         <td>ɲ</td>
     </tr>
@@ -604,6 +603,7 @@ tags: [explanation, misc, linguistics]
     <tr>
         <td>어말인 경우</td>
         <td></td>
+        <td></td>
         <td>ɴ</td>
     </tr>
 </table>
@@ -612,73 +612,101 @@ tags: [explanation, misc, linguistics]
         <td style="font-weight: bold;">사. 촉음(促音, っ)의 처리</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>조건</td>
+        <td></td>
+        <td></td>
         <td>대상</td>
         <td>변환</td>
+        <td></td>
     </tr>
     <tr>
-        <td>무성 마찰음 앞인 경우</td>
+        <td rowspan="5">무성 마찰음 앞인 경우</td>
+        <td></td>
+        <td></td>
         <td>さすせそ</td>
         <td>s (이후 장음화)</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>し</td>
         <td>ɕ (이후 장음화)</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>ふ</td>
         <td>ɸ (이후 장음화)</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>はへほ</td>
         <td>h (이후 장음화)</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>ひ</td>
         <td>ç (이후 장음화)</td>
-    </tr>
-    <tr>
-        <td>무성 마찰음 앞이 아닌 경우</td>
-        <td></td>
         <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: right">양순음 앞</td>
-        <td>ばびぶべぼ</td>
-        <td>b̚</td>
-    </tr>
-    <tr>
+        <td rowspan="6">무성 마찰음 앞이 아닌 경우</td>
+        <td rowspan="2" style="text-align: center">양순음 앞</td>
+        <td style="text-align: center">무성음 앞</td>
         <td>ぱぴぷぺぽ</td>
         <td>p̚</td>
+        <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: right">치경음 앞</td>
+        <td style="text-align: center">유성음 앞</td>
+        <td>ばびぶべぼ</td>
+        <td>b̚</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="text-align: center">치경음 앞</td>
+        <td style="text-align: center">무성음 앞</td>
         <td>たちつてと</td>
         <td>t̚</td>
+        <td></td>
     </tr>
     <tr>
+        <td style="text-align: center">유성음 앞</td>
         <td>だぢづでど</td>
         <td>d̚</td>
+        <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: right">연구개음 앞</td>
+        <td rowspan="2" style="text-align: center">연구개음 앞</td>
+        <td style="text-align: center">무성음 앞</td>
         <td>かきくけこ</td>
         <td>k̚</td>
+        <td></td>
     </tr>
     <tr>
+        <td style="text-align: center">유성음 앞</td>
         <td>がぎぐげご</td>
         <td>g̚</td>
+        <td></td>
     </tr>
     <tr>
         <td>어말인 경우</td>
         <td></td>
+        <td></td>
+        <td></td>
         <td>ʔ</td>
+        <td></td>
     </tr>
 </table>
 <table>
@@ -698,57 +726,48 @@ tags: [explanation, misc, linguistics]
         <td>ː</td>
     </tr>
     <tr>
-        <td>장음부호가 아닌 경우</td>
+        <td rowspan="6">장음부호가 아닌 경우</td>
         <td>/a/+/a/</td>
         <td>대상의 앞 모라의 모음의 장음화</td>
     </tr>
     <tr>
-        <td></td>
         <td>/i/+/i/</td>
         <td>대상의 앞 모라의 모음의 장음화</td>
     </tr>
     <tr>
-        <td></td>
         <td>/u/+/u/</td>
         <td>대상의 앞 모라의 모음의 장음화</td>
     </tr>
     <tr>
-        <td></td>
         <td>/e/+/e/</td>
         <td>대상의 앞 모라의 모음의 장음화</td>
     </tr>
     <tr>
-        <td></td>
         <td>/o/+/o/</td>
         <td>대상의 앞 모라의 모음의 장음화</td>
     </tr>
     <tr>
-        <td></td>
         <td>/o/+/u/</td>
         <td>대상의 앞 모라의 모음의 장음화</td>
     </tr>
     <tr>
-        <td>장음화되는 촉음의 경우</td>
+        <td rowspan="5">장음화되는 촉음의 경우</td>
         <td>[s]+[s]</td>
         <td>sː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[ɕ]+[ɕ]</td>
         <td>ɕː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[ɸ]+[ɸ]</td>
         <td>ɸː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[h]+[h]</td>
         <td>hː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[ç]+[ç]</td>
         <td>çː</td>
     </tr>
