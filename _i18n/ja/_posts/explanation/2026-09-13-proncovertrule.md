@@ -564,30 +564,29 @@ tags: [explanation, misc, linguistics]
     <tr>
         <td style="font-weight: bold;">カ　撥音（ん）の処理</td>
         <td></td>
-        <td style="width: 200px;"></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>条件</td>
+        <td></td>
         <td>対象</td>
         <td>変換</td>
     </tr>
     <tr>
         <td>摩擦音及び母音・半母音の前である場合</td>
+        <td></td>
         <td>さしすせそはひふへほあいうえおやゆよわを</td>
         <td>ɰ̃</td>
     </tr>
     <tr>
-        <td>摩擦音及び母音・半母音の前ではない場合</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
+        <td rowspan="4">摩擦音及び母音・半母音の前ではない場合</td>
         <td style="text-align: right">両唇音の前</td>
         <td>ばびぶべぼぱぴぷぺぽまみむめも</td>
         <td>m</td>
     </tr>
     <tr>
-        <td style="text-align: right">（歯茎）硬口蓋音の前 (口蓋化音を含む)</td>
+        <td style="text-align: right">（歯茎）硬口蓋音の前<br>(口蓋化音を含む)</td>
         <td>にちじぢり</td>
         <td>ɲ</td>
     </tr>
@@ -604,6 +603,7 @@ tags: [explanation, misc, linguistics]
     <tr>
         <td>語末の場合</td>
         <td></td>
+        <td></td>
         <td>ɴ</td>
     </tr>
 </table>
@@ -612,73 +612,101 @@ tags: [explanation, misc, linguistics]
         <td style="font-weight: bold;">キ　促音（っ）の処理</td>
         <td></td>
         <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>条件</td>
+        <td></td>
+        <td></td>
         <td>対象</td>
         <td>変換</td>
+        <td></td>
     </tr>
     <tr>
-        <td>無声摩擦音の前である場合</td>
+        <td rowspan="5">無声摩擦音の前である場合</td>
+        <td></td>
+        <td></td>
         <td>さすせそ</td>
         <td>s（続いて長音化へ）</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>し</td>
         <td>ɕ（続いて長音化へ）</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>ふ</td>
         <td>ɸ（続いて長音化へ）</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>はへほ</td>
         <td>h（続いて長音化へ）</td>
+        <td></td>
     </tr>
     <tr>
+        <td></td>
         <td></td>
         <td>ひ</td>
         <td>ç（続いて長音化へ）</td>
-    </tr>
-    <tr>
-        <td>無声摩擦音の前ではない場合</td>
-        <td></td>
         <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: right">両唇音の前</td>
-        <td>ばびぶべぼ</td>
-        <td>b̚</td>
-    </tr>
-    <tr>
+        <td rowspan="6">無声摩擦音の前ではない場合</td>
+        <td rowspan="2" style="text-align: center">両唇音の前</td>
+        <td style="text-align: center">無声音の前</td>
         <td>ぱぴぷぺぽ</td>
         <td>p̚</td>
+        <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: right">歯茎音の前</td>
+        <td style="text-align: center">有声音の前</td>
+        <td>ばびぶべぼ</td>
+        <td>b̚</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="text-align: center">歯茎音の前</td>
+        <td style="text-align: center">無声音の前</td>
         <td>たちつてと</td>
         <td>t̚</td>
+        <td></td>
     </tr>
     <tr>
+        <td style="text-align: center">有声音の前</td>
         <td>だぢづでど</td>
         <td>d̚</td>
+        <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: right">軟口蓋音の前</td>
+        <td rowspan="2" style="text-align: center">軟口蓋音の前</td>
+        <td style="text-align: center">無声音の前</td>
         <td>かきくけこ</td>
         <td>k̚</td>
+        <td></td>
     </tr>
     <tr>
+        <td style="text-align: center">有声音の前</td>
         <td>がぎぐげご</td>
         <td>g̚</td>
+        <td></td>
     </tr>
     <tr>
         <td>語末の場合</td>
         <td></td>
+        <td></td>
+        <td></td>
         <td>ʔ</td>
+        <td></td>
     </tr>
 </table>
 <table>
@@ -698,57 +726,48 @@ tags: [explanation, misc, linguistics]
         <td>ː</td>
     </tr>
     <tr>
-        <td>長音符号ではない場合</td>
+        <td rowspan="6">長音符号ではない場合</td>
         <td>/a/+/a/</td>
         <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td></td>
         <td>/i/+/i/</td>
         <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td></td>
         <td>/u/+/u/</td>
         <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td></td>
         <td>/e/+/e/</td>
         <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td></td>
         <td>/o/+/o/</td>
         <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td></td>
         <td>/o/+/u/</td>
         <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td>長音化する促音の場合</td>
+        <td rowspan="5">長音化する促音の場合</td>
         <td>[s]+[s]</td>
         <td>sː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[ɕ]+[ɕ]</td>
         <td>ɕː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[ɸ]+[ɸ]</td>
         <td>ɸː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[h]+[h]</td>
         <td>hː</td>
     </tr>
     <tr>
-        <td></td>
         <td>[ç]+[ç]</td>
         <td>çː</td>
     </tr>
