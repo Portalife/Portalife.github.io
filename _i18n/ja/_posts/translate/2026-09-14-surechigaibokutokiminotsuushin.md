@@ -116,6 +116,8 @@ tags: [translation, bpm15q, yunomi]
 
 Wi-Fiも普及する前だったからレイトンの週刊ナゾ通信も受け取れなかったんだよな
 
+懐かしい
+
 <h3 style="font-weight: 680;">{% t translation.legend %}</h3>
 
 <table style="margin: 0 0 1.5rem 0;">

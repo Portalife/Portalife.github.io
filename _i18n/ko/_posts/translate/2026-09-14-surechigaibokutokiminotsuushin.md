@@ -114,7 +114,9 @@ tags: [translation, bpm15q, yunomi]
 
 내가 살던 곳은 엇갈림 통신 1명이라도 되면 기적이었고
 
-와이파이도 보급되기 이전이라 레이튼 주간 수수께끼도 못 받았었는데
+와이파이도 보급되기 이전이라 레이튼 주간 수수께끼도 못 받았었는데  
+
+추억이네
 
 <h3 style="font-weight: 680;">{% t translation.legend %}</h3>
 
