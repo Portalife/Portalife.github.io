@@ -222,6 +222,9 @@ Wi-Fiも普及する前だったからレイトンの週刊ナゾ通信も受け
 }
 
 </style>
+
+原歌詞は[UtaTen](https://utaten.com/lyric/qc16121909/){:target="_blank"}よりお借りしました。
+
 <div class="lyric-container">
   <div class="lyric-item"><p class="lyric-orig">ハローハロー きこえてるかな</p>
       <p class="lyric-hangul">하로- 하로- 키코에테루카나</p>

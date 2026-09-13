@@ -220,8 +220,10 @@ tags: [translation, bpm15q, yunomi]
 .lyric-item:last-child .lyric-trans {
   border-bottom: none;
 }
-
 </style>
+
+원가사는 [UtaTen](https://utaten.com/lyric/qc16121909/){:target="_blank"}으로부터 가져왔습니다.
+
 <div class="lyric-container">
   <div class="lyric-item"><p class="lyric-orig">ハローハロー きこえてるかな</p>
       <p class="lyric-hangul">하로- 하로- 키코에테루카나</p>
