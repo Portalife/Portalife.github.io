@@ -1,11 +1,11 @@
 ---
 layout: posts
-title: "번역 포스트에서의 발음 변환 규칙 〈IPA편〉"
+title: "翻訳記事における発音変換規則 〈IPA編〉"
 categories: [explanation]
 order: 1
 tags: [explanation, misc, linguistics]
 ---
-주어진 가사를 가나로 변환한 후, 직접 제작한 Python 스크립트를 이용해 해당 가나를 IPA로 일괄 변환할 때 적용하는 규칙을 서술합니다.  
+歌詞を仮名に変換した後、自分で作成したPythonスクリプトを用いてその仮名をIPA（国際音声記号）へ一括変換する際に適用する規則を記述します。
 
 <style>
   th, td {
@@ -13,10 +13,10 @@ tags: [explanation, misc, linguistics]
   }
 </style>
 
-### 1. 스크립트에서의 변환 규칙
+### 1　スクリプトにおける変換規則
 <table>
     <tr>
-        <td colspan="4" style="font-weight: bold;">가. 모음</td>
+        <td colspan="4" style="font-weight: bold;">ア　母音</td>
         <td></td>
         <td></td>
         <td></td>
@@ -52,7 +52,7 @@ tags: [explanation, misc, linguistics]
         <td></td>
     </tr>
     <tr>
-        <td colspan="4" style="font-weight: bold;">나. 기본</td>
+        <td colspan="4" style="font-weight: bold;">イ　基本</td>
         <td></td>
         <td></td>
         <td></td>
@@ -192,7 +192,7 @@ tags: [explanation, misc, linguistics]
         <td></td>
     </tr>
     <tr>
-        <td colspan="4" style="font-weight: bold;">다. 탁음 및 반탁음</td>
+        <td colspan="4" style="font-weight: bold;">ウ　濁音及び半濁音</td>
         <td></td>
         <td></td>
         <td></td>
@@ -332,7 +332,7 @@ tags: [explanation, misc, linguistics]
         <td></td>
     </tr>
     <tr>
-        <td colspan="4" style="font-weight: bold;">라. 요음(拗音)</td>
+        <td colspan="4" style="font-weight: bold;">エ　拗音</td>
         <td></td>
         <td></td>
         <td></td>
@@ -420,7 +420,7 @@ tags: [explanation, misc, linguistics]
         <td>kʲo̞</td>
     </tr>
     <tr>
-        <td colspan="4" style="font-weight: bold;">마. 특수</td>
+        <td colspan="4" style="font-weight: bold;">オ　特殊</td>
         <td></td>
         <td></td>
         <td></td>
@@ -562,46 +562,46 @@ tags: [explanation, misc, linguistics]
 </table>
 <table>
     <tr>
-        <td style="font-weight: bold;">바. 발음(撥音, ん)의 처리</td>
+        <td style="font-weight: bold;">カ　撥音（ん）の処理</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>조건</td>
+        <td>条件</td>
         <td></td>
-        <td>대상</td>
-        <td>변환</td>
+        <td>対象</td>
+        <td>変換</td>
     </tr>
     <tr>
-        <td>마찰음 및 모음/반모음 앞인 경우</td>
+        <td>摩擦音及び母音・半母音の前である場合</td>
         <td></td>
         <td>さしすせそはひふへほあいうえおやゆよわを</td>
         <td>ɰ̃</td>
     </tr>
     <tr>
-        <td rowspan="4">마찰음 및 모음/반모음 앞이 아닌 경우</td>
-        <td style="text-align: right">양순음 앞</td>
+        <td rowspan="4">摩擦音及び母音・半母音の前ではない場合</td>
+        <td style="text-align: right">両唇音の前</td>
         <td>ばびぶべぼぱぴぷぺぽまみむめも</td>
         <td>m</td>
     </tr>
     <tr>
-        <td style="text-align: right">(치)경구개음 앞<br>(구개음화된 음 포함)</td>
+        <td style="text-align: right">（歯茎）硬口蓋音の前<br>(口蓋化音を含む)</td>
         <td>にちじぢり</td>
         <td>ɲ</td>
     </tr>
     <tr>
-        <td style="text-align: right">치경음 앞</td>
+        <td style="text-align: right">歯茎音の前</td>
         <td>たつてとだづでどなぬねのらるれろざずぜぞ</td>
         <td>n</td>
     </tr>
     <tr>
-        <td style="text-align: right">연구개음 앞</td>
+        <td style="text-align: right">軟口蓋音の前</td>
         <td>かきくけこがぎぐげご</td>
         <td>ŋ</td>
     </tr>
     <tr>
-        <td>어말인 경우</td>
+        <td>語末の場合</td>
         <td></td>
         <td></td>
         <td>ɴ</td>
@@ -609,7 +609,7 @@ tags: [explanation, misc, linguistics]
 </table>
 <table>
     <tr>
-        <td style="font-weight: bold;">사. 촉음(促音, っ)의 처리</td>
+        <td style="font-weight: bold;">キ　促音（っ）の処理</td>
         <td></td>
         <td></td>
         <td></td>
@@ -617,91 +617,91 @@ tags: [explanation, misc, linguistics]
         <td></td>
     </tr>
     <tr>
-        <td>조건</td>
+        <td>条件</td>
         <td></td>
         <td></td>
-        <td>대상</td>
-        <td>변환</td>
+        <td>対象</td>
+        <td>変換</td>
         <td></td>
     </tr>
     <tr>
-        <td rowspan="5">무성 마찰음 앞인 경우</td>
+        <td rowspan="5">無声摩擦音の前である場合</td>
         <td></td>
         <td></td>
         <td>さすせそ</td>
-        <td>s (이후 장음화)</td>
+        <td>s（続いて長音化へ）</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td>し</td>
-        <td>ɕ (이후 장음화)</td>
+        <td>ɕ（続いて長音化へ）</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td>ふ</td>
-        <td>ɸ (이후 장음화)</td>
+        <td>ɸ（続いて長音化へ）</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td>はへほ</td>
-        <td>h (이후 장음화)</td>
+        <td>h（続いて長音化へ）</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td></td>
         <td>ひ</td>
-        <td>ç (이후 장음화)</td>
+        <td>ç（続いて長音化へ）</td>
         <td></td>
     </tr>
     <tr>
-        <td rowspan="6">무성 마찰음 앞이 아닌 경우</td>
-        <td rowspan="2" style="text-align: center">양순음 앞</td>
-        <td style="text-align: center">무성음 앞</td>
+        <td rowspan="6">無声摩擦音の前ではない場合</td>
+        <td rowspan="2" style="text-align: center">両唇音の前</td>
+        <td style="text-align: center">無声音の前</td>
         <td>ぱぴぷぺぽ</td>
         <td>p̚</td>
         <td></td>
     </tr>
     <tr>
-        <td style="text-align: center">유성음 앞</td>
+        <td style="text-align: center">有声音の前</td>
         <td>ばびぶべぼ</td>
         <td>b̚</td>
         <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: center">치경음 앞</td>
-        <td style="text-align: center">무성음 앞</td>
+        <td rowspan="2" style="text-align: center">歯茎音の前</td>
+        <td style="text-align: center">無声音の前</td>
         <td>たちつてと</td>
         <td>t̚</td>
         <td></td>
     </tr>
     <tr>
-        <td style="text-align: center">유성음 앞</td>
+        <td style="text-align: center">有声音の前</td>
         <td>だぢづでど</td>
         <td>d̚</td>
         <td></td>
     </tr>
     <tr>
-        <td rowspan="2" style="text-align: center">연구개음 앞</td>
-        <td style="text-align: center">무성음 앞</td>
+        <td rowspan="2" style="text-align: center">軟口蓋音の前</td>
+        <td style="text-align: center">無声音の前</td>
         <td>かきくけこ</td>
         <td>k̚</td>
         <td></td>
     </tr>
     <tr>
-        <td style="text-align: center">유성음 앞</td>
+        <td style="text-align: center">有声音の前</td>
         <td>がぎぐげご</td>
         <td>g̚</td>
         <td></td>
     </tr>
     <tr>
-        <td>어말인 경우</td>
+        <td>語末の場合</td>
         <td></td>
         <td></td>
         <td></td>
@@ -711,47 +711,47 @@ tags: [explanation, misc, linguistics]
 </table>
 <table>
     <tr>
-        <td style="font-weight: bold;">아. 장음의 처리</td>
+        <td style="font-weight: bold;">ク　長音の処理</td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>조건</td>
-        <td>대상</td>
-        <td>변환</td>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
     </tr>
     <tr>
-        <td>장음부호인 경우</td>
-        <td>ー(장음부호)</td>
+        <td>長音符号である場合</td>
+        <td>ー（長音符号）</td>
         <td>ː</td>
     </tr>
     <tr>
-        <td rowspan="6">장음부호가 아닌 경우</td>
+        <td rowspan="6">長音符号ではない場合</td>
         <td>/a/+/a/</td>
-        <td>대상의 앞 모라의 모음의 장음화</td>
+        <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
         <td>/i/+/i/</td>
-        <td>대상의 앞 모라의 모음의 장음화</td>
+        <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
         <td>/u/+/u/</td>
-        <td>대상의 앞 모라의 모음의 장음화</td>
+        <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
         <td>/e/+/e/</td>
-        <td>대상의 앞 모라의 모음의 장음화</td>
+        <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
         <td>/o/+/o/</td>
-        <td>대상의 앞 모라의 모음의 장음화</td>
+        <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
         <td>/o/+/u/</td>
-        <td>대상의 앞 모라의 모음의 장음화</td>
+        <td>対象となる直前モーラの母音の長音化</td>
     </tr>
     <tr>
-        <td rowspan="5">장음화되는 촉음의 경우</td>
+        <td rowspan="5">長音化する促音の場合</td>
         <td>[s]+[s]</td>
         <td>sː</td>
     </tr>
@@ -773,141 +773,140 @@ tags: [explanation, misc, linguistics]
     </tr>
 </table>
 
-이하는 스크립트로 일괄 변환을 한번 거친 후, 각 곡마다 미묘하게 다른 발음을 반영하기 위해 수작업으로 이차적인 수정을 진행할 때 적용하는 추가적인 규칙입니다.
+以下は、スクリプトで一括変換した後、各楽曲ごとに微妙に異なる発音のニュアンスを反映させるため、手作業による二次の修正を行う時に適用する追加の規則です。
 
-### 2. 추가규칙
+### 2　追加規則
 <table>
     <tr>
-        <td style="font-weight: bold;">자. 발음(ん)의 처리</td>
+        <td colspan="2" style="font-weight: bold;">ケ　撥音（ん）の処理</td>
         <td></td>
         <td></td>
-        <td></td>
     </tr>
     <tr>
-        <td>조건</td>
-        <td>대상(기준)</td>
-        <td>변환</td>
-        <td>예시</td>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
     </tr>
     <tr>
-        <td rowspan="2">ん가 선행 모라의 coda인 경우</td>
-        <td>〇ん가 한 음에 할당됨</td>
-        <td>수정 없음</td>
-        <td>대부분의 경우</td>
+        <td rowspan="2">んが先行モーラのcodaである場合</td>
+        <td>〇んが一つの音に割当て</td>
+        <td>修正なし</td>
+        <td>ほとんどの場合</td>
     </tr>
     <tr>
-        <td>〇ん가 두 음에 할당됨</td>
-        <td>수정 없음</td>
-        <td>{% include w.html t="머큐리" text="머큐리에서 안식(安息)" %}</td>
+        <td>〇んが二つの音に割当て</td>
+        <td>修正なし</td>
+        <td>{% include w.html t="マーキュリー" text="「マーキュリー」で、安息" %}</td>
     </tr>
     <tr>
-        <td>ん가 단독으로 성절 자음을 구성하는 경우</td>
-        <td>〇ん가 두 음에 각각 하나씩 명확히 할당됨</td>
-        <td>.ɴ̩. (경우에 따라 ɴ̩ 대신 m̩, n̩, ŋ̍, ɲ̩도 가능) </td>
-        <td>{% include w.html t="나무가 된 여동생" text="나무가 된 여동생에서 천년고목(千年大樹)" %}</td>
+        <td>んが単独で成節子音を構成する場合</td>
+        <td>〇んが二つの音に明確に一つずつ割当て</td>
+        <td>.ɴ̩.（場合によって、ɴ̩ の代わりに m̩ n̩ ŋ̍ ɲ̩ も可能）</td>
+        <td>{% include w.html t="木になったいもうと" text="「木になったいもうと」で、千年大樹" %}</td>
     </tr>
 </table>
 <table>
     <tr>
-        <td style="font-weight: bold;">차. 촉음(っ)의 처리</td>
+        <td style="font-weight: bold;">コ　促音の処理</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>조건</td>
-        <td>대상(기준)</td>
-        <td>변환</td>
-        <td>예시</td>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
     </tr>
     <tr>
-        <td rowspan="2">っ가 선행 모라의 coda인 경우</td>
-        <td>〇っ가 한 음에 할당됨</td>
-        <td>수정 없음</td>
-        <td>대부분의 경우</td>
+        <td rowspan="2">っが先行モーラのcodaである場合</td>
+        <td>〇っが一つの音に割当て</td>
+        <td>修正なし</td>
+        <td>ほとんどの場合</td>
     </tr>
     <tr>
-        <td>〇っ가 두 음에 할당됨</td>
-        <td>수정 없음</td>
-        <td>{% include w.html t="포보스" text="포보스에서 끝났다 해도(終わったとして)" %}</td>
+        <td>〇っが二つの音に割当て</td>
+        <td>修正なし</td>
+        <td>{% include w.html t="フォボス" text="「フォボス」で、終わったとして" %}</td>
     </tr>
     <tr>
-        <td>っ가 선행 모라와 같은 모음+coda로 실현되는 경우</td>
-        <td>〇っ가 두 음에 할당됨</td>
-        <td>ː{해당 coda}</td>
-        <td>{% include w.html t="여름방학. 그것은 정말로 우울한 일" text="여름방학. 그것은 정말로 우울한 일에서 빌었어(願ったの)" %}</td>
+        <td>っが先行モーラと同じ母音+codaとして実現する場合</td>
+        <td>〇っが二つの音に割当て</td>
+        <td>ː{当該のcoda}</td>
+        <td>{% include w.html t="夏休み。それはとても憂鬱なこと" text="「夏休み。それはとても憂鬱なこと」で、願ったの" %}</td>
     </tr>
     <tr>
-        <td>어두인 경우(단, 후속 모라가 있음)</td>
+        <td>語頭の場合（後続モーラ有り）</td>
         <td>っ〇</td>
-        <td>◌͈(낮은 VOT)</td>
-        <td>{% include w.html t="장례식" text="장례식에서 라며(って)" %}</td>
+        <td>◌͈（低いVOT）</td>
+        <td>{% include w.html t="おそうしき" text="「おそうしき」で、って" %}</td>
     </tr>
 </table>
 <table>
     <tr>
-        <td style="font-weight: bold;">카. 장음의 처리</td>
+        <td style="font-weight: bold;">サ　長音の処理</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>조건</td>
-        <td>대상</td>
-        <td>변환</td>
-        <td>예시</td>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
     </tr>
     <tr>
-        <td rowspan="2">각각 독립적인 음절을 구성하는 경우</td>
+        <td rowspan="2">それぞれ独立した音節を構成する場合</td>
         <td>/e/+/i/</td>
         <td>e̞i</td>
-        <td>{% include w.html t="토루리리" text="토루리리에서 앉아 있어(座っている)" %}</td>
+        <td>{% include w.html t="とるりり" text="「とるりり」で、座っている" %}</td>
     </tr>
     <tr>
         <td>/o/+/u/</td>
         <td>o̞ɯᵝ</td>
-        <td>일반적인 실현방식은 아님</td>
+        <td>一般的な実現の方式ではない</td>
     </tr>
     <tr>
-        <td>e̞의 장음으로 실현되는 경우</td>
+        <td>e̞の長音として実現する場合</td>
         <td>/e/+/i/</td>
         <td>e̞ː</td>
-        <td>{% include w.html t="에라토마" text="에라토마에서 끓어넘쳐(煮えたぎっている)" %}</td>
+        <td>{% include w.html t="エラトマ" text="「エラトマ」で、煮えたぎっている" %}</td>
     </tr>
     <tr>
-        <td>i가 e̞에 동화되는 경우</td>
+        <td>iがe̞に同化する場合</td>
         <td>/e/+/i/</td>
         <td>e̞e</td>
-        <td>{% include w.html t="익사해서 죽어" text="익사해서 죽어에서 -였던 거야(ていたんだ)" %}</td>
+        <td>{% include w.html t="溺死して死ね" text="「溺死して死ね」で、～ていたんだ" %}</td>
     </tr>
 </table>
 <table>
     <tr>
-        <td style="font-weight: bold;">타. 특수규칙</td>
+        <td style="font-weight: bold;">シ　特殊規則</td>
         <td></td>
         <td></td>
         <td></td>
     </tr>
     <tr>
-        <td>조건</td>
-        <td>대상</td>
-        <td>변환</td>
-        <td>예시</td>
+        <td>条件</td>
+        <td>対象</td>
+        <td>変換</td>
+        <td>例</td>
     </tr>
     <tr>
-        <td>성문파열음이 실현되는 경우</td>
-        <td>모음의 앞 또는 뒤의 공간</td>
+        <td>声門破裂音が実現される場合</td>
+        <td>母音の前・後の空間</td>
         <td>ʔ</td>
-        <td>{% include w.html t="일억 년 좋아하고 있어" text="일억 년 좋아하고 있어에서 아 x26" %}</td>
+        <td>{% include w.html t="一億年恋してる" text="「一億年恋してる」で、あ x26" %}</td>
     </tr>
     <tr>
-        <td rowspan="3">표기된 모라와 실현되는 모라가 다른 경우</td>
-        <td>は(조사)</td>
+        <td rowspan="3">表記されたモーラと実現されるモーラが異なる場合</td>
+        <td>は（助詞）</td>
         <td>ɰä</td>
         <td></td>
     </tr>
     <tr>
-        <td>へ(조사)</td>
+        <td>へ（助詞）</td>
         <td>e̞</td>
         <td></td>
     </tr>
