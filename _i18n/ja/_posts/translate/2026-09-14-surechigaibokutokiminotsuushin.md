@@ -255,7 +255,7 @@ Wi-Fiも普及する前だったからレイトンの週刊ナゾ通信も受け
   <div class="lyric-item"><p class="lyric-orig">ガラリ、崩れてく 時空間の暴走</p>
       <p class="lyric-hangul">가라리 쿠즈레테쿠 지쿠우칸노 보오소오</p>
       <p class="lyric-ipa">ɡäɾäɾʲi kɯᵝd͡zɨᵝre̞te̞kɯᵝ d͡ʑikɯᵝːkänno̞ bo̞ːso̞ː</p>
-      <p class="lyric-trans">와르르 무너져 가는 시공간의 폭주</p></div>
+      <p class="lyric-trans">와르르 무너져 가 시공간의 폭주</p></div>
   <div class="lyric-item"><p class="lyric-orig">君がいない未来はさびしいよ</p>
       <p class="lyric-hangul">키미가 이나이 미라이와 사비시이요</p>
       <p class="lyric-ipa">kʲimʲiɡä inäi mʲiɾäiɰä säbʲiɕiːjo̞</p>
