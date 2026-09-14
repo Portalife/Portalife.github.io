@@ -617,25 +617,25 @@ tags: [explanation, misc, linguistics]
         <td>연구개음 앞</td>
         <td>ㄱ, ㄲ, ㅋ</td>
         <td>か, が 행 등</td>
-        <td>ㄱ</td>
+        <td>ㄱ(받침)</td>
     </tr>
     <tr>
         <td>치경음·치찰음·파찰음 앞</td>
         <td>ㅅ, ㅆ, ㅈ, ㅉ, ㅊ, ㄷ, ㄸ, ㅌ</td>
         <td>さ, ざ, た 행 등</td>
-        <td>ㅅ</td>
+        <td>ㅅ(받침)</td>
     </tr>
     <tr>
         <td>양순음 앞</td>
         <td>ㅂ, ㅃ, ㅍ</td>
         <td>ば, ぱ 행 등</td>
-        <td>ㅂ</td>
+        <td>ㅂ(받침)</td>
     </tr>
     <tr>
         <td>그 외</td>
         <td></td>
         <td></td>
-        <td>ㅅ</td>
+        <td>ㅅ(받침)</td>
     </tr>
 </table>
 <table>
