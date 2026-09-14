@@ -659,6 +659,22 @@ a:hover .pt3-link {
 
 @media print, screen and (max-width: 1100px) {
 
+  .postlist-row,
+  .category-in-posts-row {
+    position: relative;
+  }
+
+  .postlist-title-cell a::after,
+  .category-in-posts-row .cell-title a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
   .pc-only {
     display: none;
   }
@@ -673,7 +689,7 @@ a:hover .pt3-link {
 
   .sidebar {
     padding: initial;
-    margin-left: 10px;
+    margin-left: 390px;
     display: block;
     height: initial;
     overflow: initial;  
@@ -706,7 +722,7 @@ a:hover .pt3-link {
     width: 544px;
     margin-left: auto; 
     margin-right: auto;
-    border-bottom:1px solid var(--clr-splitter-blockquote-and-section);
+    border-bottom: 1px solid var(--clr-splitter-blockquote-and-section);
     border-width:1px 0;
     padding: 30px 0 20px 0;
   }
