@@ -773,7 +773,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const topPos = Math.random() * 90 + 3;
         item.style.top = topPos + "vh";
 
-        const isMobile = window.innerWidth <= 768 || window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        const isMobile = window.innerWidth <= 1100 && window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
         const fontSize = isMobile ? 24 : 48;
         item.style.fontSize = fontSize + "px";
