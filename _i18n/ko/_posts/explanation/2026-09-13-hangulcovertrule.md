@@ -662,6 +662,6 @@ tags: [explanation, misc, linguistics]
     <tr>
         <td>장음부호인 경우</td>
         <td>ー(장음부호)</td>
-        <td>선행 모음으로 표기</td>
+        <td>-(하이픈)</td>
     </tr>
 </table>
