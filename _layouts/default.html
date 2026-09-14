@@ -116,7 +116,13 @@
     {% include head-custom.html %}
   </head>
 
-  <body class="lang-{{ site.lang }}">    
+  <body class="lang-{{ site.lang }}">  
+    <button type="button" class="mobile-menu-btn mobile-only" onclick="toggleMobileSidebar()" aria-label="메뉴 열기">
+      ☰
+    </button>
+
+    <!-- 2. 모바일 전용 뒷배경 오버레이 (mobile-only 적용 ⭐) -->
+    <div class="mobile-sidebar-backdrop mobile-only" onclick="toggleMobileSidebar()"></div>  
     <div class="header-container">
 
       <div class="header-side-left"></div>
@@ -143,42 +149,44 @@
         </a>
       </div>
       
-      <div class="header-side-right">
-        {% if site.lang == "ko" %}
-          {% capture link1 %}{{ site.baseurl_root }}/ja{{ page.url }}{% endcapture %}
-          <a href="{{ link1 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ko">{% t global.japanese %}</a>
-        {% elsif site.lang == "ja" %}
-          {% capture link2 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
-          <a href="{{ link2 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ja">{% t global.korean %}</a>
-        {% endif %}
-          <div class="lang-setting-wrapper" style="position: relative; display: inline-block;">
+      <div class="pc-only">
+        <div class="header-side-right">
+          {% if site.lang == "ko" %}
+            {% capture link1 %}{{ site.baseurl_root }}/ja{{ page.url }}{% endcapture %}
+            <a href="{{ link1 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ko">{% t global.japanese %}</a>
+          {% elsif site.lang == "ja" %}
+            {% capture link2 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+            <a href="{{ link2 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ja">{% t global.korean %}</a>
+          {% endif %}
+            <div class="lang-setting-wrapper" style="position: relative; display: inline-block;">
 
-            <button id="redirect-setting-btn" style="background:none; border:none; cursor:pointer; font-size:14px; color:gray;" title="리다이렉트 설정">︙</button>
+              <button id="redirect-setting-btn" style="background:none; border:none; cursor:pointer; font-size:14px; color:gray;" title="리다이렉트 설정">︙</button>
 
-            <div id="redirect-popup" class="setting-popup">
-              <div class="popup-header">
-                  <span class="popup-title">
-                    {% t sidebar.change %}
-                    
-                    <div class="info-wrapper">
-                      <span class="info-icon">i</span>
-                      <span class="info-tooltip" style="display:inline-block; width: {% t sidebar.change_wid %};">
-                        {% t sidebar.change_desc %}
-                      </span>
-                    </div>
-                    
-                  </span>
-                  <span class="close-popup" id="close-popup">&times;</span>
+              <div id="redirect-popup" class="setting-popup">
+                  <div class="popup-header">
+                    <span class="popup-title">
+                      {% t sidebar.change %}
+                      
+                      <div class="info-wrapper">
+                        <span class="info-icon">i</span>
+                        <span class="info-tooltip" style="display:inline-block; width: {% t sidebar.change_wid %};">
+                          {% t sidebar.change_desc %}
+                        </span>
+                      </div>
+                      
+                    </span>
+                    <span class="close-popup" id="close-popup">&times;</span>
+                  </div>
+                <div class="toggle-container">
+                  <label class="switch">
+                    <input type="checkbox" id="redirect-toggle">
+                    <span class="slider round"></span>
+                  </label>
+                  <span id="toggle-status">ON</span>
                 </div>
-              <div class="toggle-container">
-                <label class="switch">
-                  <input type="checkbox" id="redirect-toggle">
-                  <span class="slider round"></span>
-                </label>
-                <span id="toggle-status">ON</span>
               </div>
             </div>
-          </div>
+        </div>
       </div>
     </div>
     <div class="wrapper">
@@ -294,6 +302,18 @@
             </div>
             <div id="cate8-0" class="cate" style="margin-top: 0.5rem"><a href="{{ '/categories/tags/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.tags %}<sup>&thinsp;Tags</sup></a><br></div>
           </div>
+          <div class="mobile-only">
+            <div class="header-side-right" style="margin: 0; padding: 0; text-align: left;">
+              {% if site.lang == "ko" %}
+                {% capture link1 %}{{ site.baseurl_root }}/ja{{ page.url }}{% endcapture %}
+                <a href="{{ link1 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ko" style="margin: 0;">{% t global.japanese %}</a>
+              {% elsif site.lang == "ja" %}
+                {% capture link2 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+                <a href="{{ link2 }}" onclick="localStorage.setItem('lang_selected', 'true');" class="lang-change-btn-ja" style="margin: 0;">{% t global.korean %}</a>
+              {% endif %}
+                <div class="lang-setting-wrapper" style="position: relative; display: inline-block;"></div>
+            </div>
+          </div>
         
         <div class="sidebar-footer">
           {%- include footer.html -%}
@@ -313,6 +333,17 @@
     </div>
   <script>
     renderMathInElement(document.body);
+  </script>
+  <script>
+  function toggleMobileSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const backdrop = document.querySelector('.mobile-sidebar-backdrop');
+    
+    if (sidebar && backdrop) {
+      sidebar.classList.toggle('open');
+      backdrop.classList.toggle('active');
+    }
+  }
   </script>
   </body>
 </html>

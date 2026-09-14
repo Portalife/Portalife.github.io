@@ -249,7 +249,6 @@ kbd {
   top: 0;
   padding: 0px 0 50px 0;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   height: calc(100vh - 108px);
   overflow-x: hidden;
@@ -657,15 +656,227 @@ a:hover .pt3-link {
   display: none;
 }
 
-@media print, screen and (max-width: 1100px) {
+@media screen and (max-width: 1240px) and (hover: hover) and (pointer: fine) {
+
+  .mobile-menu-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    font-size: 1.25rem;
+    color: #333333;
+    cursor: pointer;
+    z-index: 1001; /* 화면 최상단 */
+    line-height: 1;
+    text-align: center;
+  }
+
+  /* 2. 뒷배경 어두운 오버레이 (클릭 시 닫힘) */
+  .mobile-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* 반투명 검은 배경 */
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .mobile-sidebar-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 3. 기존 사이드바를 우측 슬라이드 서랍장으로 전환 ⭐⭐⭐ */
+  body .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* 오른쪽 벽에 고정 */
+    left: auto;
+    width: 180px; /* 서랍장 너비 */
+    max-width: 80%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1003; /* 버튼과 배경보다 위에 뜸 */
+    overflow-y: auto; /* 내용 길면 내부 스크롤 */
+    padding: 60px 0px 30px 22px;
+    margin: 0;
+    float: none;
+    line-height: 2;
+
+    /* 평소에는 오른쪽 화면 바깥으로 100% 숨겨둠 */
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* 버튼을 눌러 열렸을 때 화면 안으로 슬라이드 진입 */
+  body .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .cate {
+    position: relative;
+  }
+
+  .cate a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .cate:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transition: background-color 0.2s ease;
+  }
+
+  footer {
+    display: initial;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  div.wrapper {
+    width:auto;
+    margin:0;
+  }
+
+  section, footer {
+    float:none;
+    position:static;
+    width:auto;
+  }
+
+  header {
+    padding-right:320px;
+  }
+
+  section {
+    border-bottom:1px solid var(--clr-splitter-blockquote-and-section);
+    border-width:1px 0;
+    padding:20px 0;
+    margin:20px 0 20px;
+  }
+
+  header a small {
+    display:inline;
+  }
+
+  header ul {
+    position:absolute;
+    right:50px;
+    top:52px;
+  }
+  
+  .link-wrapper {
+    display: none;
+  }
+
+  .img-circle {
+    width: 25vw;
+    max-width: 160px;
+    min-width: 120px;
+    height: auto;
+  }
+
+  .header-side-left, 
+  .header-side-right {
+    width: 16vw;                
+    min-width: 110px;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+}
+
+
+@media print, screen and (max-width: 1100px) and (hover: none) and (pointer: coarse) {
+  .mobile-menu-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    font-size: 1.25rem;
+    color: #333333;
+    cursor: pointer;
+    z-index: 1001; /* 화면 최상단 */
+    line-height: 1;
+    text-align: center;
+  }
+
+  /* 2. 뒷배경 어두운 오버레이 (클릭 시 닫힘) */
+  .mobile-sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45); /* 반투명 검은 배경 */
+    z-index: 1002;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .mobile-sidebar-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 3. 기존 사이드바를 우측 슬라이드 서랍장으로 전환 ⭐⭐⭐ */
+  body .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* 오른쪽 벽에 고정 */
+    left: auto;
+    width: 160px; /* 서랍장 너비 */
+    max-width: 80%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1003; /* 버튼과 배경보다 위에 뜸 */
+    overflow-y: auto; /* 내용 길면 내부 스크롤 */
+    padding: 60px 0px 30px 22px;
+    margin: 0;
+    float: none;
+    line-height: 2;
+
+    /* 평소에는 오른쪽 화면 바깥으로 100% 숨겨둠 */
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* 버튼을 눌러 열렸을 때 화면 안으로 슬라이드 진입 */
+  body .sidebar.open {
+    transform: translateX(0);
+  }
 
   .postlist-row,
-  .category-in-posts-row {
+  .category-in-posts-row,
+  .cate {
     position: relative;
   }
 
   .postlist-title-cell a::after,
-  .category-in-posts-row .cell-title a::after {
+  .category-in-posts-row .cell-title a::after,
+  .cate a::after {
     content: "";
     position: absolute;
     top: 0;
@@ -685,14 +896,6 @@ a:hover .pt3-link {
 
   body {
     padding: 20px 1px 0px 1px;
-  }
-
-  .sidebar {
-    padding: initial;
-    margin-left: 390px;
-    display: block;
-    height: initial;
-    overflow: initial;  
   }
 
   footer {
@@ -813,6 +1016,11 @@ a:hover .pt3-link {
     margin: 1.5rem auto;
     border-radius: 8px;
   }
+
+  .pc-only {
+    display: none;
+  }
+
 }
 
 .link-wrapper-mobile {
