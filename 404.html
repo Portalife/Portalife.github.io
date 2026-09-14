@@ -34,9 +34,9 @@ permalink: /404.html
 
         console.log("추출된 슬러그:", docSlug);
 
-        const h2Title = document.querySelector('h2');
-        if (h2Title) {
-            h2Title.textContent = docSlug;
+        const h1Title = document.querySelector('h1');
+        if (h1Title) {
+            h1Title.textContent = docSlug;
         }
     
 
@@ -62,10 +62,10 @@ permalink: /404.html
                     document.write(html);
                     document.close();
                     const observer = new MutationObserver((mutations, obs) => {
-                        const newH2Title = document.querySelector('h2');
+                        const newH1Title = document.querySelector('h1');
 
-                        if (newH2Title) {
-                            newH2Title.textContent = docSlug;
+                        if (newH1Title) {
+                            newH1Title.textContent = docSlug;
                             obs.disconnect(); 
                         }
                     });
@@ -84,9 +84,9 @@ permalink: /404.html
     }
     else if (window.location.pathname.includes('/ja/') && window.location.pathname.includes('404.html')) {
 
-        const h2Title = document.querySelector('h2');
-        if (h2Title) {
-            h2Title.textContent = "存在しないページ"; 
+        const h1Title = document.querySelector('h1');
+        if (h1Title) {
+            h1Title.textContent = "存在しないページ"; 
         }
         document.title = "存在しないページ";
     }

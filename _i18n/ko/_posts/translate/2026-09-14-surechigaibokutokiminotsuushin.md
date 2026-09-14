@@ -116,7 +116,7 @@ tags: [translation, bpm15q, yunomi]
 
 와이파이도 보급되기 이전이라 레이튼 주간 수수께끼도 못 받았었는데  
 
-추억이네
+추억이당
 
 <h3 style="font-weight: 680;">{% t translation.legend %}</h3>
 

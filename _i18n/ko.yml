@@ -25,6 +25,7 @@ sidebar:
   tags: 태그
   all: 이 블로그
   test: 테스트
+  notice: 공지
 layout:
   at: '에 '
   exist: '글이 있어요!'
@@ -92,3 +93,4 @@ tags:
   pianoarrange: 피아노어레인지
   explanation: 해설
   bpm15q: BPM15Q
+  notice: 공지

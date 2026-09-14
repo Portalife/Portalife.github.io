@@ -25,6 +25,7 @@ sidebar:
   tags: タグ
   all: このブログ
   test: テスト
+  notice: 告知
 layout:
   at: に
   exist: '記事がありますよ！'
@@ -92,3 +93,4 @@ tags:
   pianoarrange: ピアノアレンジ
   explanation: 解説
   bpm15q: BPM15Q
+  notice: 告知
