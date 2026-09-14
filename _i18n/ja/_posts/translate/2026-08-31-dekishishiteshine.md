@@ -148,27 +148,10 @@ tags: [translation, inoutuhasa]
 
 <style type="text/css">
 .lyric-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: start;
-  gap: 2rem;
-  width: 100%;
-  margin: 2rem auto;
-}
-
-.lyric-container.left {
-  grid-column: 1;
-  justify-self: end; 
-  margin: 0;
-  white-space: nowrap;
-  text-align: right;
-}
-
-.lyric-container.center {
-  grid-column: 2;
-  margin: 0;
+  position: relative;
   width: fit-content;
-  text-align: center;
+  max-width: 100%;
+  margin: 2rem auto;
 }
 
 .lyric-container {
@@ -184,13 +167,18 @@ tags: [translation, inoutuhasa]
 }
 
 .lyric-container.left {
-  grid-column: 1;
-  justify-self: end;
-  
+  position: absolute;
+  top: 0;
+  right: calc(100% + 0.1rem);
+  width: max-content;
+  min-width: 0;
+  white-space: nowrap;
+  text-align: right;
+  z-index: 1;
+
   --container-bg: transparent;
   --outer-border: transparent;
   --inner-border: transparent;
-  --first-inner-border: transparent;
 
   --orig-bg: transparent;
   --orig-color: #000;
@@ -206,7 +194,11 @@ tags: [translation, inoutuhasa]
 }
 
 .lyric-container.center {
-  grid-column: 2;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
   --container-bg: #ffffff;
   --outer-border: #cbc8bd; 
   --inner-border: #FFC09E;
@@ -338,6 +330,28 @@ tags: [translation, inoutuhasa]
 </button>
 
 <div class="lyric-wrapper">
+<div class="mobile-only">
+  <div class="lyric-container center" style="border: none;">
+    <div class="lyric-item"><p class="lyric-orig" style="background: transparent; border-bottom: transparent;"></p>
+        <p class="lyric-hangul" style="background: transparent; border-bottom: transparent;">目の前真っ暗だよ、、、</p>
+        <p class="lyric-ipa" style="background: transparent; border-bottom: transparent;">눈앞이 새카매...</p>
+        <p class="lyric-trans" style="background: transparent; border-bottom: transparent;"></p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: transparent; border-bottom: transparent;"></p>
+        <p class="lyric-hangul" style="background: transparent; border-bottom: transparent;">みんなは何か見えてる？</p>
+        <p class="lyric-ipa" style="background: transparent; border-bottom: transparent;">여러분은 지금 뭔가 보여?</p>
+        <p class="lyric-trans" style="background: transparent; border-bottom: transparent;"></p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: transparent; border-bottom: transparent;"></p>
+        <p class="lyric-hangul" style="background: transparent; border-bottom: transparent;">今日は海に行かなきゃだった　また海だなんて</p>
+        <p class="lyric-ipa" style="background: transparent; border-bottom: transparent;">오늘은 바다에 가기로 했었어 또 바다라니</p>
+        <p class="lyric-trans" style="background: transparent; border-bottom: transparent;"></p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: transparent; border-bottom: transparent;"></p>
+        <p class="lyric-hangul" style="background: transparent; border-bottom: transparent;">頭がイカれてるみたいだね</p>
+        <p class="lyric-ipa" style="background: transparent; border-bottom: transparent;">머리가 어떻게 된 모양이네</p>
+        <p class="lyric-trans" style="background: transparent; border-bottom: transparent;"></p></div>
+    <div class="lyric-item"><p class="lyric-orig" style="background: transparent; border-bottom: transparent;">頭がイカれている</p></div>
+  </div>
+</div>
+<div class="pc-only">
   <div class="lyric-container left">
     <div class="lyric-item"><p class="lyric-orig"></p>
         <p class="lyric-hangul">目の前真っ暗だよ、、、</p>
@@ -451,6 +465,7 @@ tags: [translation, inoutuhasa]
         <p class="lyric-hangul"></p>
         <p class="lyric-ipa"></p>
         <p class="lyric-trans"></p></div>
+  </div>
   </div>
   <div class="lyric-container center">
     <div class="lyric-item"><p class="lyric-orig">全然まだ寝てない</p>
@@ -758,7 +773,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const topPos = Math.random() * 90 + 3;
         item.style.top = topPos + "vh";
 
-        const fontSize = 48;
+        const isMobile = window.innerWidth <= 768 || window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+        const fontSize = isMobile ? 24 : 48;
         item.style.fontSize = fontSize + "px";
 
         const duration = 7;

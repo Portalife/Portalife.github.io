@@ -653,17 +653,36 @@ a:hover .pt3-link {
   text-align: center;
 }
 
-@media print, screen and (max-width: 1190px) {
+.mobile-only {
+  display: none;
+}
+
+@media print, screen and (max-width: 1100px) {
+
+  .pc-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  body {
+    padding: 20px 1px 0px 1px;
+  }
 
   .sidebar {
     padding: initial;
-    display: initial;
+    margin-left: 10px;
+    display: block;
     height: initial;
-    overflow: initial;    
+    overflow: initial;  
   }
 
   footer {
-    display: initial;
+    display: block;
+    padding-top: 14px;
+    margin-left: 5px;
   }
 
   .sidebar-footer {
@@ -675,21 +694,29 @@ a:hover .pt3-link {
     margin:0;
   }
 
-  .sidebar, section, footer {
+  .sidebar, footer {
     float:none;
     position:static;
     width:auto;
+  }
+
+  section {
+    float:none;
+    position:static;
+    width: 544px;
+    margin-left: auto; 
+    margin-right: auto;
+    border-bottom:1px solid var(--clr-splitter-blockquote-and-section);
+    border-width:1px 0;
+    padding: 30px 0 20px 0;
   }
 
   header {
     padding-right:320px;
   }
 
-  section {
-    border:1px solid var(--clr-splitter-blockquote-and-section);
-    border-width:1px 0;
-    padding:20px 0;
-    margin:20px 0 20px;
+  section p {
+    line-height: 1.9;
   }
 
   header a small {
@@ -717,6 +744,10 @@ a:hover .pt3-link {
   .header-side-right {
     width: 16vw;                
     min-width: 110px;
+  }
+
+  ol {
+    padding-inline-start: 18px;
   }
 
 }

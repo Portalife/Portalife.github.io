@@ -151,45 +151,45 @@ tags: [translation, inoutuhasa]
 
 <style type="text/css">
 .lyric-wrapper {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: start;
-  gap: 2rem;
-  width: 100%;
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
   margin: 2rem auto;
 }
 
+.lyric-container.center {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+
+  --container-bg: #ffffff;
+  --outer-border: #F8F666; 
+  --inner-border: #4B3AA8;
+
+  --orig-bg: #ffffff;
+  --orig-color: #000000;
+  
+  --hangul-bg: #ffffff;
+  --hangul-color: #000000;
+  
+  --ipa-bg: #ffffff;
+  --ipa-color: #000000;
+  
+  --trans-bg: #ffffff;
+  --trans-color: #000000;
+}
+
 .lyric-container.left {
-  grid-column: 1;
-  justify-self: end; 
-  margin: 0;
+  position: absolute;
+  top: 0;
+  right: calc(100% + 0.1rem);
+  width: max-content;
+  min-width: 0;
   white-space: nowrap;
   text-align: right;
-}
+  z-index: 1;
 
-.lyric-container.center {
-  grid-column: 2;
-  margin: 0;
-  width: fit-content;
-  text-align: center;
-}
-
-.lyric-container {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 10px;
-  min-width: 280px;
-  max-width: 850px;
-  margin: 0;
-  background-color: var(--container-bg);
-  border: 3px solid var(--outer-border);
-}
-
-.lyric-container.left {
-  grid-column: 1;
-  justify-self: end;
-  
   --container-bg: transparent;
   --outer-border: transparent;
   --inner-border: transparent;
@@ -207,24 +207,18 @@ tags: [translation, inoutuhasa]
   --trans-color: #000;
 }
 
-.lyric-container.center {
-  grid-column: 2;
-  --container-bg: #ffffff;
-  --outer-border: #F8F666; 
-  --inner-border: #4B3AA8;
-
-  --orig-bg: #ffffff;
-  --orig-color: #000000;
-  
-  --hangul-bg: #ffffff;
-  --hangul-color: #000000;
-  
-  --ipa-bg: #ffffff;
-  --ipa-color: #000000;
-  
-  --trans-bg: #ffffff;
-  --trans-color: #000000;
+.lyric-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  min-width: 280px;
+  max-width: 850px;
+  margin: 0;
+  background-color: var(--container-bg);
+  border: 3px solid var(--outer-border);
 }
+
 
 .lyric-orig {
   background-color: var(--orig-bg);
@@ -276,6 +270,7 @@ tags: [translation, inoutuhasa]
 
 </style>
 <div class="lyric-wrapper">
+<div class="pc-only">
   <div class="lyric-container left">
     <div class="lyric-item"><p class="lyric-orig"></p>
         <p class="lyric-hangul"></p>
@@ -389,6 +384,7 @@ tags: [translation, inoutuhasa]
         <p class="lyric-hangul">２÷３＝８</p>
         <p class="lyric-ipa">60225÷46409＝47829</p>
         <p class="lyric-trans">8918ｘ9800319＝9587237485787582345893257845732947</p></div>
+  </div>
   </div>
   <div class="lyric-container center">
     <div class="lyric-item"><p class="lyric-orig">なにか</p>

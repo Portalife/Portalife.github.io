@@ -13,10 +13,9 @@ layout: default
 {{content}}
 
 {% if page.tags and page.tags.size > 0 %}
-  <small>tags: 
+  <small><em>tags:
     {% for tag in page.tags %}
       {% capture tag_url %}/tags/{{ tag }}/{% endcapture %}
-      <em>
         <a href="{{ tag_url | prepend: site.baseurl }}" style="color: inherit; text-decoration: none;">
           {% t tags.{{ tag }} %}
         </a>
