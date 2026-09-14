@@ -878,8 +878,10 @@ a:hover .pt3-link {
   }
 
   .postlist-row,
-  .category-in-posts-row {
+  .category-in-posts-row,
+  .cate {
     position: relative;
+    transition: background-color 0.1s ease, color 0.1s ease;
   }
 
   .postlist-title-cell a::after,
@@ -979,6 +981,25 @@ a:hover .pt3-link {
   ol {
     padding-inline-start: 18px;
   }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .category-in-posts-row .cell-title a:active,
+  .category-in-posts-row .cell-title a:focus,
+  .category-in-posts-row .cell-title a:hover,
+  .category-in-posts-row .cell-title a:hover:active {
+    outline: none;
+    text-decoration: none;
+  }
+
+.cate:active,
+.postlist-row:active,
+.category-in-posts-row:active {
+  background-color: #f0f0f063;
+}
+
 
 }
 
