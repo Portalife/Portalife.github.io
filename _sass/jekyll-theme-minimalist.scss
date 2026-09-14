@@ -695,19 +695,18 @@ a:hover .pt3-link {
     font-size: 1.25rem;
     color: #333333;
     cursor: pointer;
-    z-index: 1001; /* 화면 최상단 */
+    z-index: 1001;
     line-height: 1;
     text-align: center;
   }
 
-  /* 2. 뒷배경 어두운 오버레이 (클릭 시 닫힘) */
   .mobile-sidebar-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.45); /* 반투명 검은 배경 */
+    background-color: rgba(0, 0, 0, 0.45);
     z-index: 1002;
     opacity: 0;
     visibility: hidden;
@@ -718,29 +717,26 @@ a:hover .pt3-link {
     visibility: visible;
   }
 
-  /* 3. 기존 사이드바를 우측 슬라이드 서랍장으로 전환 ⭐⭐⭐ */
   body .sidebar {
     position: fixed;
     top: 0;
-    right: 0; /* 오른쪽 벽에 고정 */
+    right: 0;
     left: auto;
-    width: 180px; /* 서랍장 너비 */
+    width: 180px;
     max-width: 80%;
     height: 100%;
     background-color: #ffffff;
-    z-index: 1003; /* 버튼과 배경보다 위에 뜸 */
-    overflow-y: auto; /* 내용 길면 내부 스크롤 */
+    z-index: 1003;
+    overflow-y: auto;
     padding: 60px 0px 30px 22px;
     margin: 0;
     float: none;
     line-height: 2;
 
-    /* 평소에는 오른쪽 화면 바깥으로 100% 숨겨둠 */
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  /* 버튼을 눌러 열렸을 때 화면 안으로 슬라이드 진입 */
   body .sidebar.open {
     transform: translateX(0);
   }
@@ -827,19 +823,19 @@ a:hover .pt3-link {
     font-size: 1.25rem;
     color: #333333;
     cursor: pointer;
-    z-index: 1001; /* 화면 최상단 */
+    z-index: 1001;
     line-height: 1;
     text-align: center;
   }
 
-  /* 2. 뒷배경 어두운 오버레이 (클릭 시 닫힘) */
+
   .mobile-sidebar-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.45); /* 반투명 검은 배경 */
+    background-color: rgba(0, 0, 0, 0.45);
     z-index: 1002;
     opacity: 0;
     visibility: hidden;
@@ -850,29 +846,26 @@ a:hover .pt3-link {
     visibility: visible;
   }
 
-  /* 3. 기존 사이드바를 우측 슬라이드 서랍장으로 전환 ⭐⭐⭐ */
   body .sidebar {
     position: fixed;
     top: 0;
-    right: 0; /* 오른쪽 벽에 고정 */
+    right: 0;
     left: auto;
-    width: 160px; /* 서랍장 너비 */
+    width: 160px;
     max-width: 80%;
     height: 100%;
     background-color: #ffffff;
-    z-index: 1003; /* 버튼과 배경보다 위에 뜸 */
-    overflow-y: auto; /* 내용 길면 내부 스크롤 */
+    z-index: 1003;
+    overflow-y: auto;
     padding: 60px 0px 30px 22px;
     margin: 0;
     float: none;
     line-height: 2;
 
-    /* 평소에는 오른쪽 화면 바깥으로 100% 숨겨둠 */
     transform: translateX(100%);
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  /* 버튼을 눌러 열렸을 때 화면 안으로 슬라이드 진입 */
   body .sidebar.open {
     transform: translateX(0);
   }
