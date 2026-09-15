@@ -24,7 +24,7 @@ pre: true
 /* 전체 스타일 */
 .tg-card td {
   padding: 12px 14px;
-  font-size: 16px;
+  
   border-bottom: 1px solid #77999f5c; 
   vertical-align: middle;
 }
@@ -46,7 +46,7 @@ pre: true
   border-bottom: 1px solid #39c5bb;
 }
 .tg-title-main {
-  font-size: 22px;
+  
   color: #ffffff;
   font-weight: 600;
   display: block;
@@ -54,7 +54,7 @@ pre: true
   letter-spacing: -0.3px;
 }
 .tg-title-sub {
-  font-size: 16px;
+  
   color: #ffffff;
   display: block;
   font-weight: 400;
@@ -80,7 +80,7 @@ pre: true
 }
 </style>
 
-<h3 style="font-size: 22px;">{% t translation.basic %}</h3>
+<h3 style="">{% t translation.basic %}</h3>
 
 <table class="tg-card">
   <tbody>
@@ -128,25 +128,25 @@ pre: true
 <table style="margin: 0 0 1.5rem 0;">
   <tbody>
     <tr>
-      <td style="text-align: left; width:150px; font-size: 15px;">{% t translation.original %}</td>
-      <td style="font-size: 15px;">このように表示されます。</td>
+      <td style="text-align: left; width:150px; ">{% t translation.original %}</td>
+      <td style="">このように表示されます。</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.hangul %}</td>
-      <td style="font-size: 15px;">코노 요오니 효오지 사레마스</td>
+      <td style="text-align: left; ">{% t translation.hangul %}</td>
+      <td style="">코노 요오니 효오지 사레마스</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.ipa %}</td>
-      <td style="font-size: 15px;">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
+      <td style="text-align: left; ">{% t translation.ipa %}</td>
+      <td style="">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
-      <td style="font-size: 15px;">이렇게 표시됩니다.</td>
+      <td style="text-align: left; ">{% t translation.translation %}</td>
+      <td style="">이렇게 표시됩니다.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
+<h3 style="">{% t translation.lyric %}</h3>
 
 <span style="cursor:pointer; color: #39c5bb">■</span>&thinsp;初音ミク&nbsp;
 <span style="display: inline-block; background: linear-gradient(to left, #7eb2ff, #ff849c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">■</span>&thinsp;琴葉姉妹&nbsp;
@@ -183,7 +183,7 @@ pre: true
 .lyric-table td {
   line-height: 2.3;
   padding: 0 15px;
-  font-size: 15px;
+  
   vertical-align: middle;
   box-sizing: border-box;
   width: fit-content;

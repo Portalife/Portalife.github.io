@@ -383,7 +383,11 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig">４５ｘ９９＝３</p>
         <p class="lyric-hangul">２÷３＝８</p>
         <p class="lyric-ipa">60225÷46409＝47829</p>
-        <p class="lyric-trans">8918ｘ9800319＝9587237485787582345893257845732947</p></div>
+        <p class="lyric-trans">8918ｘ9800319＝</p></div>
+    <div class="lyric-item"><p class="lyric-orig">9587237485787582345893257845732947</p>
+        <p class="lyric-hangul"></p>
+        <p class="lyric-ipa"></p>
+        <p class="lyric-trans"></p></div>
   </div>
   </div>
   <div class="lyric-container center">

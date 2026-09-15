@@ -278,10 +278,17 @@ tags: [translation, momonechinoi, dameinu]
   </div>
 
   <div class="lyric-item">
-    <p class="lyric-orig">枕元に宝物があるか眠る前になると確かめる</p>
-    <p class="lyric-hangul">마쿠라모토니 타카라모노가 아루카 네무루 마에니 나루토 타시카메루</p>
-    <p class="lyric-ipa">mäkɯᵝɾämo̞to̞ɲi täkäɾämo̞no̞gä äɾɯᵝkä ne̞mɯᵝɾɯᵝ mäe̞ɲi näɾɯᵝto̞ täɕi̥käme̞ɾɯᵝ</p>
-    <p class="lyric-trans">머리맡에 보물이 있는지 잠들 즈음이 되면 확인해</p>
+    <p class="lyric-orig">枕元に宝物があるか</p>
+    <p class="lyric-hangul">마쿠라모토니 타카라모노가 아루카</p>
+    <p class="lyric-ipa">mäkɯᵝɾämo̞to̞ɲi täkäɾämo̞no̞gä äɾɯᵝkä</p>
+    <p class="lyric-trans">머리맡에 보물이 있는지</p>
+  </div>
+
+  <div class="lyric-item">
+    <p class="lyric-orig">眠る前になると確かめる</p>
+    <p class="lyric-hangul">네무루 마에니 나루토 타시카메루</p>
+    <p class="lyric-ipa">ne̞mɯᵝɾɯᵝ mäe̞ɲi näɾɯᵝto̞ täɕi̥käme̞ɾɯᵝ</p>
+    <p class="lyric-trans">잠들 즈음이 되면 확인해</p>
   </div>
 
   <div class="lyric-item">

@@ -24,7 +24,7 @@ tags: [translation, inoutuhasa]
 /* 전체 스타일 */
 .tg-card td {
   padding: 12px 14px;
-  font-size: 16px;
+  
   color: #212529;
   border-bottom: 1px solid #e4e4df;
   vertical-align: middle;
@@ -47,7 +47,7 @@ tags: [translation, inoutuhasa]
   border-bottom: none;
 }
 .tg-title-main {
-  font-size: 22px;
+  
   color: #ffffff;
   font-weight: 600;
   display: block;
@@ -55,7 +55,7 @@ tags: [translation, inoutuhasa]
   letter-spacing: -0.3px;
 }
 .tg-title-sub {
-  font-size: 16px;
+  
   color: #ffffff;
   display: block;
   font-weight: 400;
@@ -80,7 +80,7 @@ tags: [translation, inoutuhasa]
 }
 </style>
 
-<h3 style="font-size: 22px;">{% t translation.basic %}</h3>
+<h3 style="">{% t translation.basic %}</h3>
 
 <table class="tg-card">
   <tbody>
@@ -128,25 +128,25 @@ tags: [translation, inoutuhasa]
 <table style="margin: 0 0 1.5rem 0;">
   <tbody>
     <tr>
-      <td style="text-align: left; width:150px; font-size: 15px;">{% t translation.original %}</td>
-      <td style="font-size: 15px;">このように表示されます。</td>
+      <td style="text-align: left; width:150px; ">{% t translation.original %}</td>
+      <td style="">このように表示されます。</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.hangul %}</td>
-      <td style="font-size: 15px;">코노 요오니 효오지 사레마스</td>
+      <td style="text-align: left; ">{% t translation.hangul %}</td>
+      <td style="">코노 요오니 효오지 사레마스</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.ipa %}</td>
-      <td style="font-size: 15px;">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
+      <td style="text-align: left; ">{% t translation.ipa %}</td>
+      <td style="">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
-      <td style="font-size: 15px;">이렇게 표시됩니다.</td>
+      <td style="text-align: left; ">{% t translation.translation %}</td>
+      <td style="">이렇게 표시됩니다.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
+<h3 style="">{% t translation.lyric %}</h3>
 
 <style type="text/css">
 
@@ -182,7 +182,7 @@ tags: [translation, inoutuhasa]
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-weight: normal;
-  font-size: 14px;
+  
   white-space: nowrap;
   z-index: 2;
 }
@@ -225,7 +225,7 @@ tags: [translation, inoutuhasa]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid #96C5E2
 }
 
@@ -236,7 +236,7 @@ tags: [translation, inoutuhasa]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -247,7 +247,7 @@ tags: [translation, inoutuhasa]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -257,7 +257,7 @@ tags: [translation, inoutuhasa]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   text-align: center;
 }
 
@@ -301,11 +301,13 @@ tags: [translation, inoutuhasa]
 </style>
 
 <div class="lyric-wrapper">
-  <div class="side-photo-box">
-    <img src="https://res.cloudinary.com/g9fkrbfv/image/upload/v1785609997/KakaoTalk_20260802_034530200_zmapoq.jpg" class="side-photo" alt="Side Photo">
-    <span class="photo-text my-text" style="padding-bottom: 10px; display: none;">↑<br></span>
-    <span class="photo-text my-text" style="padding-bottom: 4px; display: none;"><br>こんにちは！</span>
-    <span class="photo-text my-text" style="padding-top: 5px; display: none;"><br><br>안녕!</span>
+  <div class="pc-only">
+    <div class="side-photo-box">
+      <img src="https://res.cloudinary.com/g9fkrbfv/image/upload/v1785609997/KakaoTalk_20260802_034530200_zmapoq.jpg" class="side-photo" alt="Side Photo">
+      <span class="photo-text my-text" style="padding-bottom: 10px; display: none;">↑<br></span>
+      <span class="photo-text my-text" style="padding-bottom: 4px; display: none;"><br>こんにちは！</span>
+      <span class="photo-text my-text" style="padding-top: 5px; display: none;"><br><br>안녕!</span>
+    </div>
   </div>
 <div class="lyric-container">
     <div class="lyric-item"><p class="lyric-orig">なくなった回覧板  </p>
@@ -513,10 +515,10 @@ tags: [translation, inoutuhasa]
         style="width: 100%; height: 100%; object-fit: fill;"
     >
     </video>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff; font-size: 14px; font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;  font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
             すーぱーわすれものたいむ<br><br>
         </div>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff; font-size: 14px; font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;  font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
             <br><br>슈퍼 유실물 타임
         </div>
     </div>

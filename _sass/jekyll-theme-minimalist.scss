@@ -762,7 +762,7 @@ a:hover .pt3-link {
   color: #aaa;
   white-space: nowrap;
   text-align: right;
-  min-width: 90px;
+  min-width: 80px;
 }
 .category-in-posts-pagination {
   display: flex;
@@ -849,6 +849,10 @@ a:hover .pt3-link {
 }
 
 .kanji-btn {
+  font-size: 14px;
+}
+
+.photo-text {
   font-size: 14px;
 }
 
@@ -969,7 +973,7 @@ a:hover .pt3-link {
   }
 
   .header-side-left {
-    width: 2.5vw;                
+    width: 195px;                
   }
 
   .mobile-only {
@@ -1072,11 +1076,11 @@ a:hover .pt3-link {
   }
 
   .pc-only {
-    display: none;
+    display: block;
   }
 
   .mobile-only {
-    display: block;
+    display: none;
   }
 
   .narrow-only {
@@ -1154,7 +1158,7 @@ a:hover .pt3-link {
   }
 
   .header-side-left {
-    width: 2.5vw;                
+    width: 220px;                
   }
 
   ol {
@@ -1180,6 +1184,28 @@ a:hover .pt3-link {
 }
 
 
+}
+
+@media print, screen and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
+    .pc-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .narrow-only {
+    display: block;
+  }
+
+  .non-narrow-only {
+  display: none;
+  }
+
+  .header-side-left {
+    width: 2.5vw;
+  }
 }
 
 @media print, screen and (max-width: 768px) {
@@ -1224,6 +1250,12 @@ a:hover .pt3-link {
     max-height: 150px;
     max-width: 100%; 
     min-width: 200px; 
+  }
+
+
+
+  .cell-title {
+    padding-right: 3px;
   }
 
   .layout-lab,

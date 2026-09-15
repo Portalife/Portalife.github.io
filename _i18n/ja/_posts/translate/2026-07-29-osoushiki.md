@@ -26,7 +26,7 @@ order: 1
 /* 전체 스타일 */
 .tg-card td {
   padding: 12px 14px;
-  font-size: 16px;
+  
   color: #212529;
   border-bottom: 1px solid #d1e0df;
   vertical-align: middle;
@@ -49,7 +49,7 @@ order: 1
   border-bottom: 1.5px solid #88888a;
 }
 .tg-title-main {
-  font-size: 22px;
+  
   color: #ffffff;
   font-weight: 600;
   display: block;
@@ -57,7 +57,7 @@ order: 1
   letter-spacing: -0.3px;
 }
 .tg-title-sub {
-  font-size: 16px;
+  
   color: #ffffff;
   display: block;
   font-weight: 400;
@@ -82,7 +82,7 @@ order: 1
 }
 </style>
 
-<h3 style="font-size: 22px;">{% t translation.basic %}</h3>
+<h3 style="">{% t translation.basic %}</h3>
 
 <table class="tg-card">
   <tbody>
@@ -130,25 +130,25 @@ order: 1
 <table style="margin: 0 0 1.5rem 0;">
   <tbody>
     <tr>
-      <td style="text-align: left; width:150px; font-size: 15px;">{% t translation.original %}</td>
-      <td style="font-size: 15px;">このように表示されます。</td>
+      <td style="text-align: left; width:150px; ">{% t translation.original %}</td>
+      <td style="">このように表示されます。</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.hangul %}</td>
-      <td style="font-size: 15px;">코노 요오니 효오지 사레마스</td>
+      <td style="text-align: left; ">{% t translation.hangul %}</td>
+      <td style="">코노 요오니 효오지 사레마스</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.ipa %}</td>
-      <td style="font-size: 15px;">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
+      <td style="text-align: left; ">{% t translation.ipa %}</td>
+      <td style="">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
-      <td style="font-size: 15px;">이렇게 표시됩니다.</td>
+      <td style="text-align: left; ">{% t translation.translation %}</td>
+      <td style="">이렇게 표시됩니다.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
+<h3 style="">{% t translation.lyric %}</h3>
 
 <style type="text/css">
 .lyric-container {
@@ -189,7 +189,7 @@ order: 1
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid #88888a
 }
 
@@ -200,7 +200,7 @@ order: 1
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -211,7 +211,7 @@ order: 1
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -221,7 +221,7 @@ order: 1
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   text-align: center;
 }
 

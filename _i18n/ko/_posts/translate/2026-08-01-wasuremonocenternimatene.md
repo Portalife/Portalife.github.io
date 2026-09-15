@@ -299,11 +299,13 @@ tags: [translation, inoutuhasa]
 </style>
 
 <div class="lyric-wrapper">
-  <div class="side-photo-box">
-    <img src="https://res.cloudinary.com/g9fkrbfv/image/upload/v1785609997/KakaoTalk_20260802_034530200_zmapoq.jpg" class="side-photo" alt="Side Photo">
-    <span class="photo-text my-text" style="padding-bottom: 10px; display: none;">↑<br></span>
-    <span class="photo-text my-text" style="padding-bottom: 4px; display: none;"><br>こんにちは！</span>
-    <span class="photo-text my-text" style="padding-top: 5px; display: none;"><br><br>안녕!</span>
+  <div class="pc-only">
+    <div class="side-photo-box">
+      <img src="https://res.cloudinary.com/g9fkrbfv/image/upload/v1785609997/KakaoTalk_20260802_034530200_zmapoq.jpg" class="side-photo" alt="Side Photo">
+      <span class="photo-text my-text" style="padding-bottom: 10px; display: none;">↑<br></span>
+      <span class="photo-text my-text" style="padding-bottom: 4px; display: none;"><br>こんにちは！</span>
+      <span class="photo-text my-text" style="padding-top: 5px; display: none;"><br><br>안녕!</span>
+    </div>
   </div>
 <div class="lyric-container">
     <div class="lyric-item"><p class="lyric-orig">なくなった回覧板  </p>

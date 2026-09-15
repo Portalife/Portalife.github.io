@@ -24,7 +24,7 @@ tags: [translation, inoutuhasa]
 /* 전체 스타일 */
 .tg-card td {
   padding: 12px 14px;
-  font-size: 16px;
+  
   color: #212529;
   border-bottom: 1px solid #FFC09E;
   vertical-align: middle;
@@ -47,7 +47,7 @@ tags: [translation, inoutuhasa]
   border-bottom: 1px solid #96C5E2;
 }
 .tg-title-main {
-  font-size: 22px;
+  
   color: #ffffff;
   font-weight: 600;
   display: block;
@@ -55,7 +55,7 @@ tags: [translation, inoutuhasa]
   letter-spacing: -0.3px;
 }
 .tg-title-sub {
-  font-size: 16px;
+  
   color: #ffffff;
   display: block;
   font-weight: 400;
@@ -80,7 +80,7 @@ tags: [translation, inoutuhasa]
 }
 </style>
 
-<h3 style="font-size: 22px;">{% t translation.basic %}</h3>
+<h3 style="">{% t translation.basic %}</h3>
 
 <table class="tg-card">
   <tbody>
@@ -126,25 +126,25 @@ tags: [translation, inoutuhasa]
 <table style="margin: 0 0 1.5rem 0;">
   <tbody>
     <tr>
-      <td style="text-align: left; width:150px; font-size: 15px;">{% t translation.original %}</td>
-      <td style="font-size: 15px;">このように表示されます。</td>
+      <td style="text-align: left; width:150px; ">{% t translation.original %}</td>
+      <td style="">このように表示されます。</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.hangul %}</td>
-      <td style="font-size: 15px;">코노 요오니 효오지 사레마스</td>
+      <td style="text-align: left; ">{% t translation.hangul %}</td>
+      <td style="">코노 요오니 효오지 사레마스</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.ipa %}</td>
-      <td style="font-size: 15px;">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
+      <td style="text-align: left; ">{% t translation.ipa %}</td>
+      <td style="">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
-      <td style="font-size: 15px;">이렇게 표시됩니다.</td>
+      <td style="text-align: left; ">{% t translation.translation %}</td>
+      <td style="">이렇게 표시됩니다.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
+<h3 style="">{% t translation.lyric %}</h3>
 
 <style type="text/css">
 .lyric-wrapper {
@@ -223,7 +223,7 @@ tags: [translation, inoutuhasa]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--first-inner-border);
 }
 
@@ -233,7 +233,7 @@ tags: [translation, inoutuhasa]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -243,7 +243,7 @@ tags: [translation, inoutuhasa]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -253,7 +253,7 @@ tags: [translation, inoutuhasa]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: #519FE4;
 }
 
@@ -305,7 +305,7 @@ tags: [translation, inoutuhasa]
   display: inline-block;
   margin: 10px 0 20px 0;
   padding: 8px 18px;
-  font-size: 14px;
+  
   font-weight: 600;
   border-radius: 10px;
   border: none;

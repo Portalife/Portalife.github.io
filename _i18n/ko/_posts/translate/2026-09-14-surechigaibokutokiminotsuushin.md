@@ -42,7 +42,7 @@ tags: [translation, bpm15q, yunomi]
   text-align: center;
 }
 .tg-header-row td {
-  padding: 25px 14px;
+  padding: 25px 10px;
 }
 .tg-title-main {
   
