@@ -24,7 +24,7 @@ tags: [translation, inoutuhasa]
 /* 전체 스타일 */
 .tg-card td {
   padding: 12px 14px;
-  font-size: 16px;
+  
   color: #212529;
   border-bottom: 1px solid #e4e4df;
   vertical-align: middle;
@@ -47,7 +47,7 @@ tags: [translation, inoutuhasa]
   border-bottom: none;
 }
 .tg-title-main {
-  font-size: 22px;
+  
   color: #ffffff;
   font-weight: 600;
   display: block;
@@ -55,7 +55,7 @@ tags: [translation, inoutuhasa]
   letter-spacing: -0.3px;
 }
 .tg-title-sub {
-  font-size: 16px;
+  
   color: #ffffff;
   display: block;
   font-weight: 400;
@@ -80,7 +80,7 @@ tags: [translation, inoutuhasa]
 }
 </style>
 
-<h3 style="font-size: 22px;">{% t translation.basic %}</h3>
+<h3 style="">{% t translation.basic %}</h3>
 
 <table class="tg-card">
   <tbody>
@@ -121,30 +121,30 @@ tags: [translation, inoutuhasa]
 
 사실 이것까지 의도한 것인지는 알 수 없으나, 공식 영제인 "See you at the Lost and Found Center!"에도 정말 묘한 맛이 담겨있다. 사실 전치사 at은 맥락에 따라 일본어의 に와 で 어느 쪽으로도 대응할 여지가 있다. 일반적인 상황이라면 at이 Lost and Found Center에 대해, 장소(location)를 부여하는 의미역(theta-role) 표지가 되어, "See you at \_\_\_!"이 "\_\_\_에서 또 만나!"가 되겠지만, 이 곡의 경우에는, I say/yell(see you)라는 행위의 목표(goal)을 부여하는 의미역 표지로도 볼 수 있게 되는 것이다. 다시 말해, "See you at the Lost and Found Center"은 일반적인 상황에서는 "유실물 센터에서 또 만나!"라는 의미로밖에 해석할 수 없지만, 원제의 조사가 に임을 고려한다면 "유실물 센터에게 또 만나!(자고 외치다)"이라는 의미로도 볼 수 있게 된다는 것이다.
 
-<h3 style="font-weight: 680;">{% t translation.legend %}</h3>
+<h3 class="translation-legend" style="font-weight: 680;">{% t translation.legend %}</h3>
 
 <table style="margin: 0 0 1.5rem 0;">
   <tbody>
     <tr>
-      <td style="text-align: left; width:150px; font-size: 15px;">{% t translation.original %}</td>
-      <td style="font-size: 15px;">このように表示されます。</td>
+      <td style="text-align: left; width:150px; ">{% t translation.original %}</td>
+      <td style="">このように表示されます。</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.hangul %}</td>
-      <td style="font-size: 15px;">코노 요오니 효오지 사레마스</td>
+      <td style="text-align: left; ">{% t translation.hangul %}</td>
+      <td style="">코노 요오니 효오지 사레마스</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.ipa %}</td>
-      <td style="font-size: 15px;">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
+      <td style="text-align: left; ">{% t translation.ipa %}</td>
+      <td style="">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
-      <td style="font-size: 15px;">이렇게 표시됩니다.</td>
+      <td style="text-align: left; ">{% t translation.translation %}</td>
+      <td style="">이렇게 표시됩니다.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
+<h3 style="">{% t translation.lyric %}</h3>
 
 <style type="text/css">
 
@@ -180,7 +180,7 @@ tags: [translation, inoutuhasa]
   transform: translate(-50%, -50%);
   color: #ffffff;
   font-weight: normal;
-  font-size: 14px;
+  
   white-space: nowrap;
   z-index: 2;
 }
@@ -223,7 +223,7 @@ tags: [translation, inoutuhasa]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid #96C5E2
 }
 
@@ -234,7 +234,7 @@ tags: [translation, inoutuhasa]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -245,7 +245,7 @@ tags: [translation, inoutuhasa]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -255,7 +255,7 @@ tags: [translation, inoutuhasa]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   text-align: center;
 }
 
@@ -511,10 +511,10 @@ tags: [translation, inoutuhasa]
         style="width: 100%; height: 100%; object-fit: fill;"
     >
     </video>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff; font-size: 14px; font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;  font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
             すーぱーわすれものたいむ<br><br>
         </div>
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff; font-size: 14px; font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #ffffff;  font-weight: 300; pointer-events: none; white-space: nowrap; letter-spacing: 1px;">
             <br><br>슈퍼 유실물 타임
         </div>
     </div>

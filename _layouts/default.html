@@ -22,7 +22,7 @@
     <meta name="author" content="Portalife">
     <meta name="description" content="{% t meta.description %}">
     <meta property="og:description" content="{% t sidebar.description %}">
-    <meta name="viewport" content="width=570">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="RCDOr37is_AWM9_2IjNqN9PDPkd3LJG15AIQHlSItQo" />
     <meta name="naver-site-verification" content="5ffd68faac57111855c4875ecd19cbdb741c64e0" />
     {% assign page_full_url = page.url | prepend: site.baseurl | prepend: site.url %}
@@ -195,13 +195,19 @@
             <img class="img-circle" src="{{site.logo | relative_url}}" alt="Logo">
           {% endif %}
           
-          <div class="h1-ipa" aria-label="portalife" style="color:#7ED8E9; margin:0 0 20px; line-height:1.1;">
-            {% if site.logo_text %}
-              {{ site.logo_text }}
-            {% else %}
-              {{ site.title }}
-            {% endif %}
-          </div>          
+          <div class="non-narrow-only">
+            <div class="h1-ipa" aria-label="portalife" style="color:#7ED8E9; margin:0 0 20px; line-height:1.1;">
+              {% if site.logo_text %}
+                {{ site.logo_text }}
+              {% else %}
+                {{ site.title }}
+              {% endif %}
+            </div>
+          </div>
+          <div class="narrow-only">
+            <div class="h1-ipa" aria-label="portalife" style="color:#7ED8E9; margin:0 0 10px; line-height:1.1;">portalife!
+            </div>
+          </div>    
 
           {% if site.email %}
             <p class="addr"><i class="fa-regular fa-envelope"></i>&nbsp;{{ site.email }}</p>

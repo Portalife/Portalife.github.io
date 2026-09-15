@@ -24,7 +24,7 @@ tags: [translation, bpm15q, yunomi]
 /* 전체 스타일 */
 .tg-card td {
   padding: 12px 14px;
-  font-size: 16px;
+  
   border-bottom: 1px solid #77999f5c;
   vertical-align: middle;
 }
@@ -45,7 +45,7 @@ tags: [translation, bpm15q, yunomi]
   padding: 25px 14px;
 }
 .tg-title-main {
-  font-size: 22px;
+  
   color: #ffffff;
   font-weight: 600;
   display: block;
@@ -53,7 +53,7 @@ tags: [translation, bpm15q, yunomi]
   letter-spacing: 0px;
 }
 .tg-title-sub {
-  font-size: 16px;
+  
   color: #ffffff;
   display: block;
   font-weight: 400;
@@ -79,7 +79,7 @@ tags: [translation, bpm15q, yunomi]
 }
 </style>
 
-<h3 style="font-size: 22px;">{% t translation.basic %}</h3>
+<h3 style="">{% t translation.basic %}</h3>
 
 <table class="tg-card">
   <tbody>
@@ -118,30 +118,30 @@ tags: [translation, bpm15q, yunomi]
 
 추억이당
 
-<h3 style="font-weight: 680;">{% t translation.legend %}</h3>
+<h3 class="translation-legend" style="font-weight: 680;">{% t translation.legend %}</h3>
 
 <table style="margin: 0 0 1.5rem 0;">
   <tbody>
     <tr>
-      <td style="text-align: left; width:150px; font-size: 15px;">{% t translation.original %}</td>
-      <td style="font-size: 15px;">このように表示されます。</td>
+      <td style="text-align: left; width:150px; ">{% t translation.original %}</td>
+      <td style="">このように表示されます。</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.hangul %}</td>
-      <td style="font-size: 15px;">코노 요오니 효오지 사레마스</td>
+      <td style="text-align: left; ">{% t translation.hangul %}</td>
+      <td style="">코노 요오니 효오지 사레마스</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.ipa %}</td>
-      <td style="font-size: 15px;">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
+      <td style="text-align: left; ">{% t translation.ipa %}</td>
+      <td style="">ko̞no̞ jo̞ːɲi ço̞ːʑisäɾe̞mäsɨ</td>
     </tr>
     <tr>
-      <td style="text-align: left; font-size: 15px;">{% t translation.translation %}</td>
-      <td style="font-size: 15px;">이렇게 표시됩니다.</td>
+      <td style="text-align: left; ">{% t translation.translation %}</td>
+      <td style="">이렇게 표시됩니다.</td>
     </tr>
   </tbody>
 </table>
 
-<h3 style="font-size: 22px;">{% t translation.lyric %}</h3>
+<h3 style="">{% t translation.lyric %}</h3>
 
 <style type="text/css">
 .lyric-container {
@@ -181,7 +181,7 @@ tags: [translation, bpm15q, yunomi]
   text-align: center;
   line-height: 2.3;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: none;
   border-bottom: 1px solid linear-gradient(to right, #8F929F, #c2c1c1);
 }
@@ -193,7 +193,7 @@ tags: [translation, bpm15q, yunomi]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -204,7 +204,7 @@ tags: [translation, bpm15q, yunomi]
   text-align: center;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   border-bottom: 1px solid var(--inner-border);
 }
 
@@ -214,7 +214,7 @@ tags: [translation, bpm15q, yunomi]
   margin: 0;
   line-height: 2.2;
   padding: 0 15px;
-  font-size: 15px;
+  
   text-align: center;
   border-bottom: 1px solid #faf9f9;
 }
