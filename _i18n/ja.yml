@@ -26,6 +26,7 @@ sidebar:
   all: このブログ
   test: テスト
   notice: 告知
+  home: ホーム
 layout:
   at: に
   exist: '記事がありますよ！'

@@ -192,7 +192,9 @@
       <div class="sidebar">
         <header>
           {% if site.logo %}
-            <img class="img-circle" src="{{site.logo | relative_url}}" alt="Logo">
+            <a href="{{ '/' | prepend: site.baseurl }}" rel="home">
+              <img class="img-circle" src="{{site.logo | relative_url}}" alt="Logo">
+            </a>
           {% endif %}
           
           <div class="non-narrow-only">
@@ -291,6 +293,8 @@
           -->
           {% include sidebar.html %}
           <div class="category" style="padding:0px 0px 10px 0px">
+            <div class="narrow-only">
+            <div id="cate0-0" class="cate"><a href="{{ '/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.home %}<sup>&thinsp;Hm</sup></a><br></div></div>
             <div id="cate1-0" class="cate"><span style="cursor:pointer; color: rgb(255, 166, 0)">■</span><a href="{{ '/categories/phonology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonology %}<sup>&thinsp;Ph</sup> ({{ site.categories["phonology"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
             <div id="cate2-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/phonetics/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.phonetics %}<sup>&thinsp;Pt</sup> ({{ site.categories["phonetics"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
             <div id="cate3-0" class="cate"><span style="cursor:pointer; color: rgb(250, 0, 0)">■</span><a href="{{ '/categories/morphology/' | prepend: site.baseurl }}" style="color: black"> {% t sidebar.morphology %}<sup>&thinsp;Mp</sup> ({{ site.categories["morphology"] | where_exp: "item", "item.re != true" | size }})</a><br></div>
