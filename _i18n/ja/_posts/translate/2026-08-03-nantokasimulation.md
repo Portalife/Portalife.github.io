@@ -504,10 +504,10 @@ tags: [translation, inoutuhasa]
     <div class="lyric-item"><p class="lyric-orig" style="border-bottom: 1px solid transparent;"><br></p>
         <p class="lyric-hangul" style="border-bottom: 1px solid transparent;"></p>
         <p class="lyric-ipa" style="border-bottom: 1px solid transparent;">すーぱーきゅうけいたいむ</p>
-        <p class="lyric-trans" style="border-bottom: 3px solid transparent; text-align: right; font-size: 13.5px">訳；普通にさぼりタイム&nbsp;</p></div>
+        <p class="lyric-trans" style="border-bottom: 3px solid transparent; text-align: right; font-size: 10.8px">訳；普通にさぼりタイム&nbsp;</p></div>
     <div class="lyric-item"><p class="lyric-orig" style="border-bottom: 1px solid transparent;"></p>
         <p class="lyric-hangul" style="border-bottom: 1px solid transparent;">슈퍼 휴식 타임</p>
-        <p class="lyric-ipa" style="border-bottom: 1px solid transparent; padding-bottom: 23px; text-align: right; font-size: 13.5px">뜻 : 그냥 농땡이 타임&nbsp;</p>
+        <p class="lyric-ipa" style="border-bottom: 1px solid transparent; padding-bottom: 23px; text-align: right; font-size: 10.8px">뜻 : 그냥 농땡이 타임&nbsp;</p>
         <p class="lyric-trans"></p></div>
     <div class="lyric-item"><p class="lyric-orig">はじまりのうたをきいた</p>
         <p class="lyric-hangul">하지마리노 우타오 키이타</p>
