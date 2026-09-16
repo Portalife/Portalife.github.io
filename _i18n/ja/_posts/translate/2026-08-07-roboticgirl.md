@@ -103,7 +103,7 @@ tags: [translation, yunomi]
     </tr>
     <tr>
       <td class="tg-label">{% t translation.movie %}</td>
-      <td class="tg-value">篠田利隆(アマナ異次元),<br> UKYO Inaba,<br> きあと</td>
+      <td class="tg-value">篠田利隆(アマナ異次元)、<br> UKYO Inaba、<br> きあと</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.upload %}</td>

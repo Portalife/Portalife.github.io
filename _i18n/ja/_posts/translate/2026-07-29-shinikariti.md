@@ -98,7 +98,7 @@ order: 2
     </tr>
     <tr>
       <td class="tg-label">{% t translation.chorus %}</td>
-      <td class="tg-value">ストピくん, 可不, 東北きらたん,<br>初音ミク, 琴葉茜{% include foot.html content="『くらしアソート』収録版でのみ" %}</td>
+      <td class="tg-value">ストピくん、可不、東北きらたん、<br>初音ミク、琴葉茜{% include foot.html content="『くらしアソート』収録版でのみ" %}</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.composer %}</td>
@@ -113,7 +113,7 @@ order: 2
     </tr>
     <tr>
       <td class="tg-label">{% t translation.movie %}</td>
-      <td class="tg-value">創作集団52Hz, まいなす</td>
+      <td class="tg-value">創作集団52Hz、まいなす</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.upload %}</td>
@@ -121,7 +121,7 @@ order: 2
     </tr>
     <tr>
       <td class="tg-label">{% t translation.album %}</td>
-      <td class="tg-value">シングル, <a href="{{ '/tags/kurashiassort/' | prepend: site.baseurl }}">くらしアソート</a></td>
+      <td class="tg-value">シングル、<a href="{{ '/tags/kurashiassort/' | prepend: site.baseurl }}">くらしアソート</a></td>
     </tr>
   </tbody>
 </table>

@@ -102,7 +102,7 @@ tags: [translation, momonechinoi, dameinu]
     </tr>
     <tr>
       <td class="tg-label">{% t translation.mixer %}</td>
-      <td class="tg-value">オオウチアラタ, 大村みこり</td>
+      <td class="tg-value">オオウチアラタ、大村みこり</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.date %}</td>

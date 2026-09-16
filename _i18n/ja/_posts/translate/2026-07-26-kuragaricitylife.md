@@ -96,7 +96,7 @@ pre: true
     </tr>
     <tr>
       <td class="tg-label">{% t translation.chorus %}</td>
-      <td class="tg-value">ストピくん, 東北きりたん, 琴葉姉妹</td>
+      <td class="tg-value">ストピくん、東北きりたん、琴葉姉妹</td>
     </tr>
     <tr>
       <td class="tg-label">{% t translation.composer %}</td>
