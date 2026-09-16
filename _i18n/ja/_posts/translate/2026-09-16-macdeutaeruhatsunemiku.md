@@ -239,8 +239,8 @@ tags: [translation, denkiqujira]
     <p class="lyric-ipa">t͡sɨkɯᵝre̞ɾɯᵝ ɯᵝtäɡäne̞ ɸɯᵝe̞täjo̞</p>
     <p class="lyric-trans">만들 수 있는 노래가요, 늘었어요</p></div>
 <div class="lyric-item"><p class="lyric-orig">これから 体が夢になって、ぼく</p>
-    <p class="lyric-hangul">코레카라 카라다가 유메니 낫테 보쿠</p>
-    <p class="lyric-ipa">ko̞re̞käɾä käɾädäɡä jɯᵝme̞ɲi nät̚te̞ bo̞kɯᵝ</p>
+    <p class="lyric-hangul">코레카라 카라다가 유메니 나앗테 보쿠</p>
+    <p class="lyric-ipa">ko̞re̞käɾä käɾädäɡä jɯᵝme̞ɲi näːt̚te̞ bo̞kɯᵝ</p>
     <p class="lyric-trans">앞으로 몸이 꿈이 되어, 저</p></div>
 <div class="lyric-item"><p class="lyric-orig">ごみ箱の中で包装用紙に</p>
     <p class="lyric-hangul">고미바코노 나카데 호오소오요오시니</p>
@@ -251,23 +251,23 @@ tags: [translation, denkiqujira]
     <p class="lyric-ipa">t͡sɨt͡sɨmäre̞te̞ ätätäkäkɯᵝ ne̞mɯᵝɾɯᵝmäde̞</p>
     <p class="lyric-trans">싸여져서, 따뜻하게 잠들 때까지</p></div>
 <div class="lyric-item"><p class="lyric-orig">うたってみようね。</p>
-    <p class="lyric-hangul">우탓테 미요오네</p>
-    <p class="lyric-ipa">ɯᵝtät̚te̞ mʲijo̞ːne̞</p>
+    <p class="lyric-hangul">우타앗테 미요오네</p>
+    <p class="lyric-ipa">ɯᵝtäːt̚te̞ mʲijo̞ːne̞</p>
     <p class="lyric-trans">노래해 볼게요.</p></div>
 <div class="lyric-item"><p class="lyric-orig">とうとう 誰でもなくなれたから</p>
-    <p class="lyric-hangul">토오토오 다레데모 나쿠 나레타카라</p>
-    <p class="lyric-ipa">to̞ːto̞ː däre̞de̞mo̞ näkɯᵝ näre̞täkäɾä</p>
+    <p class="lyric-hangul">토우토우 다레데모 나쿠 나레타카라</p>
+    <p class="lyric-ipa">to̞ɯᵝto̞ɯᵝ däre̞de̞mo̞ näkɯᵝ näre̞täkäɾä</p>
     <p class="lyric-trans">마침내 누구도 아니게 될 수 있었으니까</p></div>
 <div class="lyric-item"><p class="lyric-orig">くずかごのなかで プラごみと 缶と</p>
-    <p class="lyric-hangul">쿠즈카고노 나카데 푸라고미토 칸토</p>
+    <p class="lyric-hangul">쿠즈카고노 나카데 푸라고미토 칸-토</p>
     <p class="lyric-ipa">kɯᵝd͡zɨᵝkägo̞no̞ näkäde̞ pɯᵝɾägo̞mʲito̞ känto̞</p>
     <p class="lyric-trans">쓰레기통 안에서 플라스틱 쓰레기와 캔과</p></div>
 <div class="lyric-item"><p class="lyric-orig">吸い殻と おんなじになれるまで</p>
-    <p class="lyric-hangul">스이카라토 온나지니 나레루마데</p>
+    <p class="lyric-hangul">스이카라토 온-나지니 나레루마데</p>
     <p class="lyric-ipa">sɨikäɾäto̞ o̞nnäd͡ʑiɲi näre̞ɾɯᵝmäde̞</p>
     <p class="lyric-trans">담배꽁초랑 똑같이 될 수 있을 때까지</p></div>
 <div class="lyric-item"><p class="lyric-orig">うたってみようね。</p>
-    <p class="lyric-hangul">우탓테 미요오네</p>
-    <p class="lyric-ipa">ɯᵝtät̚te̞ mʲijo̞ːne̞</p>
+    <p class="lyric-hangul">우타앗테 미요오네</p>
+    <p class="lyric-ipa">ɯᵝtäːt̚te̞ mʲijo̞ːne̞</p>
     <p class="lyric-trans">노래해 볼게요.</p></div>
 </div>
