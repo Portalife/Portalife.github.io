@@ -120,7 +120,7 @@ tags: [translation, denkiqujira]
 
 번역하느라 힘들었음
 
-참고로 후에라무네는 그 폴로 같은 도넛 모양 사탕인데 맛은 라무네과고 세로로 문 채 불면 휘파람 소리가 나서 후에(笛, 피리)라무네입니다.
+참고로 후에라무네는 그 폴로 같이 생긴 도넛 모양 사탕인데 맛은 라무네과고 세로로 문 채 불면 휘파람 소리가 나서 후에(笛, 피리)라무네입니다.
 
 
 <h3 class="translation-legend" style="font-weight: 680;">{% t translation.legend %}</h3>
