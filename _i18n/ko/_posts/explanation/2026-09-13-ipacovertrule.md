@@ -916,4 +916,10 @@ tags: [explanation, misc, linguistics]
         <td>ikɯᵝ/jɯᵝkɯᵝ</td>
         <td></td>
     </tr>
+    <tr>
+        <td>い가 반모음화되는 경우</td>
+        <td>言う</td>
+        <td>jɯᵝː</td>
+        <td></td>
+    </tr>
 </table>

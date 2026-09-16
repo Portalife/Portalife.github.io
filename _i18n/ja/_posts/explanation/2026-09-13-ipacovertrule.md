@@ -915,4 +915,10 @@ tags: [explanation, misc, linguistics]
         <td>ikɯᵝ/jɯᵝkɯᵝ</td>
         <td></td>
     </tr>
+    <tr>
+        <td>イが半母音化する場合</td>
+        <td>言う</td>
+        <td>jɯᵝː</td>
+        <td></td>
+    </tr>
 </table>
