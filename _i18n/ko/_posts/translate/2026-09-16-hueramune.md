@@ -116,7 +116,7 @@ tags: [translation, denkiqujira]
   </tbody>
 </table>
 
-노래 제목이 이건 아니겠지만 이거 ㄹㅇ 개띵곡
+노래 제목이 이건 아니겠지만 이거 ㄹㅇ 띵곡
 
 번역하느라 힘들었음
 
