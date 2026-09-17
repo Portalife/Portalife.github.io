@@ -115,8 +115,6 @@ tags: [translation, denkiqujira]
 
 저런
 
-{% include audio.html src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1789629004/kurashi_remix_piano_re20_dzvan7.wav" title="kurashi remix piano.wav" %}  
-
 <h3 class="translation-legend" style="font-weight: 680;">{% t translation.legend %}</h3>
 
 <table style="margin: 0 0 1.5rem 0;">
