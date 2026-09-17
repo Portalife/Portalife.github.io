@@ -1,0 +1,17 @@
+<!-- _includes/audio.html -->
+<div class="audio-player-container" style="position: relative; width: 100%; max-width: 650px; margin: 1.5rem auto; background: transparent;">
+  
+  {% if include.title %}
+  <div class="audio-info" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: #334155;">
+    <span style="padding-left: 5px">{{ include.title }}</span>
+    {% if include.artist %}
+      <small style="color: #64748b; font-weight: normal;">- {{ include.artist }}</small>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <audio controls preload="metadata" style="display: block; width: 100%; height: 38px; outline: none; border-radius: 8px;" controlsList="nodownload" oncontextmenu="return false;">
+    <source src="{{ include.src }}" type="{{ include.type | default: 'audio/mpeg' }}">
+    브라우저가 오디오 재생을 지원하지 않습니다.
+  </audio>
+</div>
