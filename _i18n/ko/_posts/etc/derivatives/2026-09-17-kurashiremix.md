@@ -10,7 +10,7 @@ tags: [derivatives]
 
 원래 명분은 중요한 거라고!
  
-초기 버전에 비해 믹싱이라든지 좀 정돈된 느낌
+초기 버전에 비해 믹싱이라든지 좀 정돈된 느낌  
 또한 피아노를 곁들였다 
 
 {% include video.html src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1789633327/aac6_kyvbfp.mp4" %}  
