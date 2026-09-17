@@ -20,7 +20,15 @@ wav판.↘
 {% include audio.html src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1789629004/kurashi_remix_piano_re20_dzvan7.wav" title="kurashi remix piano.wav" %}  
 
 
-{% include audio.html src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1789630420/kurashi_remix9_cewze5.wav" title="kurashi remix.wav" %}  
+{% include audio.html src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1789635591/kurashi_remix_piano_re6_bkatog.wav" title="kurashi remix piano 초기.wav" %}  
 
-그리고 이건 위 버전의 초기판. 피아노판에 비해 거친 느낌  
-전체적으로 조금 시끄럽지만 두 번째 반복되는 부분에서 뻗어나가는 고음이 상당히 기분이 좋다 어흐
+이건 위 버전의 초기판. 지금 들으니까 왜 이게 더 좋은 것 같냐...
+<br><br>
+
+{% include audio.html src="https://res.cloudinary.com/g9fkrbfv/video/upload/v1789630420/kurashi_remix9_cewze5.wav" title="kurashi remix piano electric.wav" %}  
+
+일렉판.
+
+피아노판에 비해 거친 느낌  
+전체적으로 조금 시끄럽지만 두 번째 반복되는 부분에서 뻗어나가는 고음이 상당히 기분이 좋다 어흐  
+사실 제작 순서상으론 이게 제일 앞. 즉, eletric > piano 초기 > piano 순.
