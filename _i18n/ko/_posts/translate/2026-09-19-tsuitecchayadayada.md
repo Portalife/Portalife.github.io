@@ -287,7 +287,7 @@ tags: [translation, denkiqujira]
 <div class="lyric-item"><p class="lyric-orig">耳元から嘘をついたきみに好かれた</p>
     <p class="lyric-hangul">미미모토카라 우소오 츠이타 키미니 스카레타</p>
     <p class="lyric-ipa">mʲimʲimo̞to̞käɾä ɯᵝso̞o̞ t͡sɨitä kʲimʲiɲi sɨkäre̞tä</p>
-    <p class="lyric-trans">귓가에 대고 거짓말 친 너에게 호감을 샀어</p></div>
+    <p class="lyric-trans">귓가에서 거짓말 한 너에게 호감을 샀어</p></div>
 <div class="lyric-item"><p class="lyric-orig">信じられないようなことが</p>
     <p class="lyric-hangul">신지라레나이 요오나 코토가</p>
     <p class="lyric-ipa">ɕiɲd͡ʑiɾäre̞näi jo̞ːnä ko̞to̞ɡä</p>
