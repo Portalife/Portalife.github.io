@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: "번역 카테고리에 관련한 사항"
-categories: [etc, misc]
-tags: [misc]
+categories: [notice]
+tags: [notice]
 order: 2
 ---
 번역 카테고리의 포스트에서는 보컬, 작곡가, 작사가, 일러스트레이터, 날짜 등 작품의 기본 정보를 서술하고, 가사를 원어-발음(한글)-발음(IPA, 국제음성기호)-번역의 네 줄 단위로 묶어서 보여드리고 있습니다.

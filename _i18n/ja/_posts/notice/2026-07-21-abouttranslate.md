@@ -1,8 +1,8 @@
 ---
 layout: posts
 title: "翻訳カテゴリーについて"
-categories: [etc, misc]
-tags: [misc]
+categories: [notice]
+tags: [notice]
 order: 2
 ---
 翻訳カテゴリーの投稿では、ボーカル、作曲者、作詞者、イラストレーター、公開日などの作品に関する基本情報を記載し、歌詞を「原語 - 発音（ハングル） - 発音（IPA、国際音声記号） - 翻訳」の4行1セット形式で掲載しています。
