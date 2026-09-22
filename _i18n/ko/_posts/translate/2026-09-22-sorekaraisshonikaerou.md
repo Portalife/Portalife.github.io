@@ -237,7 +237,7 @@ tags: [translation, inoutuhasa]
 <div class="lyric-item"><p class="lyric-orig">もう忘れているんじゃない</p>
     <p class="lyric-hangul">모오 와스레테이루응 쟈나이</p>
     <p class="lyric-ipa">mo̞ː ɰäsɨre̞te̞iɾɯᵝ.ɴ̩ d͡ʑänäi</p>
-    <p class="lyric-trans">이미 잊어버린 거 아니야?</p></div>
+    <p class="lyric-trans">이미 잊어버리지 않았어?</p></div>
 <div class="lyric-item"><p class="lyric-orig">昨日の晩ご飯を</p>
     <p class="lyric-hangul">키노우노 방고하응오</p>
     <p class="lyric-ipa">kʲino̞ɯᵝno̞ bäŋgo̞hä.ɴ̩.o̞</p>

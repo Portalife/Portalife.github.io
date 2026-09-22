@@ -1,7 +1,7 @@
 ---
 layout: translate
 title: "ついてっちゃやだやだ"
-author: [전기고래]
+author: [電ǂ鯨]
 categories: [translate]
 order: 1
 tags: [translation, denkiqujira]
