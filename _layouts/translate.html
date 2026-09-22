@@ -165,3 +165,98 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const widget = document.querySelector(".category-in-posts-widget");
+  if (!widget) return;
+
+  const searchInput = widget.querySelector(".category-search-input");
+  const clearBtn = widget.querySelector(".search-clear-btn");
+  const tbody = widget.querySelector(".category-in-posts-tbody");
+  const emptyNotice = widget.querySelector(".category-search-empty");
+  const pagination = widget.querySelector(".category-in-posts-pagination");
+
+  if (!searchInput || !tbody) return;
+
+  // 1. 기존 카테고리 목록 HTML 백업
+  const originalTbodyHtml = tbody.innerHTML;
+  let searchData = [];
+  let isDataLoaded = false;
+
+  // 2. search.json 백그라운드 비동기 로딩 (브라우저 캐시 활용)
+  fetch('{{ "/search.json" | relative_url }}')
+    .then(response => response.json())
+    .then(data => {
+      searchData = data;
+      isDataLoaded = true;
+    })
+    .catch(error => console.error("Search data load error:", error));
+
+  // 3. 실시간 검색 실행 함수
+  function performSearch() {
+    const rawQuery = searchInput.value.trim();
+
+    clearBtn.style.display = rawQuery ? "block" : "none";
+
+    // 검색창이 비었으면 원래 카테고리 목록으로 복구
+    if (rawQuery.length === 0) {
+      tbody.innerHTML = originalTbodyHtml;
+      emptyNotice.style.display = "none";
+      if (pagination) pagination.style.display = "";
+      return;
+    }
+
+    if (!isDataLoaded) return; // 아직 데이터 로딩 전이면 대기
+
+    // 맥/윈도우 자모 분리 방지 (NFC)
+    const query = rawQuery.normalize('NFC').toLowerCase();
+
+    // 번역 포스트 중에서 제목 또는 작곡가/가수 매칭
+    const matches = searchData.filter(item => {
+      const title = item.title ? item.title.normalize('NFC').toLowerCase() : "";
+      const author = item.author ? item.author.normalize('NFC').toLowerCase() : "";
+      return title.includes(query) || author.includes(query);
+    });
+
+    if (pagination) pagination.style.display = "none";
+
+    if (matches.length > 0) {
+      emptyNotice.style.display = "none";
+      const currentUrl = window.location.pathname;
+
+      let html = "";
+      matches.forEach(item => {
+        const isCurrent = currentUrl === item.url;
+        const authorText = item.author ? ` - ${item.author}` : "";
+
+        html += `
+          <div class="category-in-posts-row item-row ${isCurrent ? 'current-post' : ''}" data-url="${item.url}">
+            <div class="cell-title">
+              <a href="${item.url}">
+                ${item.title}${authorText}
+              </a>
+            </div>
+            <div class="cell-date">
+              ${item.date}
+            </div>
+          </div>
+        `;
+      });
+      tbody.innerHTML = html;
+    } else {
+      tbody.innerHTML = "";
+      emptyNotice.style.display = "block";
+    }
+  }
+
+  // 이벤트 바인딩
+  searchInput.addEventListener("input", performSearch);
+
+  // X 버튼 클릭 시 초기화
+  clearBtn.addEventListener("click", function () {
+    searchInput.value = "";
+    performSearch();
+    searchInput.focus();
+  });
+});
+</script>

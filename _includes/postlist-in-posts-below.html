@@ -72,6 +72,12 @@
           <strong>{% t sidebar.{{ cat }} %}</strong>
         </a>
         <span class="category-count">{{ posts.size }}{% t layout.number %}{% t layout.exist %}</span>
+        {% if page.category == 'translate' %}
+        <div class="category-in-posts-search">
+          <input type="text" class="category-search-input" placeholder="번역 포스트 검색..." autocomplete="off" style="padding: 4px 8px; border: 1px solid #ccc; border-radius: 4px;">
+          <button type="button" class="search-clear-btn" style="display: none; cursor: pointer;">&times;</button>
+        </div>
+        {% endif %}
       </div>
     </div>
 
