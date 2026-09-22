@@ -792,34 +792,34 @@ a:hover .pt3-link {
   text-decoration: none;
   color: inherit;
 }
-/* 1. 스크롤바 전체 너비 (슬림하게 6px) */
+
 #cat-search-results::-webkit-scrollbar {
   width: 6px;
 }
 
-/* 2. 스크롤바가 지나가는 레일(바탕) 투명화 */
+
 #cat-search-results::-webkit-scrollbar-track {
   background: transparent;
-  margin: 6px 0; /* 모서리 곡선 침범 방지 여백 */
+  margin: 6px 0;
 }
 
-/* 3. 실제로 움직이는 스크롤 막대 (둥글게 깎기) */
+
 #cat-search-results::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1; /* 연한 회색 */
-  border-radius: 10px;       /* ⭐ 막대기 끝을 둥글게 처리 */
+  background-color: #cbd5e1;
+  border-radius: 10px;
 }
 
-/* 4. 스크롤 막대에 마우스 올렸을 때 조금 더 진하게 */
+
 #cat-search-results::-webkit-scrollbar-thumb:hover {
   background-color: #94a3b8;
 }
 
-/* 파이어폭스 호환용 */
+
 #cat-search-results {
   scrollbar-width: thin;
   scrollbar-color: #cbd5e1 transparent;
 }
-/* 검색창 감싸는 영역 (드롭다운 기준점 및 정렬) */
+
 .category-in-posts-search {
   position: relative;
   display: flex;
@@ -828,14 +828,14 @@ a:hover .pt3-link {
   margin-right: auto; 
 }
 
-/* 검색 입력 인풋 박스 */
+
 .category-in-posts-search #cat-search-input,
 .category-in-posts-search .category-search-input {
-  width: 260px;               /* 📌 1. 원하는 검색창 너비 지정 (예: 250px, 300px, 드롭다운과 같은 320px 등) */
-  box-sizing: border-box;     /* 패딩이 늘어나도 전체 너비 유지 */
+  width: 260px;
+  box-sizing: border-box;
   
-  /* 📌 2. 위/아래 5px, 오른쪽 28px(X버튼 공간 확보!), 왼쪽 10px */
-  padding: 5px 28px 5px 10px; 
+
+  padding: 5px 28px 5px 10px;
   
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -843,14 +843,13 @@ a:hover .pt3-link {
   font-size: 13px;
 }
 
-/* 2. X 버튼 위치 (인풋 오른쪽 안쪽에 깔끔하게 고정) */
 .category-in-posts-search #cat-search-clear,
 .category-in-posts-search .search-clear-btn {
   display: none;
   position: absolute;
-  right: 8px;                 /* 오른쪽 끝에서 8px 안쪽 */
+  right: 8px;
   top: 50%;
-  transform: translateY(-50%); /* 세로 중앙 정렬 */
+  transform: translateY(-50%);
   cursor: pointer;
   background: none;
   border: none;
@@ -858,12 +857,12 @@ a:hover .pt3-link {
   color: #888;
   padding: 0;
   line-height: 1;
-  margin: 0;                  /* 기존 margin-left 삭제 */
+  margin: 0;
 }
 
-/* 공중에 뜨는 드롭다운 결과창 (ul) */
+
 #cat-search-results {
-  display: none; /* 기본 숨김, JS가 검색 시 block으로 전환 */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -880,7 +879,7 @@ a:hover .pt3-link {
   margin: 4px 0 0 0;
 }
 
-/* 드롭다운 내부 결과 링크 (한 줄 스타일 및 호버 효과) */
+
 #cat-search-results .cat-search-item {
   display: block;
   padding: 8px 12px;
@@ -912,12 +911,11 @@ a:hover .pt3-link {
 }
 
 #cat-search-results .cat-search-item.selected {
-  background-color: #f8fafc78;  /* 하이라이트 배경색 */
-  color: #2563eb;             /* 하이라이트 글자색 */
+  background-color: #f8fafc78;
+  color: #2563eb;
   font-weight: 500;
 }
 
-/* 토글 버튼 '열기' 문구 기본 숨김 */
 .category-toggle-btn .toggle-text-open {
   display: none;
 }
@@ -1267,6 +1265,17 @@ a:hover .pt3-link {
     margin-right: 4px;
   }
 
+  #cat-search-results .cat-search-item:hover,
+  #cat-search-results .cat-search-item.selected,
+  #cat-search-results .cat-search-item:active {
+    background-color: #f8fafc78;
+    color: #2563eb;
+    transition: background-color 0.15s ease, color 0.1s ease;
+  }
+
+  #cat-search-results .cat-search-item {
+    -webkit-tap-highlight-color: transparent;
+  }
 
 
 
@@ -1600,6 +1609,18 @@ a:hover .pt3-link {
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  #cat-search-results .cat-search-item:hover,
+  #cat-search-results .cat-search-item.selected,
+  #cat-search-results .cat-search-item:active {
+    background-color: #f8fafc78;
+    color: #2563eb;
+    transition: background-color 0.15s ease, color 0.1s ease;
+  }
+
+  #cat-search-results .cat-search-item {
+    -webkit-tap-highlight-color: transparent;
   }
 
 }

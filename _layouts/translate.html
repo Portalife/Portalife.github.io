@@ -67,7 +67,8 @@ layout: default
         color: #1e3a8a;
         line-height: 1.4;
       `;
-      notice.innerHTML = `리다이렉트됨: <strong>${fromTitle}</strong>에서 건너왔습니다.`;
+      notice.innerHTML = `리다이렉트됨: <strong></strong>에서 건너왔습니다.`;
+      notice.querySelector('strong').textContent = fromTitle;
 
       const h1Tag = document.querySelector("h1");
 
@@ -213,11 +214,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const query = rawQuery.normalize('NFC').toLowerCase();
 
-    const matches = searchData.filter(item => {
-      const t = toSafeString(item.title).normalize('NFC').toLowerCase();
-      const a = toSafeString(item.author).normalize('NFC').toLowerCase();
-      return t.includes(query) || a.includes(query);
+    const fuse = new Fuse(searchData, {
+      keys: ['title', 'author'],
+      threshold: 0.3,
+      ignoreLocation: true
     });
+
+    const matches = fuse.search(query).map(result => result.item);
 
     if (matches.length > 0) {
       matches.forEach(item => {
@@ -226,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const authorText = (!item.is_redirect && authorStr) ? ` <span class="cat-search-author">- ${authorStr}</span>` : "";
 
         li.innerHTML = `<a href="${item.url}" class="cat-search-item">
-          <strong class="cat-search-title">${item.title}</strong>${authorText}
+          <span class="cat-search-title">${item.title}</span>${authorText}
         </a>`;
         resultsContainer.appendChild(li);
       });
@@ -254,10 +257,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const translateBaseUrl = "{{ '/categories/translate/' | prepend: site.baseurl }}";
 
   searchInput.addEventListener("keydown", function (e) {
-    if (e.isComposing || e.keyCode === 229) {
-      return; 
-    }
-
     const items = resultsContainer.querySelectorAll(".cat-search-item");
 
     if (e.key === "ArrowDown") {
@@ -265,26 +264,36 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       selectedIndex = (selectedIndex + 1) % items.length;
       updateSelection(items);
-    } 
 
-    else if (e.key === "ArrowUp") {
+    } else if (e.key === "ArrowUp") {
       if (!items.length || resultsContainer.style.display === "none") return;
       e.preventDefault();
       selectedIndex = (selectedIndex - 1 + items.length) % items.length;
       updateSelection(items);
-    } 
-    else if (e.key === "Enter") {
+
+    } else if (e.key === "Enter") {
       e.preventDefault();
       const rawQuery = searchInput.value.trim();
       if (!rawQuery) return;
+
+      const hasTwoOrMoreDots = /\.{2,}/.test(rawQuery);
+      const isOnlySlash = /^[/]+$/.test(rawQuery);
+      if (hasTwoOrMoreDots || isOnlySlash) return;
 
       if (selectedIndex >= 0 && items[selectedIndex]) {
         window.location.href = items[selectedIndex].href;
         return;
       }
 
-      if (items.length > 0 && items[0]) {
-        window.location.href = items[0].href;
+      const queryNFC = rawQuery.normalize('NFC').toLowerCase();
+      
+      const exactMatch = searchData.find(item => {
+        const titleNFC = toSafeString(item.title).normalize('NFC').toLowerCase();
+        return titleNFC === queryNFC;
+      });
+
+      if (exactMatch) {
+        window.location.href = exactMatch.url;
         return;
       }
 
