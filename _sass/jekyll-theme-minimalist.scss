@@ -137,13 +137,15 @@ a small {
 
 .layout-lab a.wiki-link-broken,
 .layout-posts a.wiki-link-broken,
-.layout-textbook a.wiki-link-broken {
+.layout-textbook a.wiki-link-broken,
+.layout-translate a.wiki-link-broken {
   color: #c0392b;
 }
 
 .layout-lab a.wiki-link-broken:hover, .layout-lab a.wiki-link-broken:focus,
 .layout-posts a.wiki-link-broken:hover, .layout-posts a.wiki-link-broken:focus,
-.layout-textbook a.wiki-link-broken:hover, .layout-textbook a.wiki-link-broken:focus {
+.layout-textbook a.wiki-link-broken:hover, .layout-textbook a.wiki-link-broken:focus,
+.layout-translate a.wiki-link-broken:hover, .layout-translate a.wiki-link-broken:focus, {
   text-decoration: underline;
 }
 

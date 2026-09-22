@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   {% assign target_post = site.posts | where: "title", page.target | first %}
   {% if target_post %}
-    {% assign source_title = page.title | url_encode %}
+    {% assign source_title = page.title | url_encode | replace: '+', '%20' %}
+    <!-- DEBUG: 지킬이 읽은 제목은 [ {{ page.title }} ] 입니다 -->
     {% assign target_url = target_post.url | prepend: site.baseurl | append: "#from=" | append: source_title %}
     <!-- 메타 태그 즉시 리다이렉트 -->
     <meta http-equiv="refresh" content="0; url={{ target_url }}">

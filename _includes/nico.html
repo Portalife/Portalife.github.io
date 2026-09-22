@@ -1,0 +1,11 @@
+<!-- _includes/niconico.html -->
+<div class="youtube-container{% if include.shorts %} youtube-shorts{% endif %}">
+  <iframe class="youtube-embed" 
+          src="https://embed.nicovideo.jp/watch/{{ include.id }}{% if include.start %}?from={{ include.start }}{% endif %}" 
+          frameborder="0" 
+          scrolling="no" 
+          allow="autoplay *; fullscreen *; encrypted-media *; picture-in-picture *;" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>
+</div>
