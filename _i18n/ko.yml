@@ -96,3 +96,9 @@ tags:
   explanation: 해설
   bpm15q: BPM15Q
   notice: 공지
+search:
+  noresult: 검색 결과가 없습니다.
+  loading: "데이터 불러오는 중…"
+  cantloadjson: search.json 로드 실패
+  jsonerror: "search.json 에러:"
+  placeholder: "곡명 또는 아티스트명을 검색…"

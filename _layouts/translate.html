@@ -64,10 +64,8 @@ layout: default
         padding: 2px 12px;
         background-color: #f0f6ff;
         border-radius: 4px;
-        font-size: 0.88rem;
         color: #1e3a8a;
         line-height: 1.4;
-        white-space: nowrap;
       `;
       notice.innerHTML = `리다이렉트됨: <strong>${fromTitle}</strong>에서 건너왔습니다.`;
 
@@ -116,7 +114,6 @@ layout: default
   }
 })();
 </script>
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   const footnotes = document.querySelectorAll('.auto-footnote');
@@ -167,96 +164,201 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const widget = document.querySelector(".category-in-posts-widget");
-  if (!widget) return;
+  const searchInput = document.getElementById("cat-search-input") || document.querySelector(".category-search-input");
+  const clearBtn = document.getElementById("cat-search-clear") || document.querySelector(".search-clear-btn");
+  const resultsContainer = document.getElementById("cat-search-results");
 
-  const searchInput = widget.querySelector(".category-search-input");
-  const clearBtn = widget.querySelector(".search-clear-btn");
-  const tbody = widget.querySelector(".category-in-posts-tbody");
-  const emptyNotice = widget.querySelector(".category-search-empty");
-  const pagination = widget.querySelector(".category-in-posts-pagination");
+  if (!searchInput || !resultsContainer) return;
 
-  if (!searchInput || !tbody) return;
-
-  // 1. 기존 카테고리 목록 HTML 백업
-  const originalTbodyHtml = tbody.innerHTML;
   let searchData = [];
-  let isDataLoaded = false;
+  let isLoaded = false;
+  let selectedIndex = -1;
 
-  // 2. search.json 백그라운드 비동기 로딩 (브라우저 캐시 활용)
-  fetch('{{ "/search.json" | relative_url }}')
-    .then(response => response.json())
+  function toSafeString(val) {
+    if (!val) return "";
+    if (Array.isArray(val)) return val.join(", ");
+    if (typeof val === "object") return Object.values(val).join(", ");
+    return String(val);
+  }
+
+  // search.json 비동기 호출
+  fetch("{{ '/search.json' | prepend: site.baseurl }}")
+    .then(res => {
+      if (!res.ok) throw new Error("{% t search.cantloadjson %}");
+      return res.json();
+    })
     .then(data => {
       searchData = data;
-      isDataLoaded = true;
+      isLoaded = true;
     })
-    .catch(error => console.error("Search data load error:", error));
+    .catch(err => console.error("{% t search.jsonerror %}", err));
 
-  // 3. 실시간 검색 실행 함수
-  function performSearch() {
+  function doSearch() {
     const rawQuery = searchInput.value.trim();
+    resultsContainer.innerHTML = "";
+    selectedIndex = -1;
 
-    clearBtn.style.display = rawQuery ? "block" : "none";
+    if (clearBtn) clearBtn.style.display = rawQuery ? "block" : "none";
 
-    // 검색창이 비었으면 원래 카테고리 목록으로 복구
-    if (rawQuery.length === 0) {
-      tbody.innerHTML = originalTbodyHtml;
-      emptyNotice.style.display = "none";
-      if (pagination) pagination.style.display = "";
+    if (!rawQuery) {
+      resultsContainer.style.display = "none";
       return;
     }
 
-    if (!isDataLoaded) return; // 아직 데이터 로딩 전이면 대기
+    if (!isLoaded) {
+      resultsContainer.innerHTML = '<li class="no-res">{% t search.loading %}</li>';
+      resultsContainer.style.display = "block";
+      return;
+    }
 
-    // 맥/윈도우 자모 분리 방지 (NFC)
     const query = rawQuery.normalize('NFC').toLowerCase();
 
-    // 번역 포스트 중에서 제목 또는 작곡가/가수 매칭
     const matches = searchData.filter(item => {
-      const title = item.title ? item.title.normalize('NFC').toLowerCase() : "";
-      const author = item.author ? item.author.normalize('NFC').toLowerCase() : "";
-      return title.includes(query) || author.includes(query);
+      const t = toSafeString(item.title).normalize('NFC').toLowerCase();
+      const a = toSafeString(item.author).normalize('NFC').toLowerCase();
+      return t.includes(query) || a.includes(query);
     });
 
-    if (pagination) pagination.style.display = "none";
-
     if (matches.length > 0) {
-      emptyNotice.style.display = "none";
-      const currentUrl = window.location.pathname;
-
-      let html = "";
       matches.forEach(item => {
-        const isCurrent = currentUrl === item.url;
-        const authorText = item.author ? ` - ${item.author}` : "";
+        const li = document.createElement("li");
+        const authorStr = toSafeString(item.author);
+        const authorText = (!item.is_redirect && authorStr) ? ` <span class="cat-search-author">- ${authorStr}</span>` : "";
 
-        html += `
-          <div class="category-in-posts-row item-row ${isCurrent ? 'current-post' : ''}" data-url="${item.url}">
-            <div class="cell-title">
-              <a href="${item.url}">
-                ${item.title}${authorText}
-              </a>
-            </div>
-            <div class="cell-date">
-              ${item.date}
-            </div>
-          </div>
-        `;
+        li.innerHTML = `<a href="${item.url}" class="cat-search-item">
+          <strong class="cat-search-title">${item.title}</strong>${authorText}
+        </a>`;
+        resultsContainer.appendChild(li);
       });
-      tbody.innerHTML = html;
     } else {
-      tbody.innerHTML = "";
-      emptyNotice.style.display = "block";
+      const li = document.createElement("li");
+      li.className = "no-res";
+      li.textContent = "{% t search.noresult %}";
+      resultsContainer.appendChild(li);
     }
+
+    resultsContainer.style.display = "block";
   }
 
-  // 이벤트 바인딩
-  searchInput.addEventListener("input", performSearch);
+  function updateSelection(items) {
+    items.forEach((item, idx) => {
+      if (idx === selectedIndex) {
+        item.classList.add("selected");
+        item.scrollIntoView({ block: "nearest" });
+      } else {
+        item.classList.remove("selected");
+      }
+    });
+  }
 
-  // X 버튼 클릭 시 초기화
-  clearBtn.addEventListener("click", function () {
-    searchInput.value = "";
-    performSearch();
-    searchInput.focus();
+  const translateBaseUrl = "{{ '/categories/translate/' | prepend: site.baseurl }}";
+
+  searchInput.addEventListener("keydown", function (e) {
+    if (e.isComposing || e.keyCode === 229) {
+      return; 
+    }
+
+    const items = resultsContainer.querySelectorAll(".cat-search-item");
+
+    if (e.key === "ArrowDown") {
+      if (!items.length || resultsContainer.style.display === "none") return;
+      e.preventDefault();
+      selectedIndex = (selectedIndex + 1) % items.length;
+      updateSelection(items);
+    } 
+
+    else if (e.key === "ArrowUp") {
+      if (!items.length || resultsContainer.style.display === "none") return;
+      e.preventDefault();
+      selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+      updateSelection(items);
+    } 
+    else if (e.key === "Enter") {
+      e.preventDefault();
+      const rawQuery = searchInput.value.trim();
+      if (!rawQuery) return;
+
+      if (selectedIndex >= 0 && items[selectedIndex]) {
+        window.location.href = items[selectedIndex].href;
+        return;
+      }
+
+      if (items.length > 0 && items[0]) {
+        window.location.href = items[0].href;
+        return;
+      }
+
+      window.location.href = translateBaseUrl + encodeURIComponent(rawQuery) + "/";
+    }
   });
+
+  searchInput.addEventListener("input", doSearch);
+  searchInput.addEventListener("focus", doSearch);
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      searchInput.value = "";
+      resultsContainer.innerHTML = "";
+      resultsContainer.style.display = "none";
+      clearBtn.style.display = "none";
+      searchInput.focus();
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+      resultsContainer.style.display = "none";
+    }
+  });
+
+  const searchWrapper = document.querySelector(".category-in-posts-search");
+  
+  const START_THRESHOLD = 185;
+  const MAX_HIDE_DIST = 100;
+
+  let currentTranslateY = -MAX_HIDE_DIST;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  function updateHeaderPosition() {
+    const currentScrollY = window.scrollY;
+    const deltaY = currentScrollY - lastScrollY;
+
+    const isSearching = searchInput.value.trim().length > 0;
+    const isFocused = document.activeElement === searchInput;
+    if (isSearching || isFocused) {
+      currentTranslateY = 0;
+      searchWrapper.style.transform = `translateY(0px)`;
+      lastScrollY = currentScrollY;
+      ticking = false;
+      return;
+    }
+
+    if (currentScrollY <= START_THRESHOLD) {
+      currentTranslateY = -MAX_HIDE_DIST;
+    } 
+
+    else {
+
+      currentTranslateY -= deltaY;
+
+      if (currentTranslateY > 0) currentTranslateY = 0;
+      if (currentTranslateY < -MAX_HIDE_DIST) currentTranslateY = -MAX_HIDE_DIST;
+    }
+
+    searchWrapper.style.transform = `translateY(${currentTranslateY}px)`;
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  window.addEventListener("scroll", function () {
+    if (window.innerWidth > 768 || !searchWrapper) return;
+
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeaderPosition);
+      ticking = true;
+    }
+  }, { passive: true });
 });
 </script>

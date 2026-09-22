@@ -96,3 +96,9 @@ tags:
   explanation: 解説
   bpm15q: BPM15Q
   notice: 告知
+search:
+  noresult: 検索結果がありません。
+  loading: "データを読み込み中…"
+  cantloadjson: search.jsonの読み込みに失敗
+  jsonerror: "search.json エラー:"
+  placeholder: "曲名またはアーティスト名で検索…"

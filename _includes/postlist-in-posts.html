@@ -68,14 +68,21 @@
           {% capture cat_url %}/categories/{{ cat }}/{% endcapture %}
         {% endif %}
 
-        <a href="{{ cat_url | prepend: site.baseurl }}" style="text-decoration: none; color: inherit;">
-          <strong>{% t sidebar.{{ cat }} %}</strong>
-        </a>
+        <a href="{{ cat_url | prepend: site.baseurl }}"><strong>{% t sidebar.{{ cat }} %}</strong></a>
         <span class="category-count">{{ posts.size }}{% t layout.number %}{% t layout.exist %}</span>
       </div>
+
+      {% if cat == "translate" %}
+      <div class="category-in-posts-search">
+        <input type="text" id="cat-search-input" class="category-search-input" placeholder="{% t search.placeholder %}" autocomplete="off">
+        <button type="button" id="cat-search-clear" class="search-clear-btn">&times;</button>
+        <ul id="cat-search-results"></ul>
+      </div>
+      {% endif %}
+
       <button type="button" class="category-toggle-btn" onclick="toggleCategoryNav(this)">
         <span class="toggle-text-close">{% t layout.closelist %}</span>
-        <span class="toggle-text-open" style="display: none;">{% t layout.openlist %}</span>
+        <span class="toggle-text-open">{% t layout.openlist %}</span>
       </button>
     </div>
 
