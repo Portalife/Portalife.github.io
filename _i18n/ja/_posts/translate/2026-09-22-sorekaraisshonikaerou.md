@@ -1,7 +1,7 @@
 ---
 layout: translate
 title: "それから一緒に帰ろう"
-author: [이노우츠하SA]
+author: [いのうつはSA]
 categories: [translate]
 order: 1
 tags: [translation, inoutuhasa]
