@@ -42,6 +42,8 @@ layout: default
   </em>
 </small>
 
+{% include postlist-in-posts-below.html limit=5 %}
+
 <script>
 (function() {
   function showRedirectNotice() {
@@ -120,7 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
   const footnotes = document.querySelectorAll('.auto-footnote');
   if (footnotes.length === 0) return;
 
-  // 1. 번역 전용 본문 컨테이너 (<section class="layout-translate">) 탐색 ⭐
   const postContainer = document.querySelector('section.layout-translate') || 
                         document.querySelector('.layout-translate') || 
                         document.body;
@@ -132,40 +133,33 @@ document.addEventListener("DOMContentLoaded", function() {
   const ol = document.createElement('ol');
   footnotesDiv.appendChild(ol);
 
-  // 2. 내주 및 각주 생성
   footnotes.forEach((fn, index) => {
     const num = index + 1;
     const content = fn.getAttribute('data-content');
 
-    // [내주 생성]
     const sup = document.createElement('sup');
     sup.id = `fnref:${num}`;
     sup.innerHTML = `&hairsp;<a href="#fn:${num}" class="footnote" rel="footnote" role="doc-noteref">${num}</a>&hairsp;`;
     fn.parentNode.replaceChild(sup, fn);
 
-    // [하단 각주 생성]
     const li = document.createElement('li');
     li.id = `fn:${num}`;
     li.innerHTML = `<p>${content}&nbsp;<a href="#fnref:${num}" class="reversefootnote" role="doc-backlink">↩</a></p>`;
     ol.appendChild(li);
   });
 
-  // 3. 기존 본문 <hr> 복제
   const existingHr = postContainer.querySelector('hr');
   const hr = existingHr ? existingHr.cloneNode(true) : document.createElement('hr');
 
-  // 4. 태그 링크들 중 '맨 마지막(하단)' 태그 목록만 정확하게 탐색 ⭐⭐⭐
   const tagLinks = postContainer.querySelectorAll('.post-tag-link');
   const bottomTagElement = tagLinks.length > 0 
     ? tagLinks[tagLinks.length - 1].closest('small') 
     : null;
 
   if (bottomTagElement) {
-    // 맨 아래 태그 목록 바로 "위"에 구분선과 각주 삽입!
     bottomTagElement.parentNode.insertBefore(hr, bottomTagElement);
     bottomTagElement.parentNode.insertBefore(footnotesDiv, bottomTagElement);
   } else {
-    // 혹시 하단 태그가 없는 경우 section 맨 뒤에 삽입
     postContainer.appendChild(hr);
     postContainer.appendChild(footnotesDiv);
   }

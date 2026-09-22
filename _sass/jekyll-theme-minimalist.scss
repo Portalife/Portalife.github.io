@@ -687,10 +687,24 @@ a:hover .pt3-link {
   font-family: inherit;
   font-size: 0.95rem;
 }
+.category-in-posts-widget-below {
+  width: 100%;
+  margin: 1.5rem 0 2rem 0;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border-top: 1px solid #eee;
+}
 .category-in-posts-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+}
+.category-in-posts-header-below {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 .category-in-posts-title strong {
