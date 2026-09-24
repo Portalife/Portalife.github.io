@@ -43,6 +43,7 @@ layout:
   postdate: 작성일
   openlist: 목록열기
   closelist: 목록닫기
+  append: " 번역"
 copyrights:
   allworks: 모든 포스트는
   license: 라이선스 하에 이용 가능합니다.
@@ -89,7 +90,7 @@ tags:
   kuragaricity: くらがりシティ
   kurashiassort: くらしアソート
   yunomi: Yunomi
-  lamazep: LamazeP
+  lamazep: 라마즈P
   zentouyoumadahanbun: 前頭葉まだ半分
   derivatives: 2차창작
   pianoarrange: 피아노어레인지

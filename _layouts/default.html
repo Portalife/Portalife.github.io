@@ -50,7 +50,7 @@
           {% if p == "tags" %}
             {% assign idx = forloop.index %}
             {% assign tag = parts[idx] %}
-            {% capture head_title %}#{% t tags.{{ tag }} %}{% endcapture %}
+            {% capture head_title %}{% t tags.{{ tag }} %}{% endcapture %}
             {% break %}
           {% endif %}
         {% endfor %}
@@ -68,7 +68,7 @@
       {% assign clean_title = site.title %}
     {% endif %}
 
-    <title>{% if head_title %}{{ clean_title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if head_title %}{{ clean_title }}{% if cat == translate %}{% t layout.append %}{% endif %} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <meta property="og:title" content="{{ clean_title }}" />
     <meta name="twitter:title" content="{{ clean_title }}" />

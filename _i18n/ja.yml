@@ -43,6 +43,7 @@ layout:
   postdate: 投稿日
   openlist: 一覧を開く
   closelist: 一覧を閉じる
+  append: ""
 copyrights:
   allworks: すべての投稿は
   license: ライセンスの下でご利用いただけます。
