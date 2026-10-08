@@ -29,14 +29,35 @@
 
     {% assign head_title = page.title %}
 
-    {% if head_title == nil %}
+    {% assign cat = include.category %}
+    {% assign is_etc = false %}
+
+    {% if cat == nil %}
+      {% if page.categories and page.categories.size > 0 %}
+        {% assign cat = page.categories[0] %}
+
+        {% if cat == "etc" and page.categories.size > 1 %}
+          {% assign cat = page.categories[1] %}
+          {% assign is_etc = true %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+    {% if cat == nil or cat == "etc" %}
       {% if page.url contains "/categories/" %}
-        {% assign parts = page.url | split: '/' %}
-        {% for p in parts %}
+        {% assign url_parts = page.url | split: '/' %}
+        {% for p in url_parts %}
           {% if p == "categories" %}
-            {% assign idx = forloop.index %}
-            {% assign cat = parts[idx] %}
-            {% capture head_title %}{% t sidebar.{{ cat }} %}{% endcapture %}
+            {% assign cat_idx = forloop.index %}
+            {% assign cat = url_parts[cat_idx] %}
+
+            {% if cat == "etc" %}
+              {% assign is_etc = true %}
+              {% assign next_idx = cat_idx | plus: 1 %}
+              {% if url_parts[next_idx] and url_parts[next_idx] != "" %}
+                {% assign cat = url_parts[next_idx] %}
+              {% endif %}
+            {% endif %}
             {% break %}
           {% endif %}
         {% endfor %}
@@ -44,12 +65,14 @@
     {% endif %}
 
     {% if head_title == nil %}
-      {% if page.url contains "/tags/" %}
-        {% assign parts = page.url | split: '/' %}
-        {% for p in parts %}
+      {% if page.url contains "/categories/" and cat %}
+        {% capture head_title %}{% t sidebar.{{ cat }} %}{% endcapture %}
+      {% elsif page.url contains "/tags/" %}
+        {% assign url_parts = page.url | split: '/' %}
+        {% for p in url_parts %}
           {% if p == "tags" %}
-            {% assign idx = forloop.index %}
-            {% assign tag = parts[idx] %}
+            {% assign tag_idx = forloop.index %}
+            {% assign tag = url_parts[tag_idx] %}
             {% capture head_title %}{% t tags.{{ tag }} %}{% endcapture %}
             {% break %}
           {% endif %}
@@ -68,7 +91,7 @@
       {% assign clean_title = site.title %}
     {% endif %}
 
-    <title>{% if head_title %}{{ clean_title }}{% if cat == translate %}{% t layout.append %}{% endif %} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if head_title %}{{ clean_title }}{% if cat == "translate" and page.id %}{% t layout.append %}{% endif %} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <meta property="og:title" content="{{ clean_title }}" />
     <meta name="twitter:title" content="{{ clean_title }}" />
