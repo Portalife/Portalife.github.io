@@ -251,17 +251,14 @@ kbd {
 }
 
 .sidebar {
-  width:195px;
-  float:right;
-  position:relative;
-  -webkit-font-smoothing:subpixel-antialiased;
+  width: 195px;
+  float: right;
+  position: relative;
+  -webkit-font-smoothing: subpixel-antialiased;
   top: 0;
   padding: 0px 0 50px 0;
   display: flex;
   justify-content: space-between;
-  height: calc(100vh - 108px);
-  overflow-x: hidden;
-  overflow-y: scroll;
   line-height: 1.8;
 }
 
