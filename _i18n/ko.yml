@@ -97,6 +97,7 @@ tags:
   explanation: 해설
   bpm15q: BPM15Q
   notice: 공지
+  story: 이야기
 search:
   noresult: 검색 결과가 없습니다.
   loading: "데이터 불러오는 중…"
