@@ -2,6 +2,12 @@
 @import "rouge-github";
 @import "colors";
 
+:root, html, body {
+  color-scheme: light;
+  background-color: var(--clr-bg);
+  color: #212529;
+}
+
 body {
   background-color: var(--clr-bg);
   padding:50px;
@@ -1657,6 +1663,14 @@ a:hover .pt3-link {
   // header li, header ul li + li + li {
   //   width:33%;
   // }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root, html, body {
+    color-scheme: light;
+    background-color: var(--clr-bg);
+    color: #212529;
+  }
 }
 
 @media print {
