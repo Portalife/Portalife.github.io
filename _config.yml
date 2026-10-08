@@ -4,7 +4,7 @@ logo_text: "/pɔːrtəlaɪf/!"
 description:
 show_downloads: false
 google_analytics: G-C9SV2BH564
-color-scheme: auto
+color_scheme: light
 languages: ["ko", "ja"]
 default_lang: "ko"
 permalink: /categories/:categories/:title/
