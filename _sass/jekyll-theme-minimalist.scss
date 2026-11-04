@@ -4,12 +4,12 @@
 
 :root, html, body {
   color-scheme: light;
-  background-color: var(--clr-bg);
+  background-color: hsl(0, 0%, 100%);
   color: #212529;
 }
 
 body {
-  background-color: var(--clr-bg);
+  background-color: hsl(0, 0%, 100%);
   padding:50px;
   font-size: 16px;
   line-height: 1.5;
