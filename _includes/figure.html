@@ -1,0 +1,10 @@
+<!-- _includes/figure.html -->
+<figure class="paper-figure"{% if include.width %} style="max-width: {{ include.width }};"{% endif %}>
+  <img src="{{ include.url }}" alt="{{ include.alt | default: include.caption | default: 'Figure image' }}" loading="lazy">
+  {% if include.caption or include.num %}
+    <figcaption>
+      {% if include.num %}<span class="fig-num">Figure {{ include.num }}.</span>{% endif %}
+      <span class="fig-desc">{{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+    </figcaption>
+  {% endif %}
+</figure>
